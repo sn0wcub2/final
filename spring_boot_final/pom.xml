@@ -8,11 +8,11 @@
 		<version>2.7.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.world_cup_2022</groupId>
-	<artifactId>projectW</artifactId>
+	<groupId>com.spring_boot_final</groupId>
+	<artifactId>project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>world_cup_2022_projectW</name>
+	<name>spring_boot_final</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
