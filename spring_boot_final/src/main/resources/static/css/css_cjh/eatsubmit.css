@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+
+}
+
+html, body{
+		background-color: grey;
+}
+
+calcontainer.{
+ width: max-content;
+ height: max-content;
+ position:relative;
+ padding: 2% 0 0 0;
+ top: 10%;
+ right:0%;
+ width:100%;
+ height:100%
+}
+
+.calendar{
+	height: 610px;
+	width: max-content;
+	background-color: #fff;
+	border-radius: 25px;
+	overfolw : hidden;
+	padding : 30px 50px 0px 50px;
+	box-shadow: var(--shadow);
+}
+
+.calendar-header{
+	background: #f3f3f3;
+	display: flex;
+	justify-content : space-between;
+	align-items: center;
+	font-weight:700;
+	color: var(--white);
+	padding:10px;
+}
+
+
+
+.calendar-body{
+	pad: 10px;
+}
+
+.calandar-week-days{
+	display: grid;
+	grid-template-columns : repeat(7, 1fr);
+	font-weight :600;
+	cursor : pointer;
+	color: grey;
+}
+
+.calandar-week-days div:hover{
+	color: black;
+	transform: scale(1.2);
+	transition: all .2s ease-in-out;
+}
+
+.calendar-week-days div{
+	display: grid;
+	place-items: center;
+	color: var(--bg-second);
+	height:50px;
+}
+
+.calendar-days{
+	display : grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 2px;
+	color: var(--color -txt);
+}
+
+
+calendar-days div{
+	width: 37px;
+	height: 33px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	position: relative;
+	cursor: pointer;
+	animation: to-top 1s forwards;
+}
+.month-picker{
+	padding: 5px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.month-picker hover{
+	background-color: var(--color-hover);
+}
+.month-picker hover{
+	color: var(--color-txt);
+}
+
+year-picker{
+	display: flex;
+	align-items: center;
+}
+.year-change{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	margin: 0px 10px;
+	cursor: pointer;
+}
+
+.yearchange :hover{
+	background-color : var(--light-btn);
+	transition: all .2s ease-in-out;
+	transform: scale(1.12);
+}
+.year-change: hover i{
+	color: var(--bg-body);
+}
+.calendar-footer{
+	padding: 10px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center
+}
