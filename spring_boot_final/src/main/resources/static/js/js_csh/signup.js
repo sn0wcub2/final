@@ -2,21 +2,20 @@
  * signup.js
  */
 function signupCheck() {
-	var userId = document.getElementById("userId");
-	var userPwd = document.getElementById("userPwd");
-	var userPwd2 = document.getElementById("userPwd2");
-	var userName = document.getElementById("userName");
-	var userBirth = document.getElementById("userBirth");
-	var userEmail = document.getElementById("userEmail");
-	var userHP = document.getElementById("userHP");
-	var userEmgHP = document.getElementById("userEmgHP");
-	var userZipcode = document.getElementById("userZipcode");
-	var user2Zipcode = document.getElementById("user2Zipcode");
-	var user3Zipcode = document.getElementById("user3Zipcode");
+	var memId = document.getElementById("memId");
+	var memPwd = document.getElementById("memPwd");
+	var memPwd2 = document.getElementById("memPwd2");
+	var memName = document.getElementById("memName");
+	var memGender = document.getElementById("memGender");
+	var memBirth = document.getElementById("birth-year")+"-"+document.getElementById("birth-month")+"-"+document.getElementById("birth-day");
+	var memHP = document.getElementById("memHP");
+	var memEmgHP = document.getElementById("memEmgHP");
+	var memEmail = document.getElementById("memEmail");
+	var memZipcode = document.getElementById("memZipcode");
 
-	if (userId.value == "") {
+	if (memId.value == "") {
 		alert("아이디를 입력하세요.")
-		userId.focus();
+		memId.focus();
 		return false;
 	};
 	
@@ -26,59 +25,67 @@ function signupCheck() {
         return false;
     	}
 
-	if (userPwd.value == "") {
+	if (memPwd.value == "") {
 		alert("비밀번호를 입력하세요.")
-		userPwd.focus();
+		memPwd.focus();
 		return false;
 	};
 
 	var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
-	if (!pwdCheck.test(userPwd.value)) {
+	if (!pwdCheck.test(memPwd.value)) {
 		alert("비밀번호는 영문자+숫자+특수문자 조합으로 8~25자리 사용해야 합니다.");
-		userPwd.focus();
+		memPwd.focus();
 		return false;
 	};
 
-	if (userPwd2.value !== userPwd.value) {
-		alert("비밀번호가 일치하지 않습니다.")
-		userPwd2.focus();
-		return false;
-	};
-
-	if (userName.value == "") {
+	if (memName.value == "") {
 		alert("이름을 입력하세요.")
-		userName.focus();
-		return false;
-	};
-
-	var num = /^[0-9]+/g;
-
-	if (!num.test(userHP.value)) {
-		alert("전화번호는 숫자만 입력하세요.")
-		userHP.focus();
-		return false;
-	};
-
-	if (userEmail.value == "") {
-		alert("이메일을 입력하세요.")
-		userEmail.focus();
+		memName.focus();
 		return false;
 	};
 	
-	if (userZipcode.value == "") {
-		alert("주소를 입력하세요.")
-		userZipcode.focus();
+	if($("input[name=memGender]:radio:checked").length < 1){
+
+		alert("성별을 선택하세요.");
+
 		return false;
 	};
-	if (user2Zipcode.value == "") {
-		alert("주소를 입력하세요.")
-		user2Zipcode.focus();
+	
+	if($('#birth-year option:selected').val() == ""||$('#birth-month option:selected').val() == ""||$('#birth-day option:selected').val() == ""){
+    alert("생년월일을 입력하세요.");
+    $("#birth-year").focus();
+    return false;
+    
+	};
+	
+		
+
+	var num = /^[0-9]+/g;
+
+	if (!num.test(memHP.value)) {
+		alert("전화번호를 입력하세요")
+		memHP.focus();
 		return false;
 	};
-	if (user3Zipcode.value == "") {
+	
+	var num = /^[0-9]+/g;
+	
+	if (!num.test(memEmgHP.value)) {
+		alert("긴급전화번호를 입력하세요")
+		memEmgHP.focus();
+		return false;
+	};
+
+	if (memEmail.value == "") {
+		alert("이메일을 입력하세요.")
+		memEmail.focus();
+		return false;
+	};
+	
+	if (memZipcode.value == "") {
 		alert("주소를 입력하세요.")
-		user3Zipcode.focus();
+		memZipcode.focus();
 		return false;
 	};
 
