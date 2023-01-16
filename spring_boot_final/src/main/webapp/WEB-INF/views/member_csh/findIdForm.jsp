@@ -5,23 +5,26 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>비밀번호 변경</title>
+		<title>아이디 찾기</title>
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/findidpwd.css'/>">
+		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+		<script src="<c:url value='/js/js_csh/findIdForm.js'/>"></script>
 	</head>
 	<body>
 	<div id="wrap">
 		<div class="findbox">
 			<div id="findId">
-				<form id="findPwdForm" name="findPwdForm" method="post" action="/member/findPwd">
-					<h1>비밀번호 변경</h1>
+				<form id="findIdForm" name="findIdForm">
+					<h1>아이디 찾기</h1>
 						
 					<h4>이름</h4>
-					<span class="input_area"><input type="text" maxlength="15" id="findPwdName" name="findPwdName" 
+					<span class="input_area"><input type="text" maxlength="15" id="findIdName" name="findIdName" 
 					placeholder="이름을 입력해 주세요." required></span>
 						
 					<h4>이메일</h4>
-					<span class="input_area"><input type="text" maxlength="30" id="findPwdEmail" name="findPwdEmail" 
+					<span class="input_area"><input type="text" maxlength="30" id="findIdEmail" name="findIdEmail" 
 					placeholder="이메일을 입력해 주세요." required></span>
+					
 					<button type="submit">찾기</button>
 					<button type="button" onClick="history.back()">취소</button>
 				</form>

@@ -10,7 +10,7 @@
  		// 서버에 전송하고 결과 받아서 처리
  		$.ajax({
  			type:"post",
- 			url:"/member/eqlogin",
+ 			url:"/member_csh/eqlogin",
  			data: {"id":$('#id').val(),
  			       "pwd":$('#pwd').val()},
  			dataType:'text',
