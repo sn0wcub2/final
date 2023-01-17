@@ -9,15 +9,20 @@
 	</head>
 	<body>
 	<section id="sec1">
-	지역 확인하기
+		지역 확인하기
+		<input type="text">
+		<button>내 상세 주소 받아오기</button>
 	</section>
 	
 	<section id="sec2">
-	메뉴선택
+	<div>
+		<img>
+	</div>
 	</section>
 	
 	<section id="sec3">
 	날짜 선택
+	> 달력
 	</section>
 	
 	<section id="sec4">
