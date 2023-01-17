@@ -4,9 +4,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>세탁 메인</title>
 </head>
 <body>
-hello
+	<div id="wrap">
+			<div class="laundry">
+				<div id="laundryMain"></div>
+				<h1>세탁</h1>
+				<hr>
+				
+				<div>
+			<button type="button" onclick="location.href='<c:url value='/laundry_kbh/MypageUpdate/cjh'/>'">회원정보 수정</button>
+			</div><br><br>
+			<div>
+			<button type="button" onclick="location.href='<c:url value='/laundry_kbh/MypageUpdate/cjh'/>'">회원정보 수정</button>
+			</div><br><br>
+			<div>
+			<button type="button" onclick="location.href='<c:url value='/laundry_kbh/MypageUpdate/cjh'/>'">회원정보 수정</button>
+			</div><br><br>
+			<div>
+			<button type="button" onclick="location.href='<c:url value='/laundry_kbh/MypageUpdate/cjh'/>'">회원정보 수정</button>
+			</div><br><br>
+			<div>
+			<button type="button" onclick="location.href='<c:url value='/laundry_kbh/MypageUpdate/cjh'/>'">회원정보 수정</button>
+			</div><br><br>
+			
 </body>
 </html>
+
