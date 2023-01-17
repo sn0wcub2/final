@@ -11,5 +11,4 @@ public interface IService_csh {
 	public String findId(String memName, String memEmail);
 	public String findPwd(String memName, String memEmail);
 	public void changePwd(VO_csh vo);
-
 }

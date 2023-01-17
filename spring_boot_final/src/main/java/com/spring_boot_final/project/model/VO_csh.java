@@ -17,6 +17,13 @@ public class VO_csh {
 	private String memZipcode;
 	private String memAddress1;
 	private String memAddress2;
+	private int memPoint;
+	public int getMemPoint() {
+		return memPoint;
+	}
+	public void setMemPoint(int memPoint) {
+		this.memPoint = memPoint;
+	}
 	public String getMemId() {
 		return memId;
 	}
