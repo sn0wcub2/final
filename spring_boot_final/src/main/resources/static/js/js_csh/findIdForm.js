@@ -20,10 +20,10 @@
  			success:function(result) {
  				if (result != "fail") {
  					alert("ID : " + result);
- 					location.href="/member/searchAfterLoginForm?memId=" + result;
+ 					location.href="/member_csh/login";
  				} else {
  					alert("ID 찾기를 실패했습니다 이름과 이메일을 확인해주세요");
- 					location.href="/member/findIdForm";
+ 					location.href="/member_csh/findIdForm";
  				}
  			},
  			error:function() {
