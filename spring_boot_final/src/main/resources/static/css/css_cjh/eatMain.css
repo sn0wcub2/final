@@ -5,18 +5,20 @@
 	padding: 0;
 }
 
-.banner {
-	width: 100%;
-	height: 100vh;
-	background-color: #F3A712;
-	background-size: cover; 
-	backgroung-position: center;
+/* 상단 헤더 */
+.logo{
+	height:90px;
+	width:100px;
 }
+
 
 .nav {
 	width: 85%;
 	margin: auto;
-	padding: 35px;
+	padding-left: 35px;
+	padding-top: 35px;
+	padding-right: 35px;
+	padding-bottom: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -38,26 +40,25 @@
 }
 
 
-.content-left{
-	position: absolute;
-	top:70%;
-	left:20%;
-	transform: translateY(-50%);
-	color:#fff;
+/* 슬라이드 광고 */
+.main_ad{
+	margin: auto;
+	padding: 0;
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #F3A712;
 }
-
-
-.content-right{
-	top:35%;
-	position: absolute;
-	height:40vh;
-	width:30%;
-	right:10%;
-	border: 2px solid #fff;
+.slider{
+	width:1900px;
+	height:1000px;
 }
-
+.slides{
+	width:5700px;
+	height:1000px;
+}
 .subbutton{
-
 	text-align: center;
 	border-radius:25px;
 	font-weight: bold;

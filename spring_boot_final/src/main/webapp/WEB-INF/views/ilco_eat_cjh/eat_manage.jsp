@@ -7,30 +7,37 @@
 <meta charset="UTF-8">
 <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 <script src="<c:url value='/js/js_cjh/makeMID.js'/>"></script>
-<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatsubmit.css"/>'>
+<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
 <title>Insert title here</title>
 </head>
 <body>
 
-	<div class="calcontainer">
+		
+			메뉴 등록
+			<form method="post" action="/ilcofoodmange/insertmenu">
+				식단 일자 : <input type="date" name="date" id="date">
+				<br> 메뉴 종류 : <select id="type" name="menu_type">
+					<option value="" selected disabled>메뉴 타입</option>
+					<option value="LA">L-A</option>
+					<option value="LB">L-B</option>
+					<option value="DA">D-A</option>
+					<option value="DB">D-B</option>
+				</select><br> 식단 구성 : <input type="text" name="menu_comp"><br>
+				영양정보 : <input type="text" name="nutrition_info"><br> 알레르기
+				정보 : <input type="text"><br>
+				사진 첨부>>
+				<br> <input type="submit" value="등록">
+			</form>
+		등록 일자 확인
 		<div class="calendar">
-			<div class="calendar-header">
-				<span class="month-picker" id="month-picker">1</span>
-				<div class="year-picker" id="year-picker">
-					<span class="year-change" id="pre-year"> 
-						<i>전</i>
-					</span> 
-					<span id="year">2023</span>
-					 <span class="year-change"
-						class="next-year"> 
-						<i>후</i>
-					</span>
+			<div class="cal_head" >
+				<div class="row">
+					<div><</div>
+					<div>2023년</div>
+					<div> 01월</div>
+					<div>></div>
 				</div>
-			</div>
-달력 날짜 선택하여 메뉴 들어갔는지 확인>js 이용 하단 데이터 삽입
-
-			<div class="calendar-body">
-				<div class="calandar-week-days">
+				<div class="row">
 					<div>일</div>
 					<div>월</div>
 					<div>화</div>
@@ -39,37 +46,59 @@
 					<div>금</div>
 					<div>토</div>
 				</div>
-			</div>
-			<div class="calendar-footer">
-			</div>
-			<div class="date-time-format">
-				<div class="day-text-format"> 오늘 </div>
-				<div class="date-time-value">
-					<div class="time-format">04:29:30</div>
-					<div class="date-format">2023-01-16</div>
+		</div>
+		<div class="cal_body" >
+				<div class="week" id="week1">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+					<div>5</div>
+					<div>6</div>
+					<div>7</div>
+				</div>
+				<div class="week" id="week2">
+					<div>8</div>
+					<div>9</div>
+					<div>10</div>
+					<div>11</div>
+					<div>12</div>
+					<div>13</div>
+					<div>14</div>
+				</div>
+				<div class="week" id="week3">
+					<div>15</div>
+					<div>16</div>
+					<div>17</div>
+					<div>18</div>
+					<div>19</div>
+					<div>20</div>
+					<div>21</div>
+				</div>
+				<div class="week" id="week4">
+					<div>22</div>
+					<div>23</div>
+					<div>24</div>
+					<div>25</div>
+					<div>26</div>
+					<div>27</div>
+					<div>28</div>
+				</div>
+				<div class="week" id="week5">
+					<div>30</div>
+					<div>31</div>
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+					<div>5</div>
 				</div>
 			</div>
-			<div class="month-list"></div>
-
+		
 		</div>
-	</div>
-	
-	
-	
-	
-	메뉴 등록
-	<form method="post" action="/ilcofoodmange/insertmenu">
-		식단 일자 : <input type="date" name="date" id="date"><br> 메뉴
-		종류 : <select id="type" name="menu_type">
-			<option value="" selected disabled>메뉴 타입</option>
-			<option value="LA">L-A</option>
-			<option value="LB">L-B</option>
-			<option value="DA">D-A</option>
-			<option value="DB">D-B</option>
-		</select><br> 식단 구성 : <input type="text" name="menu_comp"><br>
-		영양정보 : <input type="text" name="nutrition_info"><br> 알레르기
-		정보 : <input type="text"><br> <input type="submit"
-			value="등록">
-	</form>
+		<div class="cal_footer" >
+		</div>
+		
 </body>
+
 </html>

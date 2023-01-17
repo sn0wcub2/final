@@ -6,7 +6,7 @@
   
   <mapper namespace="com.spring_boot_final.project.dao.IDAO_cjh">
 	  <insert id="insertmenu" parameterType="com.spring_boot_final.project.model.MenuVO_cjh">
-	  		INSERT INTO menu (menu_id, menu_type, menu_comp, nutrition_info, menu_date)
-	  		VALUES (#{menu_id}, #{menu_type}, #{menu_comp}, #{nutrition_info}, #{menu_date})
+	  		INSERT INTO menu(menu_id, menu_pic, menu_type, menu_comp, nutrition_info, allergy_info, menu_date) 
+	  		VALUES(#{menu_id}, #{menu_pic}, #{menu_type}, #{menu_comp}, #{nutrition_info}, #{allergy_info}, #{menu_date})
 	  </insert>
   </mapper>

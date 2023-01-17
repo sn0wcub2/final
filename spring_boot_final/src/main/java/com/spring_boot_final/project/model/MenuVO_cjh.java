@@ -1,18 +1,14 @@
 package com.spring_boot_final.project.model;
 
-import java.util.Date;
-
-import org.springframework.format.annotation.DateTimeFormat;
-
 public class MenuVO_cjh {
 
 		private String menu_id;
 		private String menu_type;
+		private String menu_pic;		
 		private String menu_comp;
 		private String nutrition_info;
-		@DateTimeFormat(pattern = "yyyy-MM-dd")
-		private Date date;
-		
+		private String allergy_info;
+		private String menu_date;
 		public String getMenu_id() {
 			return menu_id;
 		}
@@ -24,6 +20,12 @@ public class MenuVO_cjh {
 		}
 		public void setMenu_type(String menu_type) {
 			this.menu_type = menu_type;
+		}
+		public String getMenu_pic() {
+			return menu_pic;
+		}
+		public void setMenu_pic(String menu_pic) {
+			this.menu_pic = menu_pic;
 		}
 		public String getMenu_comp() {
 			return menu_comp;
@@ -37,12 +39,20 @@ public class MenuVO_cjh {
 		public void setNutrition_info(String nutrition_info) {
 			this.nutrition_info = nutrition_info;
 		}
-		public Date getDate() {
-			return date;
+		public String getAllergy_info() {
+			return allergy_info;
 		}
-		public void setDate(Date date) {
-			this.date = date;
+		public void setAllergy_info(String allergy_info) {
+			this.allergy_info = allergy_info;
 		}
+		public String getMenu_date() {
+			return menu_date;
+		}
+		public void setMenu_date(String menu_date) {
+			this.menu_date = menu_date;
+		}
+		
+
 		
 		
 }

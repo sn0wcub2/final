@@ -1,6 +1,5 @@
 package com.spring_boot_final.project.controller;
 
-import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -57,8 +56,12 @@ public class Controller_cjh {
 												@RequestParam("menu_type") String mt,
 												MenuVO_cjh menu){
 		menu.setMenu_id(date + "-" + mt);
+		menu.setMenu_pic(null);
+		System.out.println(menu.getMenu_id());
 		service.insertmenu(menu);
-		System.out.println(date+mt);
+//		System.out.println(menu.getAllergy_info());
+//		System.out.println(menu.getMenu_comp());
+//		System.out.println(menu.getMenu_date());
 		return "redirect:/ilcoeat/main";
 	}
 	

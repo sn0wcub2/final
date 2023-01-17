@@ -11,7 +11,8 @@
 	<body>
 <!-- 		top -->
 	<div class="nav">
-		<img src="image/cjh_beta_eat_logo.png"class="logo">로고 경로 찾아줘유
+	
+		<img src="<c:url value='/image/cjh_beta_eat_logo.png'/>" class="logo">
 		<ul>
 			<li> <a href="<c:url value='/ilcoeat/eatSubscribe'/>">구독하기</a></li>
 			<li> <a href="<c:url value='/ilcoeat/eatMenu'/>">오늘 메뉴</a></li>
@@ -19,24 +20,47 @@
 			<li> <a href="#">문의하기</a></li>
 		</ul>
 	</div>
+		 <a href="<c:url value='/ilcoeat/eatSubscribe'/>">구독하기</a>
 	
+
+
+<img src="<c:url value='/image/cjh_eatForMain1.jpg'/>" >
+<img src="<c:url value='/image/cjh_eatForMain1.JPG'/>">
+<img src="<c:url value='/image/cjh_eatForMain1.jpg'/>" >
+
+
+
 <!-- 	메인 광고 -->
-	<div class="banner">
-		<div class="content">
-			<div class="content-left">
-				<h1>일코푸드</h1>
-				<p>대충 상업적 문구 자리 우측에는 사진</p>
+	<div class="slider">
+		<div class="slides">
+			<input type="radio" name="radio-btn" id="radio1">
+			<input type="radio" name="radio-btn" id="radio2">
+			<input type="radio" name="radio-btn" id="radio3">
+			<div class="silde_first">
+				<img src="<c:url value='/image/cjh_beta_eat_logo.png'/>" alt="">
 			</div>
-			<div class="content-right">
-				<img src="#"id="mainfood">
-				<br>맛있는 음식 사진
+			<div class="silde">
+				<img src="/image/cjh_eatForMain2.jpg" alt="">
+			</div>
+			<div class="silde">
+				<img src="/image/cjh_eatForMai3.jpg" alt="">
 			</div>
 		</div>
-			<div>
-				<button class="subbutton" id="subbutton1"type="button" onclick="location.href='<c:url value='/ilcoeat/eatSubscribe'/>'">구독</button>
-			</div>
+		<div class="navigation-manual">
+			<label for="radio1" class="manual-btn"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn"></label>
+		</div>
 	</div>
-	
+
+
+
+
+
+
+
+
+
 <!-- 	일코 푸드 사용법 -->
 	<div class="sec01">
 		<h3>3단계로 보는 일코 푸드 사용법</h3><br>

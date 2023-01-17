@@ -1,0 +1,23 @@
+*{
+	align-items: center;
+}
+
+.row{
+	display: flex;
+}
+.week{
+	width: 1000px;
+}
+.cal_body div{
+	display: flex;
+	min-width: 10%;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 100px;
+	border: solid 1px;
+	text-align:start
+}
+
+.week div:hover{
+	background-color:green;	
+}
