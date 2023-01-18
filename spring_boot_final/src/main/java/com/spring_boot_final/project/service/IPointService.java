@@ -9,15 +9,13 @@ import com.spring_boot_final.project.model.PointVO;
 
 	public void insertPoint(String memId);
 	
-	public void changePoint(String memId, int pointAdd, String pointDescription);
+	public void changePoint(String memId, int pointUsed, int pointTotal, String pointDescription);
 	
-	public void updatePoint(String memId, int pointAdd);
+	public void changePoint2(String memId, int pointAdd, int pointTotal, String pointDescription);
 	
-	public void changePoint2(String memId, int pointUsed, String pointDescription);
+	public int findLastestData(String memId);
 	
-	public void updatePoint2(String memId, int pointUsed);
-	
-	public int pointTotalCheck(String memId);
+	public int pointTotalCheck(String memId, int pointChangeNo);
 	
 	public ArrayList<PointVO> pointView(String memId);
 }
