@@ -1,9 +1,10 @@
 package com.spring_boot_final.project.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring_boot_final.project.model.VO_csh;
@@ -21,9 +22,10 @@ public class MypageController_csh {
 	}
 	
 	// 회원정보 수정
-	@RequestMapping("/mypage_csh/MypageUpdate/{memId}")
-	public String MypageUpdate(@PathVariable String memId, Model model) {
+	@RequestMapping("/mypage_csh/MypageUpdate")
+	public String MypageUpdate(HttpSession session,Model model) {
 		
+		String memId=(String) session.getAttribute("sid");
 		VO_csh mem = service.detailViewMyPage(memId);
 		model.addAttribute("mem", mem);
 		

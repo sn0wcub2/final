@@ -52,7 +52,7 @@
                                     <td colspan="2"><input type="text" name="memAddress2" class="postcodify_details" id="memAddress2" value="${mem.memAddress2}"></td></tr>
                                 <tr><td colspan="3">
                                 <input id="button" type="submit" value="수정">
-                                <input id="button" type="reset" value="취소"></td></tr>
+                                <input id="button" type="reset" value="취소" onClick="history.back()"></td></tr>
                             </table>
 					</form>
 				</div>
