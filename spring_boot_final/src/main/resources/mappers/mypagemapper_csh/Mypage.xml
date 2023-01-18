@@ -12,4 +12,14 @@
 		resultType="com.spring_boot_final.project.model.VO_csh">
 		SELECT * FROM user WHERE memId = #{memId}
 	</select>
+	
+	<!-- 회원 정보 수정 : 기본키인 memId는 수정하지 않음 -->
+	<update id="updateMyPage"
+		parameterType="com.spring_boot_final.project.model.VO_csh">
+		UPDATE user
+		SET memName=#{memName}, memHP=#{memHP}, memEmail=#{memEmail},
+		memZipcode=#{memZipcode},
+		memAddress1=#{memAddress1},memAddress2=#{memAddress2}
+		WHERE memName=#{memName}
+	</update>
 </mapper>
