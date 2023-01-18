@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.spring_boot_final.project.dao.IMypageDAO_csh">
+
+	<!--마이페이지 맵퍼 -->
+
+	<select id="detailViewMyPage" parameterType="string"
+		resultType="com.spring_boot_final.project.model.VO_csh">
+		SELECT * FROM user WHERE memId = #{memId}
+	</select>
+	
+	<!-- 회원 정보 수정 : 기본키인 memId는 수정하지 않음 -->
+	<update id="updateMyPage"
+		parameterType="com.spring_boot_final.project.model.VO_csh">
+		UPDATE user
+		SET memName=#{memName}, memHP=#{memHP}, memEmail=#{memEmail},
+		memZipcode=#{memZipcode},
+		memAddress1=#{memAddress1},memAddress2=#{memAddress2}
+		WHERE memName=#{memName}
+	</update>
+</mapper>

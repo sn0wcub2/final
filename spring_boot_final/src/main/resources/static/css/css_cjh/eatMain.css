@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+* {
+	margin: auto 0;
+	padding: 0;
+}
+
+
+/* 상단 헤더 */
+.logo{
+	height:90px;
+	width:100px;
+}
+.nav {
+	width: 85%;
+	margin: auto;
+	padding-left: 35px;
+	padding-top: 35px;
+	padding-right: 35px;
+	padding-bottom: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo {
+	cursor: pointer;
+}
+.nav ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+}
+.nav ul li a{
+	text-decoration: none;
+	color:#534D41;
+}
+
+
+
+
+/* 메인 페이지*/
+
+#mainbox{
+    margin: 0 auto;
+    position: relative;
+    width: min-content;
+}
+#pannel{
+	position:relative;
+	height: 600px;
+	display: inline-flex;
+}
+.section{
+	width:1980px;
+	height: 600px;
+}
+.title{
+    width: 600px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+}
+.outline {
+    position: relative;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.0em;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+#s1{
+	background: linear-gradient(60deg, rgba(0, 0, 0, 0.8) 30%,
+		rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0.2) 100%), url(../../image/cjh_eatMain1.jpg);
+	background-size: cover;
+}
+#t1{
+    padding-top: 230px;
+    padding-left: 35%;
+}
+#o1{
+    top: 53px;
+    left: 820px;
+    color: darkcyan;
+    font-size: large;
+}
+#s2{
+	background: linear-gradient(60deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.7) 35%,
+		rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.0) 100%), url(../../image/cjh_eatMain2.jpg);
+	background-size: cover;
+}
+#t2{
+    padding-top: 139px;
+    padding-left: 10%;
+}
+#o2{
+    top: 53px;
+    left: 363px;
+    color: orange;
+    width: 737px;
+    font-size: x-large;
+    letter-spacing: 4px;
+    line-height: 2.1;
+}
+#s3{
+	background: linear-gradient(60deg, rgba(0, 0, 0, 0.8) 30%,
+		rgba(0, 0, 0, 0.1) 31%, rgba(0, 0, 0, 0) 100%), url(../../image/cjh_eatMain3.jpg);
+	background-size: cover;
+}
+#t3{
+	padding-top: 446px;
+    padding-left: 7%;
+}
+#o3{
+	top: -117px;
+    left: 189px;
+    color: orange;
+    width: 737px;
+    font-size: x-large;
+    letter-spacing: 4px;
+    line-height: 1.5;
+}
+#s4{
+    background: linear-gradient(109deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.2) 100%), url(../../image/cjh_eatMain4.jpg);
+    background-size: cover;
+}
+#t4 {
+    padding-top: 246px;
+    padding-left: 9%;
+    font-size: 30px;
+}
+#s5{
+	background: linear-gradient(60deg, rgba(0, 0, 0, 0.5) 30%,
+		rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.2) 100%), url(../../image/cjh_eatMain5.jpg);
+	background-position: 0 630px;
+	background-size: cover;
+}
+#t5{
+	padding-top: 450px;
+    padding-left: 1350px;
+}
+#o5{
+    top: 20px;
+    padding-left: 828px;
+    left: 347px;
+    color: #f3F3F3;
+    width: 737px;
+    font-size: large;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+#slideShowBox {
+	width: 1980px;
+	height: 600px;
+	text-align:center;
+	overflow:hidden;  /* 영역 벗어나면 숨김 */
+}
+#prevNextButtonBox {
+	position:relative;
+	z-index: 1;
+	top: 250px;
+}
+#prevButton {
+	position:absolute;
+	left:4%;
+	rotate: 180deg;
+	opacity: 0.1;
+	cursor:pointer;
+}
+
+#nextButton {
+	position:absolute;
+	right:4%;
+	opacity: 0.1;
+	cursor:pointer;
+}
+#prevButton:hover{opacity: 0.8;}
+#nextButton:hover{opacity: 0.8;}
+
+
+/* 사용법 */
+.sec01 {
+	width: 100%;
+	height: 100vh;
+	background-color: #29335C;
+	background-size: cover; 
+	background-position: center;
+	color: #fff;
+}
+
+.sec01 h3{
+	position: relative;
+	top:20%;
+	left:60%;
+	transform: translateY(-50%);
+	color:#fff;
+}
+
+.instruction{
+	position: relative;
+	top: 20%;
+	display: flex;
+	justify-content: space-evenly;
+	text-align:center;
+}
+
+.instructionBox{
+	align:center;
+	width:15%
+}
+
+.instructionBox .icon{
+	height: 16vh;
+	width: 80%;
+	margin-left:10%;
+	border:2px solid #fff;
+}
+
+#subbutton2{
+	position: relative;
+	margin-top:50vh;
+	margin-left:80%;
+}
+#controlButtonBox {
+	 margin: 0 auto;
+	 width: 160px; 
+	}
+#controlButtonBox img {
+    float: left;
+    transform: translateY(-51px);
+    margin: 10px;
+}
+
+
+
+/*  오늘의 메뉴 */
+.sec02 {
+	width: 100%;
+	height: 100vh;
+	background-color: #F0CEA0;
+	background-size: cover; 
+	background-position: center;
+
+}
+
+/*후기 존*/
+.sec03 {
+	width: 100%;
+	height: 100vh;
+	background-color: #534D41;
+	background-size: cover; 
+	background-position: center;
+}
