@@ -93,11 +93,10 @@
 						var tTime = " 예상 시간 : "
 								+ ((resultData[0].properties.totalTime) / 60)
 										.toFixed(0) + "분";
-						var pay = "결제 금액 : "
-								+ ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "원";
-
+						
 						$("#result").text(tDistance + tTime);
-						$("#safeReturnPay").text(pay);
+						$("#safeReturnPay").html("결제 금액 : "
+								+ "<input type='text' id='srpay' value='" + ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "'readonly>" + "원");
 						
 						//기존 그려진 라인 & 마커가 있다면 초기화
 						if (resultdrawArr.length > 0) {

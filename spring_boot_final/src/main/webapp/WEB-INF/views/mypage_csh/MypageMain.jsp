@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,7 @@
 			<h1>마이페이지</h1>
 			<hr>
 			<div>
-			<button type="button" onclick="location.href='<c:url value='/mypage_csh/MypageUpdate/cjh'/>'">회원정보 수정</button>
+			<button type="button" onclick="location.href='<c:url value='/mypage_csh/MypageUpdate/'/>'">회원정보 수정</button>
 			</div><br><br>
 			
 			<div>

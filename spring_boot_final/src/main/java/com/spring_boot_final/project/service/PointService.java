@@ -1,7 +1,6 @@
 package com.spring_boot_final.project.service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -27,59 +26,33 @@ public class PointService implements IPointService {
 	}
 
 	@Override
-	public void changePoint(String memId, int pointAdd, String pointDescription) {
+	public void changePoint(String memId, int pointUsed, int pointTotal, String pointDescription) {
 		
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("memId", memId);
-		map.put("pointAdd", pointAdd);
-		map.put("pointDescription", pointDescription);
+		dao.changePoint(memId, pointUsed, pointTotal, pointDescription);
+	}
 
-		dao.changePoint(map);
+	
+	@Override
+	public void changePoint2(String memId, int pointAdd, int pointTotal, String pointDescription) {
+		
+		dao.changePoint2(memId, pointAdd, pointTotal, pointDescription);
 	}
 
 	@Override
-	public void updatePoint(String memId, int pointAdd) {
+	public int pointTotalCheck(String memId, int pointChangeNo) {
 		
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("memId", memId);
-		map.put("pointAdd", pointAdd);
-
-		dao.updatePoint(map);
-		
-	}
-
-	@Override
-	public void changePoint2(String memId, int pointUsed, String pointDescription) {
-		
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("memId", memId);
-		map.put("pointUsed", pointUsed);
-		map.put("pointDescription", pointDescription);
-
-		dao.changePoint2(map);
-		
-	}
-
-	@Override
-	public void updatePoint2(String memId, int pointUsed) {
-		
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("memId", memId);
-		map.put("pointUsed", pointUsed);
-
-		dao.updatePoint2(map);
-		
-	}
-
-	@Override
-	public int pointTotalCheck(String memId) {
-		
-		return dao.pointTotalCheck(memId);
+		return dao.pointTotalCheck(memId, pointChangeNo);
 	}
 	
 	@Override
 	public ArrayList<PointVO> pointView(String memId) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return dao.pointView(memId);
+	}
+
+	@Override
+	public int findLastestData(String memId) {
+		
+		return dao.findLastestData(memId);
 	}
 }
