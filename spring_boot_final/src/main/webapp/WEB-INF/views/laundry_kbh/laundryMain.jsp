@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-hello s
+
+	<form method="post" action="/bbbbbbbb">
+				정보 : <input type="text"><br>
+				<br> <input type="submit" value="등록">
+			</form>
 </body>
 </html>
