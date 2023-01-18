@@ -23,7 +23,7 @@ function setAccompany() {
  			dateType:"text",
  			success:function(result) {
  				if(result == "success") { 
- 					alert("신청 완료");
+ 					alert("신청 완료.");
  				} else {
  					alert("포인트가 부족합니다.");
  				}
