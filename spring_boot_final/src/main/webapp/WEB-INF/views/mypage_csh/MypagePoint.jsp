@@ -40,15 +40,17 @@
             <th style="width: 30%">변경 내역</th>
             <th style="width: 15%">총 포인트</th>
         </tr>
+
         <c:forEach var="pt" items="${ptList}">
             <tr>
                 <td>${pt.pointChangeNo}</td>
                 <td>${pt.memId}</td>
-                <td>${ pt.pointAdd }</td>
-                <td>${ pt.pointUsed }</td>
-                <td><fmt:formatDate value="${pt.pointDate }" pattern="yy-MM-dd HH:mm"/></td>
-                <td>${ pt.pointDescription }</td>
-                <td>${ pt.pointTotal }</td></tr>
+                <td>${pt.pointAdd}</td>
+                <td>${pt.pointUsed}</td>
+                <td><fmt:formatDate value="${pt.pointDate}" pattern="yy-MM-dd HH:mm"/></td>
+                <td>${pt.pointDescription}</td>
+                <td>${pt.pointTotal}</td>
+           </tr>
         </c:forEach>
     </table>
     <input type="button" value="뒤로가기" onclick="history.back(-1)">

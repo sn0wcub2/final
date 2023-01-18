@@ -79,7 +79,7 @@ public class PointService implements IPointService {
 	
 	@Override
 	public ArrayList<PointVO> pointView(String memId) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return dao.pointView(memId);
 	}
 }

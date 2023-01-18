@@ -1,5 +1,7 @@
 package com.spring_boot_final.project.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,13 +9,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.spring_boot_final.project.model.PointVO;
 import com.spring_boot_final.project.model.VO_csh;
 import com.spring_boot_final.project.service.MypageService_csh;
+import com.spring_boot_final.project.service.PointService;
 
 @Controller
 public class MypageController_csh {
 	@Autowired
 	private MypageService_csh service;
+	
+	@Autowired
+	private PointService ser;
+	
 	
 	// 마이페이지 메인
 	@RequestMapping("/mypage_csh/MypageMain")
@@ -52,7 +60,10 @@ public class MypageController_csh {
 	
 	// 포인트 내역
 	@RequestMapping("/mypage_csh/MypagePoint")
-	public String MypagePoint() {
+	public String MypagePoint(HttpSession session, Model model) {
+		String memId=(String) session.getAttribute("sid");
+		ArrayList<PointVO> ptList = ser.pointView(memId);
+        model.addAttribute("ptList", ptList);
 		return "mypage_csh/MypagePoint";
 	}
 	
