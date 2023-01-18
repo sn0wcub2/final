@@ -29,7 +29,7 @@ function setAccompany() {
  				}
  			},
  			erroe:function() {
- 				alert("로그인 후 다시 이용해주세요");
+ 				alert("로그인 후 다시 이용해주세요.");
  				location.href="/member_csh/login";
  			}
  		}); // ajax 끝
