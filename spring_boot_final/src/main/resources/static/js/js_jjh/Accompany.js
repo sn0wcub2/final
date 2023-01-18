@@ -22,10 +22,10 @@ function setAccompany() {
  			url:"/safe/safereturnsignup",
  			dateType:"text",
  			success:function(result) {
- 				if(result == "success") {
+ 				if(result == "success") { 
  					alert("신청 완료");
  				} else {
- 					alert("포인트가 부족합니다");
+ 					alert("포인트가 부족합니다.");
  				}
  			},
  			erroe:function() {
