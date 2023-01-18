@@ -66,8 +66,9 @@
 			
 			<div id="safeReturnSignUpBox">
 				<p id="result"></p>
+				<p id="safeReturnPay"></p>
 				<input type="submit" value="서비스 신청">
-				<button id='safeReturnSignUpBtn' onClick='location.href="/safe/signup"'>서비스 신청</button>
+				<button id='safeReturnSignUpBtn' onClick='location.href="/safe/signup"'>서비스 신청 버튼</button>
 			</div>
 		</form>
 		
