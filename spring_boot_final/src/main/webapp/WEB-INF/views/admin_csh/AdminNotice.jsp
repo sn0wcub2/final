@@ -8,7 +8,6 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-	내 지역 요청하기<br>
-	 데이터 테이블 만들고	마지막으로 작업하기
+		
 	</body>
 </html>

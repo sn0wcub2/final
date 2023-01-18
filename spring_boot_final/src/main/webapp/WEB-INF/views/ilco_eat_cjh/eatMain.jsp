@@ -5,41 +5,159 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>일코 잇 메인 페이지</title>
+		<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatMain.css"/>'>
 	</head>
 	<body>
 <!-- 		top -->
-		<br><br><hr>
-		<section id="sec01">
-			집에서 도시락... 서비스 내용<br>
-			<button type="button" onclick="location.href='<c:url value='/ilcoeat/eatSubscribe'/>'">구독</button>
-		</section>
-		<br><br><hr>
-		<section id="sec02">
+	<div class="nav">
+	
+		<img src="<c:url value='/image/cjh_beta_eat_logo.png'/>" class="logo">
+		<img src="<c:url value='/images/cjh_beta_eat_logo.png'/>" class="logo">
+		<ul>
+			<li> <a href="<c:url value='/ilcoeat/eatSubscribe'/>">구독하기</a></li>
+			<li> <a href="<c:url value='/ilcoeat/eatMenu'/>">오늘 메뉴</a></li>
+			<li> <a href="#">후기</a></li>
+			<li> <a href="#">문의하기</a></li>
+		</ul>
+	</div>
+	
+
+<!-- 	메인 광고 -->
+
+		<article id="month">
+
+			<div id="prevNextButtonBox">
+				<img id="prevButton" src='<c:url value="/image/right.png"/>'> 
+				<img id="nextButton" src='<c:url value="/image/right.png"/>'>
+			</div>
+			<div id="hyper">
+				<a href="<c:url value='/'/>" id="hyperButton">메인 페이지>></a>
+			</div>
+
+			<div id="limitbox">
+				<!-- 페이지 제한 -->
+				<div id="panel">
+					<div id="s1" class="section">
+						<p id="t1" class="title"><a href="<c:url value='/'/>" >JAVA</a></p>
+						<p id="o1" class="outline" >Draven as an orphan on the streets
+							of Basilich, Draven was headstrong and full of bravado,
+							frequently getting into vicious brawls with older street children
+							and shady underworld thugs. While supremely confident in his
+							own...</p>
+					</div>
+					<div id="s2" class="section">
+						<h1 id="t2" class="title"><a href="<c:url value='/'/>" >HTML5</a></h1>
+						<p id="o2" class="outline"><a>Beyond the material plane, outside
+							and somehow below it, lies the unknowable abyss. It is the realm
+							of the Void, where no mortal or immortal creature may ever walk.
+							It is not necessary to know how such a place ever came to be, nor
+							why</a></p>
+					</div>
+					<div id="s3" class="section">
+						<h1 id="t3" class="title"><a href="<c:url value='/'/>" >리액트</a></h1>
+						<p id="o3" class="outline">내용.</p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</article>
+
+		<!-- 실질적 실행 파트 -->
+
+	</section>
+
+
+
+</body>
+</html>
+
+<img src="<c:url value='/image/cjh_eatForMain2.jpg'/>" >
+	<div class="slider">
+		<div class="slides">
+			<input type="radio" name="radio-btn" id="radio1">
+			<input type="radio" name="radio-btn" id="radio2">
+			<input type="radio" name="radio-btn" id="radio3">
+			<div class="silde_first">
+				<img src="<c:url value='/image/cjh_beta_eat_logo.png'/>" alt="">
+			</div>
+			<div class="silde">
+				<img src="/image/cjh_eatForMain2.jpg" alt="">
+			</div>
+			<div class="silde">
+				<img src="/image/cjh_eatForMai3.jpg" alt="">
+			</div>
+		</div>
+		<div class="navigation-manual">
+			<label for="radio1" class="manual-btn"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn"></label>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+<!-- 	일코 푸드 사용법 -->
+	<div class="sec01">
+		<h3>3단계로 보는 일코 푸드 사용법</h3><br>
+		<div class="instruction">
+			<div class="instructionBox">
+				1. 지역 확인<br>
+				<div class="icon">
+					<img src="#" > 아이콘자리<br>
+				</div>
+				내 지역이 배달 가능 지역인지 확인<br>
+			</div>
+			<div class="instructionBox">
+				2. 메뉴 선택<br>
+				<div class="icon">
+					<img src="#" > 아이콘자리<br>
+				</div>
+				나에게 맞는 메뉴 선택<br>
+			</div>
+			<div class="instructionBox">
+				날짜 선택<br>
+				<div class="icon">
+					<img src="#" > 아이콘자리<br>
+				</div>
+				배달 받을 날짜 선택<br>
+			</div>
+		</div>
+		<div>
+				<button class="subbutton" id="subbutton2" type="button" onclick="location.href='<c:url value='/ilcoeat/eatSubscribe'/>'"> 나도 사용하기</button>
+		</div>
+	</div>
+
+
+
+<!-- 오늘의 메뉴 오늘의 메뉴 페이지 제작 후 진행 -->
+		<section class="sec02">
 			오늘의 메뉴<br>
 			오늘 날짜<br>
 			점심 메뉴 사진1, 사진2, 사진3<br>
 			저녁 메뉴 사진1, 사진2, 사진3<br>
+			오늘의 메뉴 페이지 제작 후 진행
 			<button type="button" onclick="location.href='<c:url value='/ilcoeat/eatMenu'/>'">메뉴 보기</button>
 		</section>
-		<br><br><hr>
-		<section id="sec03">
-			사용법 사진 등등<br>
-			사진 사진 사진
-		</section>
-		<br><br><hr>
-		<section id="sec04">
-			현재 지원 지역<br>
-			지역 리스트|하하|호호|허허|<br>
-			<button type="button" onclick="location.href='<c:url value='/ilcoeat/eatRequest'/>'"> 신청</button>
-		</section>
-		<br><br><hr>
-		<section id="sec05">
+		
+		
+		
+		<section class="sec03">
 			후기<br>
 			하하하하하
 		</section>
+		<hr><hr>
 		
-		<a href="/ilcoMypageasdfasdf">마이페이지 > 구독 관리</a>
+		<a href="/ilcoMypageasdfasdf">마이페이지 > 구독 관리</a><br>
+		<a href="/ilcofoodmange">관리자</a>
 
 <!-- 		bottom -->
 	</body>

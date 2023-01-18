@@ -17,11 +17,21 @@ function setAccompany() {
 
  $(document).ready(function() {
  	$("#safeReturnAddressForm").on("submit", function() {
- 		event.preventDefault();
- 		if ($('#result').text() == "") {
- 			alert("이용 경로를 입력하세요");
- 			return false;
- 		}
- 		location.href="/safe/safereturnsignup";
+ 		$.ajax({
+ 			type:"post",
+ 			url:"/safe/safereturnsignup",
+ 			dateType:"text",
+ 			success:function(result) {
+ 				if(result == "success") {
+ 					alert("신청 완료");
+ 				} else {
+ 					alert("포인트가 부족합니다");
+ 				}
+ 			},
+ 			erroe:function() {
+ 				alert("로그인 후 다시 이용해주세요");
+ 				location.href="/member_csh/login";
+ 			}
+ 		}); // ajax 끝
  	});
  });
