@@ -51,8 +51,8 @@ function fn_cancel(){
     
 }
  
-//수정
-function fn_update(){
+//수정 
+function fn_update(){  
     
     var form = document.getElementById("viewForm");
     
