@@ -59,22 +59,28 @@
           FROM point
           WHERE memId=#{memId}
       </select>
+<!-- 최근 데이터 가져오기 -->
+	  <select id="findLastestData" resultType="int">
+	  	  SELECT MAX(pointChangeNo)
+          FROM point
+          WHERE memId=#{memId}
+	  </select>
+      
 <!-- 현재 포인트 조회 -->
       <select id="pointTotalCheck" resultType="int">
           SELECT pointTotal
           FROM point
-          WHERE memId=#{memId} 
-          AND MAX(pointChangeNo)
+          WHERE memId=#{memId} AND pointChangeNo=#{pointChangeNo}
       </select>
       <!--   포인트 사용 -->
  	  <insert id="changePoint" parameterType="hashmap">
-          INSERT INTO point(memId, pointTotal, pointAdd, pointDescription, pointDate)
-          VALUES (#{memId}, pointTotal-#{pointAdd}, #{pointAdd}, #{pointDescription},  #{pointDate})
+          INSERT INTO point(memId, pointTotal, pointUsed, pointDescription)
+          VALUES (#{memId}, #{pointTotal}-#{pointUsed}, #{pointUsed}, #{pointDescription})
       </insert>
 	<!--   포인트 추가 -->
        <insert id="changePoint2" parameterType="hashmap">
-          INSERT INTO point(memId, pointTotal, pointAdd, pointDescription, pointDate)
-          VALUES (#{memId}, pointTotal+#{pointAdd}, #{pointAdd}, #{pointDescription},  #{pointDate})
+          INSERT INTO point(memId, pointTotal, pointAdd, pointDescription)
+          VALUES (#{memId}, #{pointTotal}+#{pointAdd}, #{pointAdd}, #{pointDescription})
       </insert>
   </mapper>
   

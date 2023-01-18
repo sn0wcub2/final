@@ -17,9 +17,12 @@ function setAccompany() {
 
  $(document).ready(function() {
  	$("#safeReturnAddressForm").on("submit", function() {
+ 		event.preventDefault();
+ 		var srpay = $("#srpay").val();
  		$.ajax({
  			type:"post",
  			url:"/safe/safereturnsignup",
+ 			data:{"srpay":srpay},
  			dateType:"text",
  			success:function(result) {
  				if(result == "success") { 
