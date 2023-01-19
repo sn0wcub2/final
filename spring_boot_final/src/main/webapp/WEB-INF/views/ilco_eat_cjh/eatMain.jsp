@@ -38,7 +38,7 @@
 						<p id="o1" class="outline" > 식사 준비는 일코 푸드에서 해드리겠습니다</p>
 					</div>
 					<div id="s2" class="section">
-						<p id="t2" class="title">음식이란 말이죠~~옹2</p>
+						<p id="t2" class="title">음식이란 말이죠</p>
 						<p id="o2" class="outline" >&nbsp;&nbsp;일코 푸드만의 엄격한 식품 검증 기준을 통해 <br>엄선된 재료만을 선별하여 최고 품질 도시락을<br> 문 앞까지 가져가는 것이 일코 푸드의 철학입니다</p>
 					</div>
 					<div id="s3" class="section">
@@ -64,42 +64,7 @@
 		</div>
 			
 		
-
-
-<!-- 	일코 푸드 사용법 -->
-	<div class="sec01">
-		<h3>3단계로 보는 일코 푸드 사용법</h3><br>
-		<div class="instruction">
-			<div class="instructionBox">
-				1. 지역 확인<br>
-				<div class="icon">
-					<img src="#" > 아이콘자리<br>
-				</div>
-				내 지역이 배달 가능 지역인지 확인<br>
-			</div>
-			<div class="instructionBox">
-				2. 메뉴 선택<br>
-				<div class="icon">
-					<img src="#" > 아이콘자리<br>
-				</div>
-				나에게 맞는 메뉴 선택<br>
-			</div>
-			<div class="instructionBox">
-				날짜 선택<br>
-				<div class="icon">
-					<img src="#" > 아이콘자리<br>
-				</div>
-				배달 받을 날짜 선택<br>
-			</div>
-		</div>
-		<div>
-				<button class="subbutton" id="subbutton2" type="button" onclick="location.href='<c:url value='/ilcoeat/eatSubscribe'/>'"> 나도 사용하기</button>
-		</div>
-	</div>
-
-
-
-<!-- 오늘의 메뉴 오늘의 메뉴 페이지 제작 후 진행 -->
+<!-- 오늘의 메뉴 -->
 		<section class="sec02">
 			오늘의 메뉴<br>
 			오늘 날짜<br>
@@ -108,6 +73,41 @@
 			오늘의 메뉴 페이지 제작 후 진행
 			<button type="button" onclick="location.href='<c:url value='/ilcoeat/eatMenu'/>'">메뉴 보기</button>
 		</section>
+
+<!-- 	일코 푸드 사용법 -->
+<!-- # main #29335C side #A8C686  -->
+	<div class="sec01">
+				<h3>일코 푸드 사용법</h3>
+				<p>원하는 메뉴, 원하는  위치, 원하는 대로 정성스럽게  </p>
+		<div class="instruction">
+			<div class="instructionBox">
+				<div class="circle">
+				 	<div class="in_num">1</div>
+				</div>
+				<div class="i1">지역 확인</div>
+				<div class="text1">서비스 운영 지역을 확인 후 받을 주소를 입력 </div>
+			</div>
+			<div class="instructionBox">
+				<div class="circle">
+				 	<div class="in_num">2</div>
+				</div>
+				<div class="i1">메뉴 선택</div>
+				<div class="text1">내가 취향에 맞는 도시락을 유심히 생각해보기</div>
+			</div>			<div class="instructionBox">
+				<div class="circle">
+				 	<div class="in_num">3</div>
+				</div>
+				<div class="i1">일자 선택</div>
+				<div class="text1">하루도 괜찮으니 도시락을 먹고 싶은 날짜 선택</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+<!-- 오늘의 메뉴 오늘의 메뉴 페이지 제작 후 진행 -->
+
 		
 		
 		

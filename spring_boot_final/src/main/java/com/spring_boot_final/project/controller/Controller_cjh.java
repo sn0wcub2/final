@@ -1,6 +1,8 @@
 package com.spring_boot_final.project.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,17 +54,21 @@ public class Controller_cjh {
 	
 	// 관리자 페이지 메뉴 등록
 	@RequestMapping("/ilcofoodmange/insertmenu")
-	public String insertmenu(@RequestParam("date") String date,
+	public String insertmenu(@RequestParam("menu_date") String date,
 												@RequestParam("menu_type") String mt,
+												@RequestParam List<String> allergy,
 												MenuVO_cjh menu){
+		// 알러지 정보 리스트로 분할
+		String A_info = ""; 
+		for( String i : allergy) {
+			A_info += "/" + i;
+		}
+		menu.setAllergy_info(A_info+"/");
+		// mid 생성
 		menu.setMenu_id(date + "-" + mt);
-		menu.setMenu_pic(null);
 		System.out.println(menu.getMenu_id());
 		service.insertmenu(menu);
-//		System.out.println(menu.getAllergy_info());
-//		System.out.println(menu.getMenu_comp());
-//		System.out.println(menu.getMenu_date());
-		return "redirect:/ilcoeat/main";
+		return "ilco_eat_cjh/eat_manage";
 	}
 	
 }

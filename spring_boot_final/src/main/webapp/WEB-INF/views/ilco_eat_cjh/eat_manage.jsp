@@ -8,39 +8,109 @@
 <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 <script src="<c:url value='/js/js_cjh/makeMID.js'/>"></script>
 <script src="<c:url value='/js/js_cjh/jquery-ui.js'/>"></script>
+<script src="<c:url value='/js/js_cjh/evo-calendar.min.js'/>"></script>
 <link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
 <link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/datepicker.css"/>'>
 <link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/jquery-ui.css"/>'>
-<title>Insert title here</title>
+
+<title>메뉴 등록</title>
+</head>
 </head>
 <body>
-
-		
+<a href="/ilcoeat/main"> 일코 푸드 메인</a>
+<h3>헤더 들어갈 자리</h3>
+		 <div class="inputform">
 			메뉴 등록
 			<form method="post" action="/ilcofoodmange/insertmenu">
-				식단 일자 : <input type="date" name="date" id="date">
-				<br> 메뉴 종류 : <select id="type" name="menu_type">
-					<option value="" selected disabled>메뉴 타입</option>
-					<option value="LA">L-A</option>
-					<option value="LB">L-B</option>
-					<option value="DA">D-A</option>
-					<option value="DB">D-B</option>
-				</select><br> 식단 구성 : <input type="text" name="menu_comp"><br>
-				영양정보 : <input type="text" name="nutrition_info"><br> 알레르기
-				정보 : <input type="text"><br>
-				사진 첨부>>
-				<br> <input type="submit" value="등록">
-			</form>
-		등록 일자 확인
-		<div class="calendar">
-			<div class="cal_head" >
 				<div class="row">
-					<div><</div>
-					<div>2023년</div>
-					<div> 01월</div>
-					<div>></div>
+					<div class="what">
+						식단 일자 : 
+					</div>
+					<div class="inputarea">
+						<input type="date" name="menu_date" id="date">
+					</div>
 				</div>
 				<div class="row">
+					<div class="what">
+						메뉴 타입 : 
+					</div>
+					<div class="inputarea">
+						<select id="type" name="menu_type">
+							<option value="" selected disabled>식단 유형 선택</option>
+							<option value="LA">점심 A-type</option>
+							<option value="LB">점심 B-type</option>
+							<option value="DA">저녁 A-type</option>
+							<option value="DB">저녁 B-type</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+						식판 구성
+				</div>		
+				<div class="row">
+					<div class="inputarea">
+						<div class="tray">		
+							<div class="trayTop">
+							        <input type="text" value="반찬1"name="men1">
+							        <input type="text" value="반찬2"name="men2">
+							        <input type="text" value="반찬3"name="men3">
+							</div>
+							<div class="trayBottom">
+							        <input type="text" value="밥"name="menRice">
+	  						        <input type="text" value="국"name="menSoup">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="what">
+						영양 정보
+					</div>					
+				</div>
+				<div class="row">
+					<div class="inputarea">
+						<div class="nutrition">
+						        총 열량 : <input type="text" name="cal">
+						        단백질 : <input type="text" name="prot">
+						        탄수화물 : <input type="text" name="carb">
+						        지방 : <input type="text" name="fat">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="what">
+						알레르기 정보 : 
+					</div>
+					<input type="checkbox" id="allergy" name="allergy" value="갑각류">
+					<label for="allergy"> 갑각류</label>
+					<input type="checkbox" id="allergy" name="allergy" value="달걀">
+					<label for="allergy"> 달걀</label>
+					<input type="checkbox" id="allergy" name="allergy" value="견과류">
+					<label for="allergy"> 견과류</label>
+					<input type="checkbox" id="allergy" name="allergy" value="우유">
+					<label for="allergy"> 우유</label>
+					이미지 업로드
+				</div>
+				
+				<input type="submit" value="등록">
+			</form>
+		</div>
+		
+		
+		
+		
+<!-- 		
+		
+			등록 일자 확인
+			<div class="calendar">
+				<div class="cal_head" >
+					<div class="row">
+						<div><</div>
+						<div>2023년</div>
+						<div> 01월</div>
+						<div>></div>
+					</div>
+					<div class="row">
 					<div>일</div>
 					<div>월</div>
 					<div>화</div>
@@ -102,8 +172,20 @@
 			
 			
 			
-		<input type='text' id="date-picker" name="date-picker" class='datepicker'>
-            <script>
+
+
+            
+            
+            
+            
+		</div>
+		<div class="cal_footer" >
+		</div>
+		
+		
+		
+		 -->
+		             <script>
                 $.datepicker.setDefaults({
                       dateFormat: 'yy-mm-dd',
                       prevText: '이전 달',
@@ -124,14 +206,6 @@
                         });
                   })
             </script>
-            
-            
-            
-            
-		</div>
-		<div class="cal_footer" >
-		</div>
-		
 </body>
 
 </html>

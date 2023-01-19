@@ -1,7 +1,63 @@
 *{
-	align-items: center;
+	margin:0;
+	padding: 0;
+}
+h3{
+	height: 300px;
+	background: #618a4a;	
+}
+.inputform{
+	margin: auto;
+	background: #614a4a;	
+    text-align: center;
+    width: 800px;
+}
+.row{
+	padding-left:100px;
+	padding-right:100px;
+	padding-bottom:50px;
+	display: flex;
+	align-content: center;
+	background: #611a4a;	
+}
+.what{
+	width: 150px;	
+	text-align:left;
+}
+.sub_row{
+	margin-left:100px;
+	padding-left:100px;
+	padding-right:100px;
+	padding-bottom:50px;
+	display: flex;
+}
+.tray{
+	height:300px;
+	background:#f23g2d;
+	#f88474
+}
+.trayTop{
+	margin:auto;
+	width:600px;
+	height:50%;
+}
+.trayBottom{
+	margin:auto;
+	width:600px;
+	height:50%;
+}
+.tray input{
+	height:130px;
+	text-align: center;
+}
+.nutrition input{
+	width:60px;
 }
 
+/* .inputform{
+	margin: auto;
+	text-align: center;
+}
 .row{
 	display: flex;
 }
@@ -20,4 +76,4 @@
 
 .week div:hover{
 	background-color:green;	
-}
+} */
