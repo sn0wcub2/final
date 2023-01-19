@@ -6,25 +6,41 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>메뉴 확인</title>
+	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatMenu.css"/>'>
 	</head>
 	<body>
-		오늘 메뉴<br>
+		오늘 메뉴 ((요약))<br>
 		<div>
 			<c:set var="ymd" value="<%=new java.util.Date()%>" />
 			<fmt:formatDate value="${ymd}" pattern="yy년 MM월 dd일의 식단" />
 		</div>
-		<table>
-			<tr>
-				<th>날짜 A 식단</th><th>날짜 B 식단</th><th>날짜 C 식단</th>
-			</tr>
-			<tr><td>사진</td><td>사진</td><td>사진</td></tr>
-			<tr><td>구성</td><td>구성</td><td>구성</td></tr>
-			<tr><td>구성</td><td>구성</td><td>구성</td></tr>
-			<tr><td>영양정보</td><td>영양정보</td><td>영양정보</td></tr>
-		</table>
-		테이블 항목 누르면 상세 정보 띄우기
-<!-- 		메뉴 사진, 구성 다양한 정보 -->
+	<c:forEach var="menu" items="${menuList}">
+	<section>
+			<div class="top">
+				<img id="menupic" src='<c:url value="#"/>'>
+			</div>
+			<div class="bottom">
+				<div class="row">
+					<div class="expln">메뉴 구성</div>
+					<div class="elmt">"${menu.men1}, ${menu.men2}, ${menu.men3}, ${menu.menRice}, ${menu.menSoup}</div>
+				</div>
+			</div>
+	</section>
+	</c:forEach>
+	css 설계용
+	<section>
+			<div class="top">
+				<img id="menupic" src='<c:url value="#"/>'>
+			</div>
+			<div class="bottom">
+				<div class="row">
+					<div class="expln">메뉴 구성</div>
+					<div class="elmt">"${menu.men1}, ${menu.men2}, ${menu.men3}, ${menu.menRice}, ${menu.menSoup}</div>
+				</div>
+			</div>
+	</section>
+
 	
 	</body>
 </html>

@@ -37,10 +37,10 @@
 					<div class="inputarea">
 						<select id="type" name="menu_type">
 							<option value="" selected disabled>식단 유형 선택</option>
-							<option value="LA">점심 A-type</option>
-							<option value="LB">점심 B-type</option>
-							<option value="DA">저녁 A-type</option>
-							<option value="DB">저녁 B-type</option>
+							<option value="Day-A">점심 A-type</option>
+							<option value="Day-B">점심 B-type</option>
+							<option value="Night-A">저녁 A-type</option>
+							<option value="Night-B">저녁 B-type</option>
 						</select>
 					</div>
 				</div>

@@ -1,10 +1,15 @@
 package com.spring_boot_final.project.controller;
 
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -30,7 +35,13 @@ public class Controller_cjh {
 	
 	// 메뉴 페이지로 이동
 	@RequestMapping("/ilcoeat/eatMenu")
-	public String ilcoeatMenu(){
+	public String ilcoeatMenu(Model model){
+		// 오늘 날짜로 검색 > 금일 날짜 문자열 변환
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		ArrayList<MenuVO_cjh> menuList = service.todaymenu(sdf.format(date));
+		model.addAttribute("menuList", menuList);
 		return "ilco_eat_cjh/eatmenu";
 	}
 	
