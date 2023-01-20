@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* { margin:0 auto; } 
+
+/* 모든 콘텐츠를 포함 wrap box */
+#wrap {
+	/* width:1280px; */
+	/* background-color:#eeeeee;  */
+	text-align:center;
+	position:relative;
+}
+
+header {
+	margin-top:30px;	
+}
+
+#comList {
+	width:800px;
+	margin-top:30px;
+}
+
+#comList tr th{
+	margin:5px;
+	border-bottom:dotted 1px red;
+}
+
+#comList tr td{
+	margin:5px;
+	border-bottom:dotted 1px red;
+}

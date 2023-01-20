@@ -14,11 +14,11 @@
 	<a href="<c:url value='/member_csh/login'/>">로그인</a>
 	<a href="<c:url value='/member_csh/signUp'/>">회원가입</a>
 	<a href="/aaaaaaaaaaa"> 세탁 서비스</a>
-	<a href=""> 커뮤니티 서비스</a>
+	<a href="/ilcocommunity/boardlist">커뮤니티 서비스</a>
 	<a href=""> 판매 페이지 </a>
 	<a href="<c:url value='/admin_csh/AdminMain'/>"> 관리자 페이지</a>
 	<a href="<c:url value='/mypage_csh/MypageMain'/>"> 마이 페이지</a>
-	<a href="/ilcoeat/main"> 일코 푸드 메인</a>
+	<a href="/ilcoeat/main"> 일코 푸드 메인</a><br><br><br><br>
 	
 	</body>
 </html>

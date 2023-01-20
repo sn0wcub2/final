@@ -10,15 +10,15 @@
 </head>
 <body>
 	<div>
-		<form id="viewForm" name="viewForm" method="post">
+		<form id="viewForm" name="viewForm" method="post" >
 			<div>
-				<h2>글쓰기</h2>
+				<h2>글수정</h2>
 				<div>
 					<table>
 						<tr>
 							<th>제목</th>
-							<td><input style="width: 500px" type="text" id="title"
-								name="title" value="${result.title }" /></td>
+							<td><input style="width: 500px" type="text" id="comTitle"
+								name="comTitle" value="${result.title }" /></td>
 						</tr>
 						<tr>
 							<th>내용</th>
@@ -26,15 +26,10 @@
 									id="content" name="content"><c:out
 										value="${result.content }" /></textarea></td>
 						</tr>
-						<tr>
-							<th>작성자</th>
-							<td><input style="width: 500px" type="text" id="writer"
-								name="writer" value="${result.writer }" /></td>
-						</tr>
+						
 					</table>
 					<div>
-						<a href='#' onClick='fn_update()'>수정</a> <a href='#'
-							onClick='fn_cancel()'>목록</a> <a href='#' onClick='fn_relay()'>답변</a>
+						<input type="submit" value="등록">
 					</div>
 				</div>
 			</div>
