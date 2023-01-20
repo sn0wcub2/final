@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_final.project.dao.IPointDAO">
+  
+<!-- 
+      <insert id="insertMemIdPoint" parameterType="string">
+          INSERT INTO point(memId, pointAdd, pointDescription)
+          VALUES (#{memId}, 3000, "회원가입 포인트")
+      </insert>
+
+
+
+      포인트 변동 사항 넣기
+      <insert id="changePoint" parameterType="hashmap">
+          INSERT INTO point(memId, pointAdd, pointDescription)
+          VALUES (#{memId}, #{pointAdd}, #{pointDescription})
+      </insert>
+
+      총 포인트 업데이트
+ 
+
+      포인트 변동 사항 넣기
+      <insert id="changePoint2" parameterType="hashmap">
+          INSERT INTO point(memId, pointUsed, pointDescription, pointTotal)
+          VALUES (#{memId}, #{pointUsed}, #{pointDescription}, pointTotal+#{pointAdd})
+      </insert>
+
+      총 포인트 업데이트
+      <update id="updatePoint2" parameterType="hashmap">
+          UPDATE point
+          SET pointTotal = pointTotal-#{pointUsed}
+          WHERE memId=#{memId}
+      </update>
+
+    총 포인트 가져오기
+      <select id="pointTotalCheck" parameterType="string" resultType="int">
+        SELECT pointTotal
+        FROM point
+        WHERE memId=#{memId}
+    </select> -->
+    
+<!-- 포인트 사용 내역 반환 타입 -->
+    <resultMap id="ptResult" type="com.spring_boot_final.project.model.PointVO" >
+        <result property="pointChangeNo" column="pointChangeNo"  />
+        <result property="pointTotal" column="pointTotal"  />
+        <result property="memId" column="memId"  />
+        <result property="pointAdd" column="pointAdd"  />
+        <result property="pointUsed" column="pointUsed"  />
+        <result property="pointDate" column="pointDate"  />
+        <result property="pointDescription" column="pointDescription"  />
+    </resultMap>
+ 
+<!-- 포인트 사용내역 조회 -->
+      <select id="pointView" resultMap="ptResult">
+          SELECT *
+          FROM point
+          WHERE memId=#{memId}
+      </select>
+<!-- 현재 포인트 조회 -->
+      <select id="pointTotalCheck" resultType="int">
+          SELECT pointTotal
+          FROM point
+          WHERE memId=#{memId} 
+          AND MAX(pointChangeNo)
+      </select>
+      <!--   포인트 사용 -->
+ 	  <insert id="changePoint" parameterType="hashmap">
+          INSERT INTO point(memId, pointTotal, pointAdd, pointDescription, pointDate)
+          VALUES (#{memId}, pointTotal-#{pointAdd}, #{pointAdd}, #{pointDescription},  #{pointDate})
+      </insert>
+	<!--   포인트 추가 -->
+       <insert id="changePoint2" parameterType="hashmap">
+          INSERT INTO point(memId, pointTotal, pointAdd, pointDescription, pointDate)
+          VALUES (#{memId}, pointTotal+#{pointAdd}, #{pointAdd}, #{pointDescription},  #{pointDate})
+      </insert>
+  </mapper>
+  
+  

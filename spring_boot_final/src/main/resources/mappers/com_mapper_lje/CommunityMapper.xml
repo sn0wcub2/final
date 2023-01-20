@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_final.project.dao.ICommunityDAO_lje">
+  <resultMap id="comResult" type="com.spring_boot_final.project.model.CommunityVO_lje" >
+  		<result property="comNo"  column="comNo"  />
+  		<result property="memId"  column="memId"  />
+  		<result property="comTitle"  column="comTitle"  />
+  		<result property="comDate"  column="comDate"  />
+  		<result property="comContent"  column="comContent"  />
+  		<result property="comCnt"  column="comCnt"  />
+  	</resultMap>
+  
+  <!-- 전체 글 조회 -->
+  <select id="listAllCommunity" resultMap="comResult">
+  		SELECT * FROM community ORDER BY comNo
+  </select>
+  
+  <!-- 글쓰기 -->
+  <insert id="insertCommunity" parameterType="com.spring_boot_final.project.model.CommunityVO_lje">
+  		INSERT INTO community (memId, comTitle, comContent, comCnt)
+  		VALUES (#{memId}, #{comTitle}, #{comContent}, 0)
+  </insert>
+  
+  <!-- 상세 글 조회 : 글번호(comNo) 전달 받아서 글 정보(CommunityVO_lje) 반환-->
+  <select id="detailViewCommunity" parameterType="string" 
+  												   resultType="com.spring_boot_final.project.model.CommunityVO_lje">
+  		SELECT * FROM community WHERE comNo = #{comNo}
+  </select>
+  
+  </mapper>

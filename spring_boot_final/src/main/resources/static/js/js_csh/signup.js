@@ -1,5 +1,5 @@
 /**
- * signup.js
+ * signup.js 
  */
 function signupCheck() {
 	var memId = document.getElementById("memId");

@@ -7,8 +7,11 @@
 		<meta charset="UTF-8">
 		<title>일코 잇 메인 페이지</title>
 		<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatMain.css"/>'>
+		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>" ></script>
+		<script src='<c:url value="/js/js_cjh/panel.js"/>'> </script>
 	</head>
 	<body>
+	<div id="wrap">
 <!-- 		top -->
 	<div class="nav">
 	
@@ -20,45 +23,47 @@
 			<li> <a href="#">문의하기</a></li>
 		</ul>
 	</div>
-		 <a href="<c:url value='/ilcoeat/eatSubscribe'/>">구독하기</a>
 	
 
-
-<img src="<c:url value='/image/cjh_eatForMain1.jpg'/>" >
-<img src="<c:url value='/image/cjh_eatForMain1.JPG'/>">
-<img src="<c:url value='/image/cjh_eatForMain1.jpg'/>" >
-
-
-
 <!-- 	메인 광고 -->
-	<div class="slider">
-		<div class="slides">
-			<input type="radio" name="radio-btn" id="radio1">
-			<input type="radio" name="radio-btn" id="radio2">
-			<input type="radio" name="radio-btn" id="radio3">
-			<div class="silde_first">
-				<img src="<c:url value='/image/cjh_beta_eat_logo.png'/>" alt="">
+		<div id="mainbox">
+			<div id="prevNextButtonBox">
+				<img id="prevButton" src='<c:url value="/image/cjh_nextBtn.png"/>'>
+				 <img id="nextButton"	src='<c:url value="/image/cjh_nextBtn.png"/>'>
+			</div>    
+			<div id="slideShowBox">
+				<div id="pannel">
+					<div id="s1" class="section">
+						<p id="t1" class="title">나의 소중한 시간을 위해</p>
+						<p id="o1" class="outline" > 식사 준비는 일코 푸드에서 해드리겠습니다</p>
+					</div>
+					<div id="s2" class="section">
+						<p id="t2" class="title">음식이란 말이죠~~옹2</p>
+						<p id="o2" class="outline" >&nbsp;&nbsp;일코 푸드만의 엄격한 식품 검증 기준을 통해 <br>엄선된 재료만을 선별하여 최고 품질 도시락을<br> 문 앞까지 가져가는 것이 일코 푸드의 철학입니다</p>
+					</div>
+					<div id="s3" class="section">
+						<p id="t3" class="title">"일코 두 번 먹자"</p>
+						<p id="o3" class="outline" >일코 푸드의 두번 째 메뉴 출시</p>
+					</div>
+					<div id="s4" class="section">
+						<p id="t4" class="title">메뉴 개발을 위한 끝 없는 도전</p>
+					</div>
+					<div id="s5" class="section">
+						<p id="t5" class="title"> 특별한 포장</p>
+						<p id="o5" class="outline" >항상 특별해야할 나를 위해 그래핀 소재를 이용한 패키지를 이용하고 있어요!</p>
+					</div>
+				</div>
 			</div>
-			<div class="silde">
-				<img src="/image/cjh_eatForMain2.jpg" alt="">
-			</div>
-			<div class="silde">
-				<img src="/image/cjh_eatForMai3.jpg" alt="">
-			</div>
+       		<div id="controlButtonBox">
+       			<img src="<c:url value='/image/cjh_controlButton1.png'/>" class="controlButton">
+       			<img src="<c:url value='/image/cjh_controlButton1.png'/>" class="controlButton">
+       			<img src="<c:url value='/image/cjh_controlButton1.png'/>" class="controlButton">
+       			<img src="<c:url value='/image/cjh_controlButton1.png'/>" class="controlButton">
+       			<img src="<c:url value='/image/cjh_controlButton1.png'/>" class="controlButton">
+       		</div>
 		</div>
-		<div class="navigation-manual">
-			<label for="radio1" class="manual-btn"></label>
-			<label for="radio2" class="manual-btn"></label>
-			<label for="radio3" class="manual-btn"></label>
-		</div>
-	</div>
-
-
-
-
-
-
-
+			
+		
 
 
 <!-- 	일코 푸드 사용법 -->
@@ -114,7 +119,7 @@
 		
 		<a href="/ilcoMypageasdfasdf">마이페이지 > 구독 관리</a><br>
 		<a href="/ilcofoodmange">관리자</a>
-
-<!-- 		bottom -->
+	</div>
+<!-- bottom -->
 	</body>
 </html>

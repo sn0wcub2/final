@@ -11,8 +11,8 @@ import org.springframework.context.annotation.ComponentScan;
 public class SpringBootFinalApplication 
 {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootFinalApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootFinalApplication.class, args);
+    }
 
 }
