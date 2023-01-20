@@ -6,59 +6,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>컴퓨니티 글쓰기</title>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comList.css' />">
 </head>
 <body>
-	<div>
-		<form id="writeForm" name="writeForm" method="post">
+	<div id="wrap">
+		<form id="writeForm" name="writeForm" method="post"  action="<c:url value='/ilcocommunity/insertCommunity' />">
 			<div>
 				<h2>글쓰기</h2>
 				<div>
 					<table>
 						<tr>
 							<th>제목</th>
-							<td><input style="width: 500px" type="text" id="title"
-								name="title" /></td>
+							<td><input style="width: 500px" type="text" id="comTitle"
+								name="comTitle" /></td>
 						</tr>
 						<tr>
 							<th>내용</th>
 							<td><textarea style="width: 500px" rows="10" cols="10"
-									id="content" name="content"></textarea></td>
-						</tr>
-						<tr>
-							<th>작성자</th>
-							<td><input style="width: 500px" type="text" id="writer"
-								name="writer" /></td>
-						</tr>
+									id="comContent"  name="comContent"></textarea></td>
+						</tr>						
 					</table>
 					<div>
-						<a href='#' onClick='fn_addtoBoard()'>글 등록</a> <a href='#'
-							onClick='fn_cancel()'>목록</a>
+						<input type="submit" value="등록"> <input type="reset" value="취소">
 					</div>
 				</div>
 			</div>
 		</form>
-		<script>
-//글쓰기
-function fn_addtoBoard(){
-    
-    var form = document.getElementById("writeForm");
-    
-    form.action = "<c:url value='/board/write.do'/>";
-    form.submit();
-    
-}
- 
-//목록
-function fn_cancel(){
-    
-    var form = document.getElementById("writeForm");
-    
-    form.action = "<c:url value='/board/boardList.do'/>";
-    form.submit();
-    
-}
-</script>
+	
 	</div>
 </body>
 </html>
