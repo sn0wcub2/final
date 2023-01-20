@@ -24,7 +24,7 @@
 		// 1. 지도 띄우기
 		map = new Tmapv2.Map("map_div", {
 			center : new Tmapv2.LatLng(37.500692, 127.036978),
-			width : "80%",
+			width : "65%",
 			height : "400px",
 			zoom : 17,
 			zoomControl : true,
