@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>메뉴 확인</title>
-	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatMenu.css"/>'>
+	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatMenuAll.css"/>'>
 	</head>
 	<body>
 		오늘 메뉴 ((요약))<br>
@@ -37,26 +37,6 @@
 			<c:set var="ymd" value="<%=new java.util.Date()%>" />
 			<fmt:formatDate value="${ymd}" pattern="yy년 MM월 dd일 저녁" />
 		</div>
-	<div class="box" id="DinnerBox">
-		<c:forEach var="menu" items="${menuList}" begin="2" end="3">
-			<section>
-					<div class="top">
-						<img class="menupic" src='<c:url value="#"/>'>
-					</div>
-					<div class="bottom">
-						<div class="row">
-							<div class="expln">메뉴 구성</div>
-							<div class="elmt"><div class="elmt1">메인 메뉴 :</div><div class="elmt2"> "${menu.mainMenu}"</div></div>
-							<div class="elmt"><div class="elmt1">서브 메뉴 :</div><div class="elmt2"> "${menu.subMenu}"</div></div>
-							<div class="elmt"><div class="elmt1">기타 메뉴 :</div><div class="elmt2"> "${menu.other}"</div></div>
-						</div>
-					</div>
-			</section>
-		</c:forEach>
-	</div>
-	<a href="/ilcoeat/menu_all"> 일코 푸드 전체 조회</a>
 
-
-	
 	</body>
 </html>

@@ -12,5 +12,6 @@
 				정보 : <input type="text"><br>
 				<br> <input type="submit" value="등록">
 			</form>
+
 </body>
 </html>

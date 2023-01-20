@@ -6,9 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
-<script src="<c:url value='/js/js_cjh/makeMID.js'/>"></script>
+<script src="<c:url value='/js/js_cjh/eat_manage.js'/>"></script>
 <script src="<c:url value='/js/js_cjh/jquery-ui.js'/>"></script>
-<script src="<c:url value='/js/js_cjh/evo-calendar.min.js'/>"></script>
 <link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
 <link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/datepicker.css"/>'>
 <link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/jquery-ui.css"/>'>
@@ -27,13 +26,11 @@
 						식단 일자 : 
 					</div>
 					<div class="inputarea">
-						<input type="date" name="menu_date" id="date">
+						<input type="date" name="menu_date" id="date" placeholder="식단 일자">
 					</div>
 				</div>
 				<div class="row">
-					<div class="what">
-						메뉴 타입 : 
-					</div>
+
 					<div class="inputarea">
 						<select id="type" name="menu_type">
 							<option value="" selected disabled>식단 유형 선택</option>
@@ -44,36 +41,24 @@
 						</select>
 					</div>
 				</div>
-				<div class="row">
-						식판 구성
-				</div>		
+
 				<div class="row">
 					<div class="inputarea">
-						<div class="tray">		
-							<div class="trayTop">
-							        <input type="text" value="반찬1"name="men1">
-							        <input type="text" value="반찬2"name="men2">
-							        <input type="text" value="반찬3"name="men3">
-							</div>
-							<div class="trayBottom">
-							        <input type="text" value="밥"name="menRice">
-	  						        <input type="text" value="국"name="menSoup">
-							</div>
-						</div>
+							        <input type="text" placeholder="메인  메뉴" name="mainMenu">
+							        <input type="text" placeholder="서브 메뉴" name="subMenu">
+							        <input type="text" placeholder="이외" name="other">
 					</div>
 				</div>
 				<div class="row">
-					<div class="what">
-						영양 정보
-					</div>					
+			
 				</div>
 				<div class="row">
 					<div class="inputarea">
 						<div class="nutrition">
-						        총 열량 : <input type="text" name="cal">
-						        단백질 : <input type="text" name="prot">
-						        탄수화물 : <input type="text" name="carb">
-						        지방 : <input type="text" name="fat">
+						      	 <input type="text" name="cal" placeholder="총 열량">
+						     	 <input type="text" name="prot" placeholder="단백질">
+						         <input type="text" name="carb" placeholder="탄수화물">
+						       	 <input type="text" name="fat" placeholder="지방">
 						</div>
 					</div>
 				</div>
@@ -81,13 +66,13 @@
 					<div class="what">
 						알레르기 정보 : 
 					</div>
-					<input type="checkbox" id="allergy" name="allergy" value="갑각류">
+					<input type="checkbox" class="allergy" name="allergy" value="갑각류">
 					<label for="allergy"> 갑각류</label>
-					<input type="checkbox" id="allergy" name="allergy" value="달걀">
+					<input type="checkbox" class="allergy" name="allergy" value="달걀">
 					<label for="allergy"> 달걀</label>
-					<input type="checkbox" id="allergy" name="allergy" value="견과류">
+					<input type="checkbox" class="allergy" name="allergy" value="견과류">
 					<label for="allergy"> 견과류</label>
-					<input type="checkbox" id="allergy" name="allergy" value="우유">
+					<input type="checkbox" class="allergy" name="allergy" value="우유">
 					<label for="allergy"> 우유</label>
 					이미지 업로드
 				</div>
@@ -95,7 +80,7 @@
 				<input type="submit" value="등록">
 			</form>
 		</div>
-		
+
 		
 		
 		

@@ -46,9 +46,9 @@ public class Controller_cjh {
 	}
 	
 	// 요청 페이지로 이동
-	@RequestMapping("/ilcoeat/eatRequest")
-	public String ilcoeatReq(){
-		return "ilco_eat_cjh/eatRequest";
+	@RequestMapping("/ilcoeat/menu_all")
+	public String menuList(){
+		return "ilco_eat_cjh/eatMenuAll";
 	}
 	//======================================================================//
 	// 마이페이지 > 관리 임시 제작

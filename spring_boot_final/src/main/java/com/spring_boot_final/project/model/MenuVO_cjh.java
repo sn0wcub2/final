@@ -7,11 +7,9 @@ public class MenuVO_cjh {
 		private String menu_date;
 		private String menu_type;
 		private String menu_pic;		
-		private String men1;
-		private String men2;
-		private String men3;
-		private String menRice;
-		private String menSoup;
+		private String mainMenu;
+		private String subMenu;
+		private String other;
 		private int cal;
 		private int prot;
 		private int carb;
@@ -41,35 +39,23 @@ public class MenuVO_cjh {
 		public void setMenu_pic(String menu_pic) {
 			this.menu_pic = menu_pic;
 		}
-		public String getMen1() {
-			return men1;
+		public String getMainMenu() {
+			return mainMenu;
 		}
-		public void setMen1(String men1) {
-			this.men1 = men1;
+		public void setMainMenu(String mainMenu) {
+			this.mainMenu = mainMenu;
 		}
-		public String getMen2() {
-			return men2;
+		public String getSubMenu() {
+			return subMenu;
 		}
-		public void setMen2(String men2) {
-			this.men2 = men2;
+		public void setSubMenu(String subMenu) {
+			this.subMenu = subMenu;
 		}
-		public String getMen3() {
-			return men3;
+		public String getOther() {
+			return other;
 		}
-		public void setMen3(String men3) {
-			this.men3 = men3;
-		}
-		public String getMenRice() {
-			return menRice;
-		}
-		public void setMenRice(String menRice) {
-			this.menRice = menRice;
-		}
-		public String getMenSoup() {
-			return menSoup;
-		}
-		public void setMenSoup(String menSoup) {
-			this.menSoup = menSoup;
+		public void setOther(String other) {
+			this.other = other;
 		}
 		public int getCal() {
 			return cal;
@@ -101,8 +87,6 @@ public class MenuVO_cjh {
 		public void setAllergy_info(String allergy_info) {
 			this.allergy_info = allergy_info;
 		}
-
-
 		
 		
 }

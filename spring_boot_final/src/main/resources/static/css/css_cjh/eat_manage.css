@@ -31,27 +31,14 @@ h3{
 	padding-bottom:50px;
 	display: flex;
 }
-.tray{
-	height:300px;
-	background:#f23g2d;
-	#f88474
-}
-.trayTop{
-	margin:auto;
-	width:600px;
-	height:50%;
-}
-.trayBottom{
-	margin:auto;
-	width:600px;
-	height:50%;
-}
-.tray input{
-	height:130px;
-	text-align: center;
-}
+
 .nutrition input{
-	width:60px;
+    border: none;
+    outline: none;
+    padding: 5px 5px 8px 0px;
+    width: 120px;
+    font-size: 15px;
+    border-bottom: solid 1px #efefef;
 }
 
 /* .inputform{

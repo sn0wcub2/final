@@ -7,3 +7,39 @@
 
 /*메뉴*/
 
+.ld{
+    font-size: 41px;
+    text-align: center;
+    background: aliceblue;
+    width: 400px;
+    margin: auto;
+}
+.box{
+    display: flex;
+    margin: auto;
+    width: 1600px;
+    justify-content: space-around;
+}
+section{
+	background-color: #f3f3f3;
+	width:650px;
+    text-align: center;
+}
+.menupic{
+	width: 198px;
+	height:108px;
+}
+.row{
+	text-align: center;
+}
+.elmt{
+	display:flex;
+	width:550px;
+}
+.elmt1{
+	width:200px;
+	text-align: right;
+}
+.elmt2{
+	padding-left:20px;
+}
