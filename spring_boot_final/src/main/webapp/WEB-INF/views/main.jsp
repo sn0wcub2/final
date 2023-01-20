@@ -19,5 +19,6 @@
 	<a href="<c:url value='/admin_csh/AdminMain'/>"> 관리자 페이지</a>
 	<a href="<c:url value='/mypage_csh/MypageMain'/>"> 마이 페이지</a>
 	<a href="/ilcoeat/main"> 일코 푸드 메인</a>
+	
 	</body>
 </html>

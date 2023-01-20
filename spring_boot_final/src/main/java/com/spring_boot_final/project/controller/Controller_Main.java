@@ -11,4 +11,12 @@ public class Controller_Main {
 	public String main() {
 		return"main";
 	}
+	@RequestMapping("/index")
+	public String index() {
+		return"index";
+	}
+	@RequestMapping("/index2")
+	public String index2() {
+		return"text";
+	}
 }
