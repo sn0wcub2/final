@@ -75,10 +75,17 @@
         }).open();
     }
 </script>
-<p> 	</p>
+<br>
+<br>
+
 	<form>
+	
 	  휴대폰 번호 입력<br>
-	  <input type="text" name="firstname"><br>
+	  <input type="text" name="phonenumber"><br>
+	  
+	  요청사항<br>
+	  <input type="text" name="require"><br>
+	  
 	</form>
     <a class="btn btn-outline-light" type="button" href="5kg~10kg">주문</a>
     <a class="btn btn-outline-light" type="button" href="laundryMain">뒤로가기</a>
