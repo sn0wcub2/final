@@ -22,14 +22,27 @@
   	</resultMap>
   
   
-  
+  <!-- menu 테이블에 모든 데이터 넣기 -->
 	  <insert id="insertmenu" parameterType="com.spring_boot_final.project.model.MenuVO_cjh">
-	  			  		INSERT INTO menu (menu_id, menu_date, menu_type, menu_pic, mainMenu, subMenu, other, cal, prot, fat, carb, allergy_info)
+	  		INSERT INTO menu (menu_id, menu_date, menu_type, menu_pic, mainMenu, subMenu, other, cal, prot, fat, carb, allergy_info)
 	  		VALUES(#{menu_id}, #{menu_date}, #{menu_type}, #{menu_pic}, #{mainMenu}, #{subMenu}, #{other}, #{cal}, #{prot}, #{carb}, #{fat}, #{allergy_info})
 	  </insert>
 	  
+	  <!-- 오늘 날짜에 해당하는 메뉴만 가져오기 -->
 	  <select id="todaymenu" parameterType="string" resultMap="menuResult">
-	  	SELECT * FROM menu WHERE menu_date=#{menu_date} ORDER BY menu_id ASC
-<!-- 	  	WHERE menu_date = #{menu_date} -->
+	  	SELECT * FROM menu 
+	  	WHERE menu_date=#{menu_date} 
+	  	ORDER BY menu_id ASC
 	  </select>
+	  
+	  
+	  <!-- 오늘 날짜 이후 해당하는 메뉴 전부 가져오기 --><!-- 부등호 사용으로 인한 cdata 이용 즉, 오류 방지용 -->
+  	  <select id="menuAll" parameterType="string" resultMap="menuResult">
+	  	<![CDATA[
+	  		SELECT * FROM menu 
+	  		WHERE menu_date >= #{menu_date} 
+	  		ORDER BY menu_id ASC
+	  	]]>
+	  </select>
+	  
   </mapper>

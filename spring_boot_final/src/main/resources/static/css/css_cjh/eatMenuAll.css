@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+	margin: auto 0;
+	padding: 0;
+}
+
+/*메뉴*/
+input[type="date"]::before{
+	content : attr(data-placeholder);
+	width: 100%;
+}
+
+input[type="date"]:valid::before{
+	display: none;	
+}
+
+input[type="date"]::before{
+	color:red;
+}
+
+.box{
+    display: block;
+    margin: auto;
+    width: 1000px;
+}
+section{
+	background-color: #f3f3f3;
+	width:80%;
+    text-align: center;
+}
+.row{
+	padding-top:20px;
+	text-align: center;
+}
+.elmt{
+	display:flex;
+	width:900px;
+	text-align: left;
+}
+.elmt1{
+	width:200px;
+}
+.elmt2{
+	width:200px;
+}
+.elmt3{
+	width:500px;
+}

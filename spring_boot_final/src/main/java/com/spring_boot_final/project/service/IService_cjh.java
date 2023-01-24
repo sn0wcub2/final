@@ -7,4 +7,5 @@ import com.spring_boot_final.project.model.MenuVO_cjh;
 public interface IService_cjh {
 	public void insertmenu(MenuVO_cjh menuVO_cjh); //  메뉴 추가
 	public ArrayList<MenuVO_cjh> todaymenu(String menu_date);// 오늘 메뉴 검색
+	public ArrayList<MenuVO_cjh> menuAll(String menu_date);// 오늘 이후 모든 메뉴 조회
 }

@@ -20,7 +20,11 @@ import com.spring_boot_final.project.service.Service_cjh;
 public class Controller_cjh {
 	@Autowired
 	private Service_cjh service;
-	
+	// 달력 제작
+	@RequestMapping("/ilcoeat/Calendar")
+	public String ilcoeatCalandar(){
+		return "ilco_eat_cjh/eatMenuCalendar";
+	}
 	// 푸드 메인으로 이동
 	@RequestMapping("/ilcoeat/main")
 	public String ilcoeatMain(){
@@ -45,11 +49,29 @@ public class Controller_cjh {
 		return "ilco_eat_cjh/eatmenu";
 	}
 	
-	// 요청 페이지로 이동
+	// 모든 메뉴 보기 페이지로 이동
 	@RequestMapping("/ilcoeat/menu_all")
-	public String menuList(){
+	public String menuList(Model model){
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		System.out.println(sdf.format(date));
+		
+		ArrayList<MenuVO_cjh> menuAllList = service.menuAll(sdf.format(date));
+		model.addAttribute("menuAllList", menuAllList);
 		return "ilco_eat_cjh/eatMenuAll";
 	}
+
+	
+	// 조건(일자, 메뉴, 타입)에 맞는 메뉴 검색
+	@RequestMapping("/ilcoeat/searchMenuAll")
+	public String searchMenuAll() {
+		return "ilco_eat_cjh/eatMenuAllResult";
+	}
+	
+	
+	
+	
 	//======================================================================//
 	// 마이페이지 > 관리 임시 제작
 	@RequestMapping("/ilcoMypageasdfasdf")

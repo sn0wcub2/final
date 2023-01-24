@@ -15,9 +15,6 @@
 		오늘 메뉴 (( 오늘 날짜 이후 전체)))<br>
 		<div class="searchBox">
 			<form method="get" action="/ilcoeat/searchMenuAll">
-				<input type="date">아직 안됨/ 검색도 안함
-				<input type="radio"> 타입만 나오게 할 생각
-				
 			</form>
 		</div>
 	<div class="box" id="ListBox">
@@ -44,9 +41,7 @@
 				</c:choose>
 		
 				<div class="row">
-<%-- 					<a href="/ilcoeat/eatMenuDetail/${ menu.menu_date}-${menu.menu_type}" style="text-decoration: none"> --%>
-						<div class="elmt" ><div class="elmt1">${menu.menu_date}</div><div class="elmt2">${type }</div><div class="elmt3"> "${menu.mainMenu}"/"${menu.subMenu}"/"${menu.other}"</div></div>
-<!-- 					</a> -->
+					<div class="elmt"><div class="elmt1">${menu.menu_date}</div><div class="elmt2">${type }</div><div class="elmt3"> "${menu.mainMenu}"/"${menu.subMenu}"/"${menu.other}"</div></div>
 				</div>
 			</section>
 		</c:forEach>

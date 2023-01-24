@@ -14,7 +14,6 @@
 	<div id="wrap">
 <!-- 		top -->
 	<div class="nav">
-	
 		<img src="<c:url value='/image/cjh_beta_eat_logo.png'/>" class="logo">
 		<ul>
 			<li> <a href="<c:url value='/ilcoeat/eatSubscribe'/>">구독하기</a></li>
@@ -24,6 +23,7 @@
 		</ul>
 	</div>
 	
+			<a href="/ilcoeat/Calendar">달력</a><br>
 
 <!-- 	메인 광고 -->
 		<div id="mainbox">
@@ -117,6 +117,7 @@
 		</section>
 		<hr><hr>
 		
+
 		<a href="/ilcoMypageasdfasdf">마이페이지 > 구독 관리</a><br>
 		<a href="/ilcofoodmange">관리자</a>
 	</div>

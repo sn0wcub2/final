@@ -27,8 +27,14 @@ public class Service_cjh implements IService_cjh {
 
 	@Override
 	public ArrayList<MenuVO_cjh> todaymenu(String menu_date) {
-		System.out.println(menu_date);
 		return dao.todaymenu(menu_date);
+	}
+
+
+
+	@Override
+	public ArrayList<MenuVO_cjh> menuAll(String menu_date) {
+		return dao.menuAll(menu_date);
 	}
 
 }
