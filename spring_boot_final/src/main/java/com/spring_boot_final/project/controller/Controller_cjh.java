@@ -10,6 +10,7 @@ import java.util.TimeZone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -27,7 +28,12 @@ public class Controller_cjh {
 	}
 	// 푸드 메인으로 이동
 	@RequestMapping("/ilcoeat/main")
-	public String ilcoeatMain(){
+	public String ilcoeatMain(Model model){
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		ArrayList<MenuVO_cjh> menuList = service.todaymenu(sdf.format(date));
+		model.addAttribute("menuList", menuList);
 		return "ilco_eat_cjh/eatMain";
 	}
 	
@@ -55,18 +61,26 @@ public class Controller_cjh {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
-		System.out.println(sdf.format(date));
-		
 		ArrayList<MenuVO_cjh> menuAllList = service.menuAll(sdf.format(date));
 		model.addAttribute("menuAllList", menuAllList);
 		return "ilco_eat_cjh/eatMenuAll";
 	}
 
 	
-	// 조건(일자, 메뉴, 타입)에 맞는 메뉴 검색
-	@RequestMapping("/ilcoeat/searchMenuAll")
-	public String searchMenuAll() {
-		return "ilco_eat_cjh/eatMenuAllResult";
+//	// 조건(일자, 메뉴, 타입)에 맞는 메뉴 검색
+//	@RequestMapping("/ilcoeat/searchMenuAll")
+//	public String searchMenuAll() {
+//		return "ilco_eat_cjh/eatMenuAllResult";
+//	}
+	
+	//상세 정보
+	@RequestMapping("/ilcoeat/detail/{menu_id}")
+	public String menuDetail(@PathVariable String menu_id,
+											Model model) {
+		System.out.println(menu_id);
+		MenuVO_cjh menu = service.menuDetail(menu_id);
+		model.addAttribute("menu", menu);
+		return "ilco_eat_cjh/eat_menuDetail";
 	}
 	
 	

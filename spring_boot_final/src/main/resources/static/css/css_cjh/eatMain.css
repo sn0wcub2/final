@@ -51,6 +51,8 @@
 .section{
 	width:1980px;
 	height: 600px;
+	margin:auto;
+	
 }
 .title{
     width: 600px;
@@ -191,7 +193,7 @@
 }
 
 /* 사용법 */
-.sec01 {
+.sec03 {
 	margin: auto;
 	width: 100%;
 	height: 1000px;
@@ -202,7 +204,7 @@
 	text-align: center;
 }
 
-.sec01 h3{
+.sec03 h3{
     position: relative;
     padding-top: 100px;
     color: #f0cfa0;
@@ -210,14 +212,13 @@
     font-size: 60px;
     margin: auto;
 }
-.sec01 p{
+.sec03 p{
 	top:1.5em;
 	position: relative;
 	color: #eedfcb;
 	font-size: 1.5em;
 	font-weight: 600;
 }
-
 .instruction{
 	position: relative;
     top: 10%;
@@ -271,19 +272,155 @@
 
 /*  오늘의 메뉴 */
 .sec02 {
-	width: 100%;
-	height: 100vh;
-	background-color: #fff;
-	background-size: cover; 
-	background-position: center;
-
+    background-color: orange;
+    display: inline-block;
+    width:100%;
+    padding-top:50px;
+    position:relative;
+    top:-35px;
 }
 
-/*후기 존*/
+.menuwrap{
+    font-weight: bolder;
+}
+/* a tag */
+a:link{
+	text-decoration:none;
+}
+/* 요일 */
+.ld{
+	font-size: 50px;
+    color: ivory;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+.box{
+	display:flex;
+	margin: auto;
+    justify-content: center;
+	border-bottom: 3px solid white ;
+	color:white;
+	text-decoration:none;
+}
+.section1{
+	margin:50px;	
+}
+/* 타입 보여주기 */
+.showType{
+    font-size: 40px;
+    text-align: center;
+    height: 50px;
+    margin: auto;
+    width: 200px;
+    margin-bottom: 10px;
+}
+/* 메뉴 하나 */
+.main_container{
+	position:relative;
+	width:800px;
+}
+/* 사진 */
+.menupic{
+	display:block;
+	width:800px;
+	height:400px;
+	border:3px solid #fff;
+	border-radius:15px;
+}
+/* 오버레이 */
+.overLay{
+	position:absolute;
+	width:806px;
+	height:0;
+	background-color:rgba(0,0,0,0.7);
+	left:0;
+	right:0;
+	bottom:0;
+	text-align: center;
+	overflow: hidden;
+	transition: .5s ease-in;
+}
+/* 효과 */
+.main_container:hover .overLay{
+	width:800px;
+	height:400px;
+	border:3px solid;
+	border-radius:15px;
+}
+/* 아이콘  및 텍스트*/
+.menuIcon{
+	padding-top:50px;
+	padding-bottom:20px;
+	width:10%;
+	height:10%;
+	border-bottom:solid 1px #fff;
+}
+.mencomp{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    width: 10%;
+    border-bottom: solid 1px #fff;
+}
+.elmt{
+	margin-top:50px;
+	margin-bottom:20px;
+	font-size:30px;
+	color:orange;
+}
+.elmt3{
+	color: white;
+    right: 30px;
+    top: 45px;
+    position: relative;
+    text-align: right;
+}
+.infoIcon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    margin-right: 12px;
+}
+.menuAtag{
+position: relative;
+    text-align: right;
+    right: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.menuAtag:link{
+	   text-decoration: none;
+    color: white;
+}
+/*사용법 존*/
 .sec03 {
+	margin: auto;
+	display:block;
+	position:relative;
+	top:-35px;
 	width: 100%;
-	height: 100vh;
-	background-color: #534D41;
+	height: 1000px;
+	background-color: #29335C;
 	background-size: cover; 
 	background-position: center;
+	color: #fff;
+	text-align: center;
+}
+.subAn{
+    position: relative;
+    right: 5%;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    bottom: -17%;
+    text-decoration: none;
+    color: white;
+}
+.subAn:link{
+	text-decoration:none;
 }

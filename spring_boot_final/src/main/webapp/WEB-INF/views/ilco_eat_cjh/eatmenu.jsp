@@ -15,8 +15,9 @@
 
 
 
-
+<div class="menuwrap">
 	오늘 메뉴 ((요약))+ 헤더 자리
+
 	<br>
 	<div class="ld">
 		<c:set var="ymd" value="<%=new java.util.Date()%>" />
@@ -38,9 +39,9 @@
 							<img class="menuIcon" src='<c:url value="/image/cjh_menu.png"/>'>
 							<div class="mencomp">메뉴 구성</div>
 						</div>
-						<div class="elmt">| ${menu.mainMenu}/ ${menu.other} /	${menu.subMenu} |</div>
+						<div class="elmt">| ${menu.mainMenu}/ ${menu.other} /${menu.subMenu} |</div>
 						<div class="elmt3">
-								<img class="infoIcon" src='<c:url value="/image/cjh_info.png"/>'><a href="#">세부 정보 더 보기</a>
+								<img class="infoIcon" src='<c:url value="/image/cjh_info.png"/>'><a href="/ilcoeat/detail/${menu.menu_id}">세부 정보 더 보기</a>
 						</div>
 					</div>
 				</div>
@@ -70,7 +71,7 @@
 						</div>
 						<div class="elmt">| ${menu.mainMenu}/ ${menu.other} /	${menu.subMenu} |</div>
 						<div class="elmt3">
-							<img class="infoIcon" src='<c:url value="/image/cjh_info.png"/>'><a href="#">세부 정보 더 보기</a>
+							<img class="infoIcon" src='<c:url value="/image/cjh_info.png"/>'><a href="/ilcoeat/detail/${menu.menu_id}">세부 정보 더 보기</a>
 						</div>
 					</div>
 				</div>
@@ -78,8 +79,10 @@
 		</c:forEach>
 	</div>
 
-	<a href="/ilcoeat/menu_all"> 일코 푸드 전체 조회</a>
-
+	<div class="menuAtag">
+		<a href="/ilcoeat/menu_all"> 일코 푸드 전체 조회&gt;&gt;</a>
+	</div>
+</div>
 
 
 </body>

@@ -8,6 +8,7 @@
 		<meta charset="UTF-8">
 		<title>메뉴 확인</title>
 	<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+	<script src="<c:url value='/js/js_cjh/eatMenuAll.js'/>"></script>
 	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatMenuAll.css"/>'>
 	</head>
 	<body>
@@ -17,23 +18,23 @@
 		
 		<div class="searchBox">
 			<div class="RadBtn">
-					<input type="radio" value="*" name="type" id="" class="radioBtn" onchange="search(this.value)"checked> 
+					<input type="radio" name="type" id="" class="radioBtn"checked> 
 					<label for="" class="radLab" >전체 보기</label>
 			</div>
 			<div class="RadBtn">
-					<input type="radio" value="Day-A" name="type" id="Day-A" onchange="search(this.value)" class="radioBtn"> 
+					<input type="radio" name="type" id="Day-A" class="radioBtn"> 
 					<label for="Day-A" class="radLab">점심 A-type</label>
 			</div>
 			<div class="RadBtn">
-					<input type="radio" value="Day-B"  name="type" id="Day-B" onchange="search(this.value)" class="radioBtn">
+					<input type="radio" name="type" id="Day-B" class="radioBtn">
 					<label for="Day-B" class="radLab">점심 B-type</label>
 			</div>
 			<div class="RadBtn">
-					<input type="radio" value="Night-A" name="type" id="Night-A" onchange="search(this.value)" class="radioBtn">
+					<input type="radio" name="type" id="Night-A" class="radioBtn">
 					<label for="Night-A" class="radLab">저녁 A-type</label>
 			</div>
 			<div class="RadBtn">
-					<input type="radio" value="Night-B" name="type" id="Night-B" onchange="search(this.value)" class="radioBtn">
+					<input type="radio" name="type" id="Night-B" class="radioBtn">
 					<label for="Night-B" class="radLab">저녁 B-type</label>
 			</div>
 		</div>
@@ -63,10 +64,8 @@
 					</c:otherwise>
 				</c:choose>
 		
-				<div class="row" id="${ menu.menu_type}">
-				<a href="<c:url value='/ilcoeat/detail/${menu.menu_id}'/>">
+				<div class="row">
 						<div class="elmt" ><div class="elmt1">${menu.menu_date}</div><div class="elmt2">${type }</div><div class="elmt3"> ${menu.mainMenu} / ${menu.subMenu} / ${menu.other}</div></div>
-				</a>
 				</div>
 			</section>
 		</c:forEach>

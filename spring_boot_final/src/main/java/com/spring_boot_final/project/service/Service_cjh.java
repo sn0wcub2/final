@@ -37,4 +37,15 @@ public class Service_cjh implements IService_cjh {
 		return dao.menuAll(menu_date);
 	}
 
+
+
+	@Override
+	public MenuVO_cjh menuDetail(String menu_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
 }
