@@ -8,6 +8,7 @@
 		<title>세탁 주문</title>
 	</head>
 	<body>
+	<form name="laundry1Form" id="signUpForm" method="post" action="<c:url value='/laundry_kbh/insertOrder'/>">
 	<p>주소 입력</p>
 <input type="text" id="sample4_postcode" placeholder="우편번호">
 <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
@@ -78,7 +79,7 @@
 <br>
 <br>
 
-	<form>
+	
 	
 	  휴대폰 번호 입력<br>
 	  <input type="text" name="phonenumber"><br>

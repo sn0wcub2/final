@@ -16,6 +16,12 @@ public class VO_kbh {
 	private String address2;
 	private String orderStatus;
 	private int price;
+	private OrderOption orderOption;
+	
+	
+	public static enum OrderOption{
+		LAUNDRY1,LAUNDRY2,BEDDING
+	}
 	
 	
 	public String getOrderId() {
@@ -77,5 +83,11 @@ public class VO_kbh {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	public OrderOption getOrderOption() {
+		return orderOption;
+	}
+	public void setOrderOption(OrderOption orderOption) {
+		this.orderOption = orderOption;
 	}
 }

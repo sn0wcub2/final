@@ -35,14 +35,14 @@
           <div class="row align-items-md-stretch">
               <div class="col-md-4 ">
                 <div class="p-5 mx-5 my-5 text-bg-dark rounded-3 ">
-                  <h2>생활빨래</h2>
+                  <h2>생활빨래1</h2>
                   <p>5kg~10kg</p>
                   <a class="btn btn-outline-light" type="button" href="5kg~10kg">7000p</a>
                   </div>
                 </div>
               <div class="col-md-4">
                 <div class="p-5 mx-5 my-5 text-bg-dark rounded-3">
-                  <h2>생활빨래</h2>
+                  <h2>생활빨래2</h2>
                   <p>10kg~20kg</p>
                   <a class="btn btn-outline-light -" type="button" href="10kg~20kg">12000p</a>
                   </div>
