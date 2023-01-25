@@ -6,29 +6,32 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>컴퓨니티 글쓰기</title>
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comList.css' />">
+<title>커뮤니티 글쓰기</title>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comWriteForm.css' />">
 </head>
 <body>
 	<div id="wrap">
 		<form id="writeForm" name="writeForm" method="post"  action="<c:url value='/ilcocommunity/insertCommunity' />">
 			<div>
-				<h2>글쓰기</h2>
-				<div>
-					<table>
-						<tr>
-							<th>제목</th>
-							<td><input style="width: 500px" type="text" id="comTitle"
-								name="comTitle" /></td>
+			<header><h3>커뮤니티 게시판</h3></header>
+				<h4>글작성</h4>
+				<div class="board_write_wrap">
+					<table class="board_write">
+						<tr class="title">
+							
+							<td><input type="text" id="comTitle"
+								name="comTitle" placeholder="제목을 입력하세요"/></td>
 						</tr>
-						<tr>
-							<th>내용</th>
-							<td><textarea style="width: 500px" rows="10" cols="10"
-									id="comContent"  name="comContent"></textarea></td>
+						<tr class="cont">
+							
+							<td><textarea rows="10" cols="10"
+									id="comContent"  name="comContent" placeholder="내용을 입력하세요"></textarea></td>
 						</tr>						
 					</table>
-					<div>
-						<input type="submit" value="등록"> <input type="reset" value="취소">
+					<div class="bt_wrap">
+						<input type="submit" value="등록">
+						<a href="<c:url value='/ilcocommunity/boardlist'/>" class="on">취소</a> 
+						<input type="reset" value="취소">
 					</div>
 				</div>
 			</div>

@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comViewForm.css' />">
 </head>
 <body>
 	<div>

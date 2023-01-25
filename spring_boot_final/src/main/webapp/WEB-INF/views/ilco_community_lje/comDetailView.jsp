@@ -7,40 +7,31 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>커뮤니티 글 상세 조회</title>
-		<style>
-			#wrap{
-				margin:0 auto;
-				width: 100%;
-				text-align: center;
-			}
-			
-			table {
-				margin:0 auto;
-				width: 400px;
-			}		
-			
-			table .tdTitle{
-				width: 100px;
-			}	
-		</style>
+		
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comDetailView.css' />">
 	</head>
 	<body>
 		<div id="wrap">
-			<h3>상세 조회</h3>
-			<table border="1" width="600">
-					<tr><td class="tdTitle">번호 </td><td>${com. comNo}</td></tr>
+		<header><h3>커뮤니티 게시판</h3></header>
+				<p>이웃들과 다양한 이야기를 나눠보세요</p>
+			<div class="board_view_wrap">
+			<div class="board_view">
+			<div class="title">${com.comTitle }</div>
+			<table class="info">
+					<tr><td>번호 </td><td>${com. comNo}</td></tr>
 					<tr><td>작성자  </td><td>${com.memId}</td></tr>
-					<tr><td>제목  </td><td>${com.comTitle }</td></tr>
 					<tr><td>작성일 </td><td><fmt:formatDate value="${com.comDate}"  pattern="yyyy-MM-dd" /></td></tr>				
 					<tr><td>조회수 </td><td> ${com.comCnt }</td></tr>
-					<tr><td>내용 </td><td> ${com.comContent }</td></tr>
-			</table><br><br>
-					
-				<a href="<c:url value='/'/>">메인 화면으로 이동</a><br><br>
+			</table>
+			<div class="cont">${com.comContent }</div>
+			</div>	
+				<div class="bt_wrap">
+				<a href="<c:url value='/ilcocommunity/boardlist'/>" class="on">목록</a>
 				
-				<a href="<c:url value='/ilcocommunity/boardViewForm/${com.comNo }'/>">글 수정</a><br><br>
+				<a href="<c:url value='/ilcocommunity/boardViewForm/${com.comNo }'/>">수정</a>
 				
-				<a href="javascript:deleteCheck();">글 삭제</a><br><br>
+				<a href="javascript:deleteCheck();">삭제</a>
+				</div>
 				<!--  삭제 확인 메시지 출력 -->
 				<script>
 					function deleteCheck(){
@@ -51,6 +42,7 @@
 					}
 				</script>
 		</div>
+	</div>
 	</body>
 </html>
 
