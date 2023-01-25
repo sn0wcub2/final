@@ -12,33 +12,44 @@
 <body>
 	<div id="wrap">
 		<header><h3>커뮤니티 게시판</h3></header>
+		<p>이웃들과 다양한 이야기를 나눠보세요</p>
 		<section>
-			<table id="comList">
+			<table class="board_list" id="comList">
 				<thead>
-					<tr>
-						<th>번호</th>
-						<th>작성자</th>
-						<th>제목</th>
-						<th>작성일</th>
-						<th>조회수</th>
+					<tr class="top">
+						<th class="num">번호</th>
+						<th class="title">제목</th>
+						<th class="writer">작성자</th>
+						<th class="date">작성일</th>
+						<th class="count">조회수</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="com" items="${comList }">
 			            <tr>
-			               <td><a href="<c:url value='/ilco_community_lje/detailViewCommunity/${com.comNo}'/>" >${com.comNo }</a></td>
-			               <td>${com.memId}</td>
-			               <td>${com.comTitle }</td>
-			               <td><fmt:formatDate value="${com.comDate}"  pattern="yyyy-MM-dd" /></td>
-			               <td>${com.comCnt}</td>			               
+			               <td class="num">${com.comNo}</td>
+			               <td class="title"><a href="<c:url value='/ilco_community_lje/detailViewCommunity/${com.comNo}'/>" >${com.comTitle }</a></td>
+			               <td class="writer">${com.memId}</td>
+			               <td class="date"><fmt:formatDate value="${com.comDate}"  pattern="yyyy-MM-dd" /></td>
+			               <td class="count">${com.comCnt}</td>			               
 			            </tr>
 			         </c:forEach>
 				</tbody>
 			</table>
 	<br>
-			<div><--이전  [1]  다음--></div>
-			<div>
-				<a href="<c:url value='/ilcocommunity/boardwriteform'/>">글쓰기</a>
+			<div class="board_page">
+                <a href="#" class="bt first"><<</a>
+                <a href="#" class="bt prev"><</a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="bt next">></a>
+                <a href="#" class="bt last">>></a>
+            </div>
+			<div class="bt_wrap">
+				<a href="<c:url value='/ilcocommunity/boardwriteform'/>" class="on">글쓰기</a>
 			</div>
 	
 		</section>
