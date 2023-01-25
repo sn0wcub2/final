@@ -2,6 +2,11 @@
 	margin:0;
 	padding: 0;
 }
+.inputmenuwraper{
+	margin-top:30px;
+	padding-bottom:50px;
+	border-bottom:1px solid black;
+}
 h3{
 	height: 300px;
 	background: #618a4a;	
@@ -14,32 +19,90 @@ h3{
 	margin: auto;
 }
 .inputform{
-	padding-top:100px;
+	padding-top:50px;
 	margin: auto;
     text-align: center;
     width: 800px;
     border: solid 2px orange;
+    box-shadow: 5px 5px 20px -10px rgb(0 0 0 / 30%);
 }
-.row{
-	padding-top:50px;
+.submitrow{
+	padding-top:20px;
 	padding-left:100px;
 	padding-right:100px;
-	padding-bottom:50px;
 	display: flex;
     justify-content: center;
 	align-content: center;
 	
 }
-.what{
-	width: 150px;	
-	text-align:left;
+/* 타입 선택 */
+.submitrow .searchBox{
+	display:flex;
+	align-items:center;
+	justify-content:center
 }
-.sub_row{
-	margin-left:100px;
-	padding-left:100px;
-	padding-right:100px;
-	padding-bottom:50px;
-	display: flex;
+.radio-title-group{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+}
+.RadBtn{
+	position:relative;
+	height:60px;
+	width:100px;
+	margin:20px;
+}
+.RadBtn input{
+	position:absolute;
+	height:100%;
+	width:100%;
+	cursor:pointer;
+	margin:0 auto;
+	opacity:0;
+	left:4px;
+	z-index:2;
+}
+.RadBtn .radio_title{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+	height:100%;
+	border: 3px solid orange;
+	border-radius:8px;
+	transition: all .3s ease;
+}
+.type_icon{
+	height:140px;
+	width:140px;
+}
+.RadBtn label{
+	font-size: 16px;
+    font-weight: bold;
+}
+.RadBtn input:checked + .radio_title{
+	background-color: #BDC667;
+	color:#f3f3f3;
+}
+
+
+
+/* 구성 입력 */
+.compon input{
+	width:600px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-bottom: solid 1px #efefef;
+    color: grey;
+    font-weight: bold;
+    padding-left: 30px;
+    height: 35px;
+    border-left: 4px solid green;
+    display: flex;
+    text-align: left;
+    transition: .3s ease;
+    box-shadow: 5px 5px 20px -10px rgb(0 0 0 / 30%);
 }
 
 .nutrition input{
@@ -51,96 +114,77 @@ h3{
     color: grey;
     font-weight: bold;
     padding-left: 30px;
-    height: 40px;
+    height: 35px;
     border-left: 4px solid red;
     display: flex;
     text-align: left;
     transition: .3s ease;
     box-shadow: 5px 5px 20px -10px rgb(0 0 0 / 30%);
 }
-.compon input{
-	width:600px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    border-bottom: solid 1px #efefef;
-    color: grey;
-    font-weight: bold;
-    padding-left: 30px;
-    height: 40px;
-    border-left: 4px solid green;
-    display: flex;
-    text-align: left;
-    transition: .3s ease;
-    box-shadow: 5px 5px 20px -10px rgb(0 0 0 / 30%);
-}
-
 .allergy{
 	opacity:1;
 }
-.label{
-	color:white;
-	text-align:center;
-	border-radius:5px;
-	border:2px solid white;
-	display: inline-block;
-	width:150px;
-	height:30px;
-	background:#FBA97F;
-	transition: .5s ease;
-}
 
-.RadBtn{
-	margin-left:10px;
-	margin-right:10px;
-}
-.radioBtn{
-	opacity:1;
-}
-.radLab{
-	color:white;
-	text-align:center;
-	border-radius:5px;
-	border:2px solid white;
-	display: inline-block;
-	width:150px;
-	height:30px;
-	background:#FBA97F;
-	transition: .5s ease;
-}
-.radLab:hover{
-	background:#da2121;
-	font-weight:bold;
-}
-.radioBtn:focus +.radLab,
-.radioBtn:checked +.radLab{
-	background:#FF6B6B;
-	font-weight:bold;
-}
-
-.searchBox{
+.row .allergy_searchBox{
 	display:flex;
-}
-/* .inputform{
-	margin: auto;
-	text-align: center;
-}
-.row{
-	display: flex;
-}
-.week{
-	width: 1000px;
-}
-.cal_body div{
-	display: flex;
-	min-width: 10%;
-	padding-left: 15px;
-	padding-right: 15px;
-	height: 100px;
-	border: solid 1px;
-	text-align:start
+	align-items:center;
+	justify-content:center
 }
 
-.week div:hover{
-	background-color:green;	
-} */
+.check-title-group{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+}
+.checkBtn{
+	position:relative;
+	height:60px;
+	width:100px;
+	margin:20px;
+}
+.checkBtn input{
+	position:absolute;
+	height:100%;
+	width:100%;
+	cursor:pointer;
+	margin:0 auto;
+	opacity:0;
+	z-index:2;
+}
+.checkBtn .check_title{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+	height:100%;
+	border: 3px solid orange;
+	border-radius:8px;
+	transition: all .3s ease;
+}
+.type_icon{
+	height:20px;
+	width:20px;
+}
+.checkBtn label{
+	font-size: 16px;
+    font-weight: bold;
+}
+.checkBtn input:checked + .check_title{
+	background-color: #BDC667;
+	color:#f3f3f3;
+}
+.menuUpload input{
+	margin-top:100px;
+	border: 3px solid orange;
+	background-color:white;
+	width:400px;
+	height:40px;
+	border-radius:8px;
+	margin-bottom:100px;
+	font-size:20px;
+	transition: all .3s ease;
+}
+.menuUpload input:hover{
+	background-color: #BDC667;
+	color:#f3f3f3;
+}

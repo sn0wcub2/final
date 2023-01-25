@@ -14,9 +14,7 @@
 <body>
 
 
-
 <div class="menuwrap">
-	오늘 메뉴 ((요약))+ 헤더 자리
 
 	<br>
 	<div class="ld">
@@ -29,7 +27,7 @@
 			<c:set var="typeWord" value="${menu.menu_type}"/>
 		    <c:set var ="length" value = "${fn:length(typeWord)}"/>
 			<c:set var="typeLast" value="${fn:substring(typeWord, length-1, length)} "/>
-			<section>
+			<div class="sectionTodaymenu">
 				<div class="showType">${typeLast} - type</div>
 				<div class="main_container">
 					<img class="menupic" src='<c:url value="/image/cjh_eatMain1.jpg"/>'>
@@ -45,7 +43,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</c:forEach>
 	</div>
 	
@@ -59,7 +57,7 @@
 			<c:set var="typeWord" value="${menu.menu_type}"/>
 		    <c:set var ="length" value = "${fn:length(typeWord)}"/>
 			<c:set var="typeLast" value="${fn:substring(typeWord, length-1, length)} "/>
-			<section>
+			<div class="sectionTodaymenu">
 				<div class="showType">${typeLast} - type</div>
 				<div class="main_container">
 					<img class="menupic" src='<c:url value="/image/cjh_eatMain1.jpg"/>'>
@@ -69,18 +67,17 @@
 							<img class="menuIcon" src='<c:url value="/image/cjh_menu.png"/>'>
 							<div class="mencomp">메뉴 구성</div>
 						</div>
-						<div class="elmt">| ${menu.mainMenu}/ ${menu.other} /	${menu.subMenu} |</div>
+						<div class="elmt">| ${menu.mainMenu} / ${menu.other} /	${menu.subMenu} |</div>
 						<div class="elmt3">
 							<img class="infoIcon" src='<c:url value="/image/cjh_info.png"/>'><a href="/ilcoeat/detail/${menu.menu_id}">세부 정보 더 보기</a>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</c:forEach>
 	</div>
-
 	<div class="menuAtag">
-		<a href="/ilcoeat/menu_all"> 일코 푸드 전체 조회&gt;&gt;</a>
+		<a href="/ilcoeat/menu_all"> &lt;&lt;일코 푸드 전체 조회&gt;&gt;</a>
 	</div>
 </div>
 

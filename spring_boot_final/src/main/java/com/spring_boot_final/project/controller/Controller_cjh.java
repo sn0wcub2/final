@@ -80,6 +80,7 @@ public class Controller_cjh {
 		System.out.println(menu_id);
 		MenuVO_cjh menu = service.menuDetail(menu_id);
 		model.addAttribute("menu", menu);
+		
 		return "ilco_eat_cjh/eat_menuDetail";
 	}
 	
