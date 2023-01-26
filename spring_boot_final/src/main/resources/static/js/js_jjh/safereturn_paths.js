@@ -24,7 +24,7 @@
 		// 1. 지도 띄우기
 		map = new Tmapv2.Map("map_div", {
 			center : new Tmapv2.LatLng(37.500692, 127.036978),
-			width : "65%",
+			width : "100%",
 			height : "400px",
 			zoom : 17,
 			zoomControl : true,
@@ -87,16 +87,16 @@
 						var resultData = response.features;
 
 						//결과 출력
-						var tDistance = "예상 거리 : "
+						var tDistance = '<img src="/image/main_images/walk.png" class="sfimg">' + "이동 거리 : "
 								+ ((resultData[0].properties.totalDistance) / 1000)
-										.toFixed(1) + "km,";
-						var tTime = " 예상 시간 : "
+										.toFixed(1) + "km&emsp;&emsp;";
+						var tTime = '<img src="/image/main_images/clock.png" class="sfimg">' + " 예상 시간 : "
 								+ ((resultData[0].properties.totalTime) / 60)
 										.toFixed(0) + "분";
 						
-						$("#result").text(tDistance + tTime);
-						$("#safeReturnPay").html("결제 금액 : "
-								+ "<input type='text' id='srpay' value='" + ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "'readonly>" + "원");
+						$("#result").html(tDistance + tTime);
+						$("#safeReturnPay").html('<img src="/image/main_images/cash.png" class="sfimg">' +"&nbsp;&nbsp;결제 금액 : " + ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "원"
+								+ "<input type='hidden' id='srpay' value='" + ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "'>");
 						
 						//기존 그려진 라인 & 마커가 있다면 초기화
 						if (resultdrawArr.length > 0) {
