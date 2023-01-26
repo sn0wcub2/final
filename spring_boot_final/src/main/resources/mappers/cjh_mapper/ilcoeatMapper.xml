@@ -48,7 +48,15 @@
 <!-- 	  메뉴 아이디에 해당하는 정보 가져오기 -->
   	  <select id="menuDetail" parameterType="string" resultType="com.spring_boot_final.project.model.MenuVO_cjh">
 	  	SELECT * FROM menu 
-	  	WHERE menu_id=#{menu_id} 
+	  	WHERE menu_id=#{menu_id}
 	  </select>
-	  
+	  <update id="menuUpdate" parameterType="string">
+	  	UPDATE menu 
+	  	SET mainMenu=#{mainMenu}, subMenu=#{subMenu}, other=#{other}, cal=#{cal}, prot=#{prot}, fat=#{fat}, carb=#{carb}, allergy_info=#{allergy_info}
+	  	WHERE menu_id = #{menu_id}
+	  </update>
+	  <delete id="menuDelete" parameterType="string">
+	  	DELETE FROM menu
+	  	WHERE menu_id = #{menu_id}
+	  </delete>
   </mapper>

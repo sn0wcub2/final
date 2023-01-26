@@ -41,8 +41,21 @@ public class Service_cjh implements IService_cjh {
 
 	@Override
 	public MenuVO_cjh menuDetail(String menu_id) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.menuDetail(menu_id);
+	}
+
+
+
+	@Override
+	public void menuUpdate(String menu_id) {
+		dao.menuUpdate(menu_id);		
+	}
+
+
+
+	@Override
+	public void menuDelete(String menu_id) {
+		dao.menuDelete(menu_id);
 	}
 
 

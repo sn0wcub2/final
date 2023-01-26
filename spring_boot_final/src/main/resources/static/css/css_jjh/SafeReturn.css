@@ -59,6 +59,7 @@ hr {
 	background-color: skyblue;
 	height: 3px;
 	border: 0;
+	width: 900px;
 }
 
 .btn-two {
@@ -86,3 +87,26 @@ hr {
 }
 
 .btn-two.cyan {background-color: skyblue;}
+
+.dtse {
+	width: 250px;
+	height: 90px;
+	display:inline-block;
+}
+
+.circling {
+	margin-right: 50px;
+	border: 1px solid skyblue;
+	border-radius: 30px;
+}
+
+.sfimg {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	top: 10px;
+}
+
+#srpay {
+	outline: none;
+}
