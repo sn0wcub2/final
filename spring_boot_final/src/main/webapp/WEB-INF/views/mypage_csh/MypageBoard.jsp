@@ -6,6 +6,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>내 게시글 확인</title>
+		<!--  head -->         
+        	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
 	<style>
         table {
             width: 100%;
@@ -27,6 +29,8 @@
 </head>
 <body>
 <div style="text-align: center;">
+<!--  top -->         
+        	<c:import url="/WEB-INF/views/layout/top.jsp" />
     <h1>내 게시글 확인</h1>
     <table style="width: 700px; margin: auto">
         <tr>
@@ -47,5 +51,9 @@
     </table>
     <input type="button" value="뒤로가기" onclick="history.back(-1)">
 </div>
+<footer>
+        <!--  bottom -->         
+        	<c:import url="/WEB-INF/views/layout/footer.jsp" />
+    </footer>
 </body>
 </html>

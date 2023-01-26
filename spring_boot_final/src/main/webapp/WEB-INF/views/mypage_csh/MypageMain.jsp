@@ -5,26 +5,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+img{
+width:100px;
+height:100px;
+}
+.mypagehistory div{
+display:inline-block;
+margin-top:100px;
+padding-left:180px;
+}
+</style>
 <meta charset="UTF-8">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <title>마이페이지 메인</title>
+			<!--  head -->         
+        	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
 </head>
 <body>
 	<div id="wrap">
-		<div class="Mypage">
-			<div id="MypageMain"></div>
-			<h1 align="center">마이페이지</h1>
-			<hr>
-			<nav class="nav flex-column">
-			  <a class="nav-link active" aria-current="page" href="#" onclick="location.href='<c:url value='/mypage_csh/MypageUpdate/'/>'">회원정보 수정</a>
-			  <a class="nav-link" href="#" onclick="location.href='<c:url value='/mypage_csh/MypageBoard'/>'">내 게시글 확인</a>
-			  <a class="nav-link" href="#" onclick="location.href='<c:url value='/mypage_csh/MyPageSubscribe'/>'">구독 정보 확인</a>
-			  <a class="nav-link" href="#" onclick="location.href='<c:url value='/mypage_csh/MypageService'/>'">예약된 서비스 확인</a>
-			  <a class="nav-link" href="#" onclick="location.href='<c:url value='/mypage_csh/MypagePoint'/>'">포인트 내역 확인</a>
-			  <a class="nav-link" href="#" onclick="location.href='<c:url value='/mypage_csh/MypageDelete'/>'">회원 탈퇴</a>
-			</nav>		
+	<!--  top -->         
+        	<c:import url="/WEB-INF/views/layout/top.jsp" />
+		<div class="mypagehistory">
+		<div>
+		<a href="#"><img src="<c:url value='/image/csh_수정.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageUpdate/'/>'"></a>
+		<p>회원정보수정</p>
+		</div>
+		<div>
+		<a href="#"><img src="<c:url value='/image/csh_게시글.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageBoard/'/>'"></a>
+		<p>내 게시글 확인</p>
+		</div>
+		<div>
+		<a href="#"><img src="<c:url value='/image/csh_구독.png'/>"onclick="location.href='<c:url value='/mypage_csh/MyPageSubscribe/'/>'"></a>
+		<p>구독 정보 확인</p>
+		</div>
+		<div>
+		<a href="#"><img src="<c:url value='/image/csh_서비스.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageService/'/>'"></a>
+		<p>예약된 서비스 확인</p>
+		</div>
+		<div>
+		<a href="#"><img src="<c:url value='/image/csh_포인트.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypagePoint/'/>'"></a>
+		<p>포인트 내역 확인</p>
+		</div>
+		<div>
+		<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageDelete/'/>'"></a>
+		<p>회원 탈퇴</p>
+		</div>		
 		</div>
 	</div>
+	<footer>
+        <!--  bottom -->         
+        	<c:import url="/WEB-INF/views/layout/footer.jsp" />
+    </footer>
 </body>
 </html>
