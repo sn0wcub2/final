@@ -36,7 +36,7 @@
 	<body>
 		<div id="wrap">
 			<div class="w3-content w3-container w3-margin-top signUpbox">
-				<div class="w3-container w3-card-4 w3-auto signUp" style="width: 600px;height: 1320px;">
+				<div class="w3-container w3-card-4 w3-auto signUp" style="width: 600px;height: 1350px;">
 				<div class="w3-center w3-large w3-margin-top">
 				<h1>회원 가입</h1>
 				</div>

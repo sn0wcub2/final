@@ -6,6 +6,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>회원탈퇴</title>
+		<!--  head -->         
+        	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
 		<style>
 			#wrap{
 				margin:0 auto;
@@ -22,6 +24,8 @@
 	</head>
 	<body>
 	<div id="wrap">
+	<!--  top -->         
+        	<c:import url="/WEB-INF/views/layout/top.jsp" />
 	<div class="mypagedeletebox">
 	<div id="mypagedelete">
 					<form id="myPageForm" class="myPageForm" method="post" action="<c:url value='/myPage_csh/deleteMyPage'/>">
@@ -45,6 +49,10 @@
 				</div>
 			</div>
 			<br><br>
-	</div>	
+	</div>
+	<footer>
+        <!--  bottom -->         
+        	<c:import url="/WEB-INF/views/layout/footer.jsp" />
+    </footer>	
 	</body>
 </html>
