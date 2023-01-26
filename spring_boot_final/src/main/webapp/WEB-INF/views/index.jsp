@@ -122,7 +122,7 @@
 
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="fh5co-card-item">
+					<a href="/laundry_kbh/laundryMain" class="fh5co-card-item">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src='<c:url value="/image/main_images/아이콘_일코 빨래방.png"/>' alt="Image" class="img-responsive">
@@ -136,7 +136,7 @@
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="fh5co-card-item">
+					<a href="/ilcocommunity/boardlist" class="fh5co-card-item">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src='<c:url value="/image/main_images/아이콘_커뮤니티.png"/>' alt="Image" class="img-responsive">
@@ -150,7 +150,7 @@
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="fh5co-card-item">
+					<a href="/index2" class="fh5co-card-item">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="#" alt="Image" class="img-responsive">
