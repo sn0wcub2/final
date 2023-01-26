@@ -6,41 +6,14 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/jquery-ui.css' />">
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
-<link rel="stylesheet" type="text/css"	href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
-
-
-<script src="<c:url value='/js/js_jjh/jquery-ui.js'/>"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/datepicker.css' />">
-
-
+<link rel="stylesheet" type="text/css"	href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
 <c:import url="/WEB-INF/views/layout/header_main.jsp"/>
+<script src="<c:url value='/js/js_jjh/jquery-ui.js'/>"></script>
 <title>메뉴 등록</title>
 </head>
 </head>
 <body>
-	<script>
-		$.datepicker.setDefaults({
-			  dateFormat: 'yy-mm-dd',
-			  prevText: '이전 달',
-			  nextText: '다음 달',
-			  monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-			  monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-			  dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-			  dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-			  dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-			  showMonthAfterYear: true,
-			  yearSuffix: '년'
-			});
-		  $(function(){
-			  $('.datepicker').datepicker({
-				    minDate: 0,
-				    autoclose: true,
-				    todayHighlight: true
-				});
-		  })
-	</script>
-	
 	<c:import url="/WEB-INF/views/layout/top.jsp"/>
 	<div class="inputmenuwraper">
 		<div class="inputform">
@@ -50,6 +23,27 @@
 					<div class="what">식단 일자 :</div>
 					<div class="inputarea">
 						<input type='text' id="date-picker" name="date-picker" class='datepicker' placeholder="식단일자">
+						<script>
+							$.datepicker.setDefaults({
+								  dateFormat: 'yy-mm-dd',
+								  prevText: '이전 달',
+								  nextText: '다음 달',
+								  monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+								  monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+								  dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+								  dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+								  dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+								  showMonthAfterYear: true,
+								  yearSuffix: '년'
+								});
+							  $(function(){
+								  $('.datepicker').datepicker({
+									    minDate: 0,
+									    autoclose: true,
+									    todayHighlight: true
+									});
+							  })
+						</script>
 						<input type='date' id="date-picker" name="date-picker" class='datepicker' placeholder="식단일자">
 					</div>
 				</div>

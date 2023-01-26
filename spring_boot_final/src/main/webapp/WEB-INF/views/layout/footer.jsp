@@ -28,18 +28,7 @@
 						</div>
 					</div>
 	
-					<div class="col-md-2 col-md-push-1">
-						<div class="gtco-widget">
-							<h3>추가 할 거 있으면 여기에 넣으세요</h3>
-							<ul class="gtco-footer-links">
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-							</ul>
-						</div>
-					</div>
+					
 	
 					<div class="col-md-3 col-md-push-1">
 						<div class="gtco-widget">
