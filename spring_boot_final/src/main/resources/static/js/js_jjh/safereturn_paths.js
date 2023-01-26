@@ -211,6 +211,26 @@
   	$("#findPaths")
 	    .on('click', function() {
 	          	 event.preventDefault();
+	          	 var chkDate = $("#date-picker").val();
+		 		 var chkBunji1 = $("#bunji1").val();
+		 		 var chkBunji2 = $("#bunji2").val();
+		 		
+		 		 if(chkDate == "") {
+		 		 	alert("서비스 사용 날짜를 선택해 주세요.");
+		 		 	return false;
+		 		 }
+		 		 if(chkBunji1 == "") {
+		 			alert("시작 위치를 선택해 주세요.");
+		 			document.getElementById("bunji1").focus();
+		 			return false;
+		 		 }
+		 		 if(chkBunji2 == "") {
+		 			alert("도착 위치를 선택해 주세요.");
+		 			document.getElementById("bunji2").focus();
+		 			return false;
+		 		 } 
+	          	 
+	          	 
 	             // 2. API 사용요청
 	             for(var i=1; i<=2; i++) {
 	             var city_do = "서울시";

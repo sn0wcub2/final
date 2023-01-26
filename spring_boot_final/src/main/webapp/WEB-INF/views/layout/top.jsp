@@ -7,7 +7,7 @@
 		<div class="gtco-container">
 			
 			<div id="menuBox" class="row">
-				<div id="gtco-logo"><a href="/index"><img src='<c:url value="/image/main_images/아이콘_메인.png"/>' style="width:490px; height:110px;"></a></div>
+				<div id="gtco-logo"><a href="/"><img src='<c:url value="/image/main_images/아이콘_메인.png"/>' style="width:490px; height:110px;"></a></div>
 
 				<div class="text-right menu-1" style="text-align: right;">
 					<c:if test="${empty sessionScope.sid }">
@@ -20,8 +20,8 @@
                                 <li><a href="/ilcoeat/main">일코 푸트</a></li>
                                 <li><a href="/safe/main">안심 귀가</a></li>
                                 <li><a href="#">안심 동행</a></li>
-                                <li><a href="#">세탁 서비스</a></li>
-                                <li><a href="#">커뮤니티</a></li>
+                                <li><a href="/laundry_kbh/laundryMain">세탁 서비스</a></li>
+                                <li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
                             </ul>
                         </li>
 						</ul>
@@ -29,7 +29,7 @@
 					<c:if test="${not empty sessionScope.sid }">
 					<ul>
 						<li><a href="<c:url value='/member_csh/logout'/>">로그아웃</a></li>
-						<li><a href="<c:url value='/myPage_csh/MypageMain/${sessionScope.sid}'/>">마이 페이지</a></li>
+						<li><a href="<c:url value='/mypage_csh/MypageMain'/>">마이 페이지</a></li>
 						
 						<li class="has-dropdown">
                             <a href="#">바로가기</a>
@@ -37,8 +37,8 @@
                                 <li><a href="/ilcoeat/main">일코 푸트</a></li>
                                 <li><a href="/safe/main">안심 귀가</a></li>
                                 <li><a href="#">안심 동행</a></li>
-                                <li><a href="#">세탁 서비스</a></li>
-                                <li><a href="#">커뮤니티</a></li>
+                                <li><a href="/laundry_kbh/laundryMain">세탁 서비스</a></li>
+                                <li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
                             </ul>
                         </li><br>
                         ${sessionScope.sid}님 환영합니다!

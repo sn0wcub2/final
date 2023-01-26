@@ -13,6 +13,6 @@ public class Controller_Main {
 	}
 	@RequestMapping("/index2")
 	public String index2() {
-		return"text";
+		return"main";
 	}
 }
