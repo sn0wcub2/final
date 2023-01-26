@@ -10,8 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/jquery-ui.css' />">
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/datepicker.css' />">
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/SafeReturn.css' />">
-		<%-- <c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 --> --%>
-		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+		<c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 -->
 		<script src="<c:url value='/js/js_jjh/jquery-ui.js'/>"></script>
 		<script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=l7xxad34a3adc29543b7a7962a0496fa88a3"></script>
 		<script src="<c:url value='/js/js_jjh/safereturn_paths.js'/>"></script>

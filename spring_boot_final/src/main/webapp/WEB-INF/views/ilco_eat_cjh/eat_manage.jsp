@@ -5,18 +5,42 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/jquery-ui.css' />">
 <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
-<script src="<c:url value='/js/js_cjh/eat_manage.js'/>"></script>
-<script src="<c:url value='/js/js_cjh/jquery-ui.js'/>"></script>
 <link rel="stylesheet" type="text/css"	href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
-<link rel="stylesheet" type="text/css"	href='<c:url value="/css/css_cjh/datepicker.css"/>'>
-<link rel="stylesheet" type="text/css"	href='<c:url value="/css/css_cjh/jquery-ui.css"/>'>
+
+
+<script src="<c:url value='/js/js_jjh/jquery-ui.js'/>"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/datepicker.css' />">
+
+
 <c:import url="/WEB-INF/views/layout/header_main.jsp"/>
 <title>메뉴 등록</title>
 </head>
 </head>
 <body>
-	<a href="/ilcoeat/main"> 일코 푸드 메인</a>
+	<script>
+		$.datepicker.setDefaults({
+			  dateFormat: 'yy-mm-dd',
+			  prevText: '이전 달',
+			  nextText: '다음 달',
+			  monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			  monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			  dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+			  dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+			  dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+			  showMonthAfterYear: true,
+			  yearSuffix: '년'
+			});
+		  $(function(){
+			  $('.datepicker').datepicker({
+				    minDate: 0,
+				    autoclose: true,
+				    todayHighlight: true
+				});
+		  })
+	</script>
+	
 	<c:import url="/WEB-INF/views/layout/top.jsp"/>
 	<div class="inputmenuwraper">
 		<div class="inputform">
@@ -25,7 +49,8 @@
 				<div class="submitrow">
 					<div class="what">식단 일자 :</div>
 					<div class="inputarea">
-						<input type='text' id="date-picker" name="menu_date" class='datepicker' placeholder="식단일자">
+						<input type='text' id="date-picker" name="date-picker" class='datepicker' placeholder="식단일자">
+						<input type='date' id="date-picker" name="date-picker" class='datepicker' placeholder="식단일자">
 					</div>
 				</div>
 				<div class="submitrow">
@@ -41,7 +66,7 @@
 											<div class="radio_title">
 												<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
 												<label for="Day-A" class="radLab">A-type</label>
-											</div> 
+										</div>									
 									</div>
 									<div class="RadBtn">
 											<input type="radio" value="Day-B"  name="menu_type" id="type" class="radioBtn">
@@ -116,10 +141,10 @@
 									</div>
 								</div>
 								<div class="checkBtn">
-									<input type="checkbox" class="allergy" name="allergy" value="견과류">
+									<input type="checkbox" class="allergy" name="allergy" value="대두">
 									<div class="check_title">
 									<img src="<c:url value='/image/cjh_nuts.png'/>" class="type_icon">
-										<label for="allergy"> 견과류</label>
+										<label for="allergy"> 대두</label>
 									</div>
 								</div>
 								<div class="checkBtn">
@@ -153,34 +178,12 @@
 			</form>
 		</div>
 	</div>
+<a href="/ilcoeat/main"> 일코 푸드 메인</a>///
+<a href="/ilcoeat/ilcoeat/menu_all"> 일코 푸드 메뉴 전체 조회</a>
 
 
 
 
-	<script>
-		$.datepicker.setDefaults({
-			dateFormat : 'yy-mm-dd',
-			prevText : '이전 달',
-			nextText : '다음 달',
-			monthNames : [ '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월',
-					'9월', '10월', '11월', '12월' ],
-			monthNamesShort : [ '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월',
-					'9월', '10월', '11월', '12월' ],
-			dayNames : [ '일', '월', '화', '수', '목', '금', '토' ],
-			dayNamesShort : [ '일', '월', '화', '수', '목', '금', '토' ],
-			dayNamesMin : [ '일', '월', '화', '수', '목', '금', '토' ],
-			showMonthAfterYear : true,
-			yearSuffix : '년'
-		});
-		$(function() {
-			$('.datepicker').datepicker({
-				minDate : 0,
-				autoclose : true,
-				todayHighlight : true
-			});
-		})
-	
-	</script>
 		<c:import url="/WEB-INF/views/layout/footer.jsp"/>
 </body>
 
