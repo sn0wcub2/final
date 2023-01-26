@@ -5,16 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<c:import url="/WEB-INF/views/layout/header_main.jsp"/>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/jquery-ui.css' />">
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 <link rel="stylesheet" type="text/css"	href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
-
-
 <script src="<c:url value='/js/js_jjh/jquery-ui.js'/>"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/datepicker.css' />">
 
 
-<c:import url="/WEB-INF/views/layout/header_main.jsp"/>
 <title>메뉴 등록</title>
 </head>
 </head>
@@ -49,8 +46,7 @@
 				<div class="submitrow">
 					<div class="what">식단 일자 :</div>
 					<div class="inputarea">
-						<input type='text' id="date-picker" name="date-picker" class='datepicker' placeholder="식단일자">
-						<input type='date' id="date-picker" name="date-picker" class='datepicker' placeholder="식단일자">
+						<input type='text' id="date-picker" name="menu_date" class='datepicker' placeholder="식단일자" autocomplete="off">
 					</div>
 				</div>
 				<div class="submitrow">

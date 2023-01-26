@@ -15,19 +15,35 @@
 		<script src="<c:url value='/js/js_csh/login.js'/>"></script>
 		<script src="<c:url value='/js/js_csh/findIdForm.js'/>"></script>
 		<style type="text/css">
+		
+		.w3-card-4, .w3-hover-shadow:hover {
+    box-shadow: 0 4px 10px 0 rgb(135 206 235), 0 4px 20px 0 rgb(135 206 235);
+}
+.w3-input:focus {
+    border-bottom: 2px solid orange;
+	outline: none;
+}
+h1 {
+    color: #87ceeb;
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
 		.mybtn{
 		  width:150px;
 		  height:40px;
 		  padding:0;
 		  display:inline; 
 		  border-radius: 4px; 
-		  background: #212529;
+		  background: #87ceeb;
 		  color: #fff;
 		  margin-top: 20px;
-		  border: solid 2px #212529; 
 		  transition: all 0.5s ease-in-out 0s;
 		}
 		.mybtn:hover .mybtn:focus {
+		  border-color:  #87ceeb; 
+  		  border-radius: 4px; 
+   		  border: solid 2px #000;
 		  background: white;
 		  color: #212529;
 		  text-decoration: none;

@@ -34,7 +34,6 @@ h4 {
 }
 
 #comTitle{
-	margin-left: 55%;
 	margin-bottom: 10px;
 	width: 700px;
 	padding: 15px;
@@ -45,7 +44,6 @@ h4 {
 }
 
 #comContent{
-	margin-left: 55%;
 	margin-bottom: 30px;
 	width: 700px;
 	height: 300px;
@@ -76,7 +74,9 @@ h4 {
     margin-left: 0;
 }
 
-
+.board_write{
+	margin:auto;
+}
 
 
 
