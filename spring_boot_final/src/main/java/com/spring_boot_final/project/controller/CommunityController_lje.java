@@ -71,4 +71,12 @@ public class CommunityController_lje {
 	public String ilcocomView(){
 		return "ilco_community_lje/comViewForm";
 		}
+	
+	//나눔글목록 페이지
+		@RequestMapping("/ilcocommunity/shareBoardList")
+		public String ilcocomShareList(Model model){
+			ArrayList<CommunityVO_lje> comList = service.listAllCommunity();
+			model.addAttribute("comList", comList);
+			return "ilco_market_lje/marketSharecomList";
+		}
 }
