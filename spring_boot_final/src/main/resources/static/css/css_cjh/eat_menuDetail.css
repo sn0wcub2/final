@@ -7,6 +7,36 @@
 	padding-bottom:50px;
 	border-bottom:1px solid black;
 }
+/*                             */
+.sampleImg{
+	position: relative;
+    padding-top: 47px;
+	
+}
+.sampleImg img{
+    height: 320px;
+    width: 550px;
+	border-radius:10px;
+	border:solid .5px black;
+}
+
+.forTest{
+	margin: auto;
+    text-align: center;
+    width: 100px;
+    height:40px;
+    border: solid 2px orange;
+    border-radius:3px;
+    font-size:15px;
+    font-weight:bold;
+    background-color:white;
+}
+
+/*                             */
+
+
+
+
 
 .title{
 	font-size:40px;	
@@ -15,6 +45,7 @@
 	width:300px;
 	margin: auto;
 }
+
 .inputform{
 	padding-top:50px;
 	margin: auto;

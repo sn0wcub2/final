@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -66,16 +68,24 @@ public class Controller_cjh {
 		return "ilco_eat_cjh/eatMenuAll";
 	}
 	
-	
-	
 	//상세 정보
 	@RequestMapping("/ilcoeat/detail/{menu_id}")
 	public String menuDetail(@PathVariable String menu_id,
+											HttpSession session,
 											Model model) {
+		String memId = (String) session.getAttribute("sid");
+		String result ="ilco_eat_cjh/eat_menuDetail";
+		
 		MenuVO_cjh menu = service.menuDetail(menu_id);
 		model.addAttribute("menu", menu);
 		
-		return "ilco_eat_cjh/eat_menuDetail";
+		System.out.println(memId);
+		
+		if(memId.equals("admin")) {
+			result = "ilco_eat_cjh/eat_menuDetailAdmin";
+		}
+		
+		return result;
 	}
 	
 	// 메뉴 상세 보기 페이지로 이동(수정 삭제 가능 > 일단 페이지 이동만)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -90,20 +100,21 @@ public class Controller_cjh {
 //			관리자 메뉴 수정
 	@RequestMapping("/ilcofoodmange/update")
 	public String menuListadmin(@RequestParam List<String> allergy, 
-												@RequestParam String menu_id,
 												MenuVO_cjh menu){
 		String A_info = ""; 
 		for( String i : allergy) {
 			A_info += "/" + i;
 		}
-		System.out.println(menu_id);
+		System.out.println(A_info);
+		System.out.println(menu.getCal());
 		menu.setAllergy_info(A_info+"/");
-		service.menuUpdate(menu_id);
+		
+		service.menuUpdate(menu);
 		
 		return "redirect:/ilcoeat/menu_all";
 	}
 	
-	
+	//삭제
 	@RequestMapping("/ilcoeat/deletemenu/{menu_id}")
 	public String deleteMenu(@PathVariable String menu_id) {
 		service.menuDelete(menu_id);
