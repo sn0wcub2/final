@@ -6,6 +6,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>로그인 화면</title>
+		<!--  head -->         
+        	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/login.css'/>">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,6 +36,8 @@
 	</head>
 	<body>
 	<div id="wrap">
+	<!--  top -->         
+        	<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<div class="w3-content w3-container w3-margin-top loginbox">
 			<div class="w3-container w3-card-4 w3-auto login" style="width: 382px;height: 456.3px;">
 				<div class="w3-center w3-large w3-margin-top">
@@ -49,7 +53,7 @@
 					placeholder="비밀번호를 입력해 주세요." required>
 					<ul>
 						<li><a href="<c:url value="/member_csh/findIdForm"/>">아이디 찾기</a></li>
-						<li><a href="<c:url value="/member_csh/findPwdForm"/>">비밀번호 변경</a></li>
+						<li><a href="<c:url value="/member_csh/findPwdForm"/>">비밀번호 찾기</a></li>
 						<li><a href="<c:url value="/member_csh/signUp"/>">회원가입</a></li>
 					</ul>
 					<p class="w3-center">
@@ -61,5 +65,7 @@
 	</div>
 	</body>
 	<footer>
+        <!--  bottom -->         
+        	<c:import url="/WEB-INF/views/layout/footer.jsp" />
     </footer>
 </html>

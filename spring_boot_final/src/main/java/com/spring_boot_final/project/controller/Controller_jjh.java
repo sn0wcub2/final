@@ -31,7 +31,7 @@ public class Controller_jjh {
 		String result = "fail";
 		String memId = (String) session.getAttribute("sid");
 		int ldate = pservice.findLastestData(memId);
-		Integer pointTotal = pservice.pointTotalCheck(memId, ldate);
+		int pointTotal = pservice.pointTotalCheck(memId, ldate);
 		
 		if (pointTotal >= srpay) {
 			String pointDesciption = "안심 동행 서비스 이용";

@@ -12,4 +12,5 @@ public interface IDAO_csh {
 	public String findPwd(HashMap<String, Object> map);
 	public void insertPoint(String memId);
 	public void changePwd(VO_csh vo);
+	public void updatePw(VO_csh vo); // 패스워드 업데이트
 }

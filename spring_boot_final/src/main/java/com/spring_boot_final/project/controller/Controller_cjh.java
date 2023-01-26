@@ -1,8 +1,16 @@
 package com.spring_boot_final.project.controller;
 
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -13,10 +21,19 @@ import com.spring_boot_final.project.service.Service_cjh;
 public class Controller_cjh {
 	@Autowired
 	private Service_cjh service;
-	
+	// 달력 제작
+	@RequestMapping("/ilcoeat/Calendar")
+	public String ilcoeatCalandar(){
+		return "ilco_eat_cjh/eatMenuCalendar";
+	}
 	// 푸드 메인으로 이동
 	@RequestMapping("/ilcoeat/main")
-	public String ilcoeatMain(){
+	public String ilcoeatMain(Model model){
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		ArrayList<MenuVO_cjh> menuList = service.todaymenu(sdf.format(date));
+		model.addAttribute("menuList", menuList);
 		return "ilco_eat_cjh/eatMain";
 	}
 	
@@ -28,15 +45,47 @@ public class Controller_cjh {
 	
 	// 메뉴 페이지로 이동
 	@RequestMapping("/ilcoeat/eatMenu")
-	public String ilcoeatMenu(){
+	public String ilcoeatMenu(Model model){
+		// 오늘 날짜로 검색 > 금일 날짜 문자열 변환
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		ArrayList<MenuVO_cjh> menuList = service.todaymenu(sdf.format(date));
+		model.addAttribute("menuList", menuList);
 		return "ilco_eat_cjh/eatmenu";
 	}
 	
-	// 요청 페이지로 이동
-	@RequestMapping("/ilcoeat/eatRequest")
-	public String ilcoeatReq(){
-		return "ilco_eat_cjh/eatRequest";
+	// 모든 메뉴 보기 페이지로 이동
+	@RequestMapping("/ilcoeat/menu_all")
+	public String menuList(Model model){
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		ArrayList<MenuVO_cjh> menuAllList = service.menuAll(sdf.format(date));
+		model.addAttribute("menuAllList", menuAllList);
+		return "ilco_eat_cjh/eatMenuAll";
 	}
+
+	
+//	// 조건(일자, 메뉴, 타입)에 맞는 메뉴 검색
+//	@RequestMapping("/ilcoeat/searchMenuAll")
+//	public String searchMenuAll() {
+//		return "ilco_eat_cjh/eatMenuAllResult";
+//	}
+	
+	//상세 정보
+	@RequestMapping("/ilcoeat/detail/{menu_id}")
+	public String menuDetail(@PathVariable String menu_id,
+											Model model) {
+		System.out.println(menu_id);
+		MenuVO_cjh menu = service.menuDetail(menu_id);
+		model.addAttribute("menu", menu);
+		return "ilco_eat_cjh/eat_menuDetail";
+	}
+	
+	
+	
+	
 	//======================================================================//
 	// 마이페이지 > 관리 임시 제작
 	@RequestMapping("/ilcoMypageasdfasdf")
@@ -52,17 +101,21 @@ public class Controller_cjh {
 	
 	// 관리자 페이지 메뉴 등록
 	@RequestMapping("/ilcofoodmange/insertmenu")
-	public String insertmenu(@RequestParam("date") String date,
+	public String insertmenu(@RequestParam("menu_date") String date,
 												@RequestParam("menu_type") String mt,
+												@RequestParam List<String> allergy,
 												MenuVO_cjh menu){
+		// 알러지 정보 리스트로 분할
+		String A_info = ""; 
+		for( String i : allergy) {
+			A_info += "/" + i;
+		}
+		menu.setAllergy_info(A_info+"/");
+		// mid 생성
 		menu.setMenu_id(date + "-" + mt);
-		menu.setMenu_pic(null);
 		System.out.println(menu.getMenu_id());
 		service.insertmenu(menu);
-//		System.out.println(menu.getAllergy_info());
-//		System.out.println(menu.getMenu_comp());
-//		System.out.println(menu.getMenu_date());
-		return "redirect:/ilcoeat/main";
+		return "ilco_eat_cjh/eat_manage";
 	}
 	
 }

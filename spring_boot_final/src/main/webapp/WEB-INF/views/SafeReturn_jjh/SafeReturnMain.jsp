@@ -9,7 +9,9 @@
 		<title>안전 귀가</title>
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/jquery-ui.css' />">
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/datepicker.css' />">
-		<c:import url="/WEB-INF/views/layout/header_main.jsp"/>
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/SafeReturn.css' />">
+		<%-- <c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 --> --%>
+		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 		<script src="<c:url value='/js/js_jjh/jquery-ui.js'/>"></script>
 		<script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=l7xxad34a3adc29543b7a7962a0496fa88a3"></script>
 		<script src="<c:url value='/js/js_jjh/safereturn_paths.js'/>"></script>
@@ -17,14 +19,16 @@
 		
 	</head>
 	<body onload="mapMaker();">
-		<c:import url="/WEB-INF/views/layout/top.jsp"/>
+		<c:import url="/WEB-INF/views/layout/top.jsp"/> <!-- 탑 메뉴 -->
 		
 		<div class="gtco-loader"></div>
-
+		<br>
+		<h3 style="text-align:center;">안심 귀가 서비스</h3> <hr>
+		
 		<div style="text-align:center;">
 			<form id="safeReturnAddressForm">
 				<p>날짜 입력</p>
-				<input type='text' id="date-picker" name="date-picker" class='datepicker'>
+				<input type='text' id="date-picker" name="date-picker" class='datepicker' autocomplete="off" style="text-align:center;" readonly>
 				<script>
 					$.datepicker.setDefaults({
 						  dateFormat: 'yy-mm-dd',
@@ -46,26 +50,27 @@
 							});
 					  })
 				</script>
+				<br>
 				<p>시작지 입력</p>
 			    <select id="dong1" name="dong1">
 			      <option value="역삼동" selected="selected">역삼동</option>
 			      <option value="신림동">신림동</option>
 			      <option value="화양동">화양동</option>
-			    </select>
-				<input type="text" class="text_custom" id="bunji1" name="bunji1" placeholder="1">번지<br>
+			    </select>&emsp;
+				<input type="text" class="text_custom" id="bunji1" name="bunji1" placeholder="1" autocomplete="off">번지<br>
 				<p>도착지 입력</p>
 				<select id="dong2" name="dong2">
 			      <option value="역삼동" selected="selected">역삼동</option>
 			      <option value="신림동">신림동</option>
 			      <option value="화양동">화양동</option>
-			    </select>
-				<input type="text" class="text_custom" id="bunji2" name="bunji2" placeholder="1">번지<br>
+			    </select>&emsp;
+				<input type="text" class="text_custom" id="bunji2" name="bunji2" placeholder="2" autocomplete="off">번지<br>
 				<br>
-				<button id="findPaths">경로 탐색</button>
+				<button id="findPaths" class="btn-two cyan small">경로 탐색</button>
 				<br><br>
 				
 				<!-- 190430 기존 지도를 모두 이미지 처리 위해 주석 처리 S -->
-				<div id="map_wrap" class="map_wrap3" style="padding-left:25%">
+				<div id="map_wrap" class="map_wrap3" style="padding-left:27%">
 					<div id="map_div"></div>
 				</div>
 				<div class="map_act_btn_wrap clear_box"></div>
@@ -73,11 +78,10 @@
 				<div id="safeReturnSignUpBox">
 					<p id="result"></p>
 					<p id="safeReturnPay"></p>
-					<input type="submit" value="서비스 신청">
-					<button id='safeReturnSignUpBtn' onClick='location.href="/safe/signup"'>서비스 신청 버튼</button>
+					<input type="submit" value="서비스 신청" class="btn-two cyan small">
 				</div>
 			</form>
 		</div>
-		<c:import url="/WEB-INF/views/layout/footer.jsp"/>
+		<c:import url="/WEB-INF/views/layout/footer.jsp"/> <!-- 바텀 메뉴 -->
 	</body>
 </html>

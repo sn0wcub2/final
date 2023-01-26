@@ -1,1 +1,88 @@
 @charset "UTF-8";
+
+.text_custom {
+	border-top: none;
+    border-left:none;
+    border-right: none;
+    border-bottom: 2px skyblue solid;
+    background-color:transparent; 
+    text-align: center;
+    outline: none;
+    width: 70px;
+}
+
+input::placeholder {
+	color:#c5cecf000;
+	font-size: 15px;
+	text-align: center;
+	font-style: italic;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  
+  
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1;
+  
+  color: #444;
+  background-color: #fff;
+  
+  padding: .6em 1.4em .5em .8em;
+  margin: 0;
+  
+  border: 1px solid #aaa;
+  border-radius: .5em;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+}
+
+select:hover {
+  border-color: #888;
+}
+
+select:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+
+select:disabled {
+  opacity: 0.5;
+}
+
+hr {
+	background-color: skyblue;
+	height: 3px;
+	border: 0;
+}
+
+.btn-two {
+  color: white; 
+  padding: 15px 25px;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.21);
+  border-bottom-color: rgba(0,0,0,0.34);
+  text-shadow:0 1px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset, 
+              0 2px 0 -1px rgba(0,0,0,0.13), 
+              0 3px 0 -1px rgba(0,0,0,0.08), 
+              0 3px 13px -1px rgba(0,0,0,0.21);
+}
+.btn-two:active {
+  top: 1px;
+  border-color: rgba(0,0,0,0.34) rgba(0,0,0,0.21) rgba(0,0,0,0.21);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89),0 1px rgba(0,0,0,0.05) inset;
+  position: relative;
+}
+
+.btn-two.small {
+  padding: 8px 18px;  
+  font-size: 14px;
+}
+
+.btn-two.cyan {background-color: skyblue;}
