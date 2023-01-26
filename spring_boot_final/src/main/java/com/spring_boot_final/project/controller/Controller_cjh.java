@@ -66,12 +66,7 @@ public class Controller_cjh {
 		return "ilco_eat_cjh/eatMenuAll";
 	}
 
-	
-//	// 조건(일자, 메뉴, 타입)에 맞는 메뉴 검색
-//	@RequestMapping("/ilcoeat/searchMenuAll")
-//	public String searchMenuAll() {
-//		return "ilco_eat_cjh/eatMenuAllResult";
-//	}
+
 	
 	//상세 정보
 	@RequestMapping("/ilcoeat/detail/{menu_id}")
@@ -80,6 +75,7 @@ public class Controller_cjh {
 		System.out.println(menu_id);
 		MenuVO_cjh menu = service.menuDetail(menu_id);
 		model.addAttribute("menu", menu);
+		
 		return "ilco_eat_cjh/eat_menuDetail";
 	}
 	
