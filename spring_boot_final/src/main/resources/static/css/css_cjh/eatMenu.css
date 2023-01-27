@@ -58,29 +58,24 @@ a:link{
 	display:block;
 	width:800px;
 	height:400px;
-	border:3px solid #FE5F55;
+	border:3px solid #09c6ab;
 	border-radius:15px;
 }
 /* 오버레이 */
 .overLay{
 	position:absolute;
-	width:806px;
-	height:0;
+	width:800px;
+	height:400px;
 	background-color:rgba(0,0,0,0.7);
 	left:0;
 	right:0;
 	bottom:0;
 	text-align: center;
 	overflow: hidden;
-	transition: .5s ease-in;
-}
-/* 효과 */
-.main_container:hover .overLay{
-	width:800px;
-	height:400px;
-	border:3px solid #FE5F55;
 	border-radius:15px;
+	border:3px solid #FE5F55;
 }
+
 /* 아이콘  및 텍스트*/
 .menuIcon{
 	padding-top:50px;
@@ -90,6 +85,7 @@ a:link{
 	border-bottom:solid 1px #fff;
 }
 .mencomp{
+	color: white;
     position: relative;
     margin-left: auto;
     margin-right: auto;

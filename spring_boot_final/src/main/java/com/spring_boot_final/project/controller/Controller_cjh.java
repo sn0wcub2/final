@@ -65,22 +65,50 @@ public class Controller_cjh {
 		model.addAttribute("menuAllList", menuAllList);
 		return "ilco_eat_cjh/eatMenuAll";
 	}
-
-
+	
+	
 	
 	//상세 정보
 	@RequestMapping("/ilcoeat/detail/{menu_id}")
 	public String menuDetail(@PathVariable String menu_id,
 											Model model) {
-		System.out.println(menu_id);
 		MenuVO_cjh menu = service.menuDetail(menu_id);
 		model.addAttribute("menu", menu);
 		
 		return "ilco_eat_cjh/eat_menuDetail";
 	}
 	
+	// 메뉴 상세 보기 페이지로 이동(수정 삭제 가능 > 일단 페이지 이동만)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	@RequestMapping("/ilcoeat/detail2/{menu_id}")
+	public String menuListadmin(@PathVariable String menu_id,
+												Model model) {
+		MenuVO_cjh menu = service.menuDetail(menu_id);
+		model.addAttribute("menu", menu);
+		return "ilco_eat_cjh/eat_menuDetailAdmin";
+	}
+			
+//			관리자 메뉴 수정
+	@RequestMapping("/ilcofoodmange/update")
+	public String menuListadmin(@RequestParam List<String> allergy, 
+												@RequestParam String menu_id,
+												MenuVO_cjh menu){
+		String A_info = ""; 
+		for( String i : allergy) {
+			A_info += "/" + i;
+		}
+		System.out.println(menu_id);
+		menu.setAllergy_info(A_info+"/");
+		service.menuUpdate(menu_id);
+		
+		return "redirect:/ilcoeat/menu_all";
+	}
 	
 	
+	@RequestMapping("/ilcoeat/deletemenu/{menu_id}")
+	public String deleteMenu(@PathVariable String menu_id) {
+		service.menuDelete(menu_id);
+		return "redirect:/ilcoeat/menu_all";
+	}
 	
 	//======================================================================//
 	// 마이페이지 > 관리 임시 제작
@@ -111,7 +139,7 @@ public class Controller_cjh {
 		menu.setMenu_id(date + "-" + mt);
 		System.out.println(menu.getMenu_id());
 		service.insertmenu(menu);
-		return "ilco_eat_cjh/eat_manage";
+		return "redirect:/ilcoeat/menu_all";
 	}
 	
 }

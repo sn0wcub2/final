@@ -25,7 +25,7 @@
   <!-- menu 테이블에 모든 데이터 넣기 -->
 	  <insert id="insertmenu" parameterType="com.spring_boot_final.project.model.MenuVO_cjh">
 	  		INSERT INTO menu (menu_id, menu_date, menu_type, menu_pic, mainMenu, subMenu, other, cal, prot, fat, carb, allergy_info)
-	  		VALUES(#{menu_id}, #{menu_date}, #{menu_type}, #{menu_pic}, #{mainMenu}, #{subMenu}, #{other}, #{cal}, #{prot}, #{carb}, #{fat}, #{allergy_info})
+	  		VALUES(#{menu_id}, #{menu_date}, #{menu_type}, #{menu_pic}, #{mainMenu}, #{subMenu}, #{other}, #{cal}, #{prot}, #{fat}, #{carb}, #{allergy_info})
 	  </insert>
 	  
 	  <!-- 오늘 날짜에 해당하는 메뉴만 가져오기 -->
@@ -50,11 +50,14 @@
 	  	SELECT * FROM menu 
 	  	WHERE menu_id=#{menu_id}
 	  </select>
+	  
 	  <update id="menuUpdate" parameterType="string">
 	  	UPDATE menu 
 	  	SET mainMenu=#{mainMenu}, subMenu=#{subMenu}, other=#{other}, cal=#{cal}, prot=#{prot}, fat=#{fat}, carb=#{carb}, allergy_info=#{allergy_info}
 	  	WHERE menu_id = #{menu_id}
 	  </update>
+	  
+	  
 	  <delete id="menuDelete" parameterType="string">
 	  	DELETE FROM menu
 	  	WHERE menu_id = #{menu_id}

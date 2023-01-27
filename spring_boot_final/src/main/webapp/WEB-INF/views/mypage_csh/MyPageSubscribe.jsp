@@ -6,6 +6,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>구독 정보 확인</title>
+		<!--  head -->         
+        	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
 	<style>
         table {
             width: 100%;
@@ -16,7 +18,7 @@
             border: 1px solid #444444;
             text-align: center;
             height: 40px;
-            background-color: dodgerblue;
+            background-color: lightskyblue;
             color: cornsilk;
         }
         table td {
@@ -27,6 +29,8 @@
 </head>
 <body>
 <div style="text-align: center;">
+<!--  top -->         
+        	<c:import url="/WEB-INF/views/layout/top.jsp" />
     <h1>구독 정보 확인</h1>
     <table style="width: 700px; margin: auto">
         <tr>
@@ -47,5 +51,9 @@
     </table>
     <input type="button" value="뒤로가기" onclick="history.back(-1)">
 </div>
+<footer>
+        <!--  bottom -->         
+        	<c:import url="/WEB-INF/views/layout/footer.jsp" />
+    </footer>
 </body>
 </html>

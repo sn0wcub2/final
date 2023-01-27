@@ -30,7 +30,7 @@
 			<form id="safeReturnAddressForm">
 				<div class="dtse" style="margin-left:50px;">
 					<p>날짜 입력</p>
-					<input type='text' id="date-picker" name="date-picker" class='datepicker' autocomplete="off" style="text-align:center;" readonly>
+					<input type='text' id="date-picker" name="date-picker" class='datepicker' placeholder="날짜를 입력해주세요" autocomplete="off" style="text-align:center;" readonly>
 					<script>
 						$.datepicker.setDefaults({
 							  dateFormat: 'yy-mm-dd',
@@ -52,7 +52,7 @@
 								});
 						  })
 					</script><p></p>
-					<input type="text" id="timepicker" name="timepicker" autocomplete="off" style="text-align:center;" readonly>
+					<input type="text" id="timepicker" name="timepicker" placeholder="시간을 입력해주세요" autocomplete="off" style="text-align:center;" readonly>
 					<script type='text/javascript'>
 						$('#timepicker').timepicki({
 							show_meridian:false,
