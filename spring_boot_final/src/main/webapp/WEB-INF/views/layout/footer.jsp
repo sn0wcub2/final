@@ -11,7 +11,7 @@
 					<div class="col-md-4">
 						<div class="gtco-widget" style="width:336.66px">
 							<h3>About Us</h3>
-							<p>여기에 주저리주저리 뭔가를 채워서 넣으면 보기 좋을거같은데 일단 당장 생각나는 내용이 없으니까 이렇게 채워넣지만 발표 전까지는 다른 내용으로 채워 넣는게 좋아보이겠죠?</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum justo eu blandit feugiat. Fusce feugiat odio eget massa lacinia, eget scelerisque tellus congue.</p>
 						</div>
 					</div>
 	
@@ -19,16 +19,20 @@
 						<div class="gtco-widget">
 							<h3>바로가기</h3>
 							<ul class="gtco-footer-links">
-								<li><a href="#">일코푸드</a></li>
-								<li><a href="#">안심서비스</a></li>
-								<li><a href="#">세탁서비스</a></li>
-								<li><a href="#">커뮤니티</a></li>
-								<li><a href="#">일코장터</a></li>
+								<li><a href="/ilcoeat/main">일코푸드</a></li>
+								<li><a href="/safe/main">안심서비스</a></li>
+								<li><a href="#">안심 동행</a></li>
+								<li><a href="/laundry_kbh/laundryMain">세탁서비스</a></li>
+								<li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
 							</ul>
 						</div>
 					</div>
 	
-					
+					<div class="col-md-2 col-md-push-1">
+						<div class="gtco-widget">
+							
+						</div>
+					</div>
 	
 					<div class="col-md-3 col-md-push-1">
 						<div class="gtco-widget">
@@ -47,7 +51,7 @@
 					<div class="col-md-12">
 						<p class="pull-left">
 							<small class="block">&copy; 2023 일코노미. All Rights Reserved.</small> 
-							<small class="block">Designed by <a href="/index" target="_blank">iconomi Team</a> Demo Images: <a href="/" target="_blank">이미지 출처 사이트 이름 넣기</a></small>
+							<small class="block">Designed by <a href="/" target="_blank">iconomi Team</a></small>
 						</p>
 						<p class="pull-right">
 							<ul class="gtco-social-icons pull-right">
