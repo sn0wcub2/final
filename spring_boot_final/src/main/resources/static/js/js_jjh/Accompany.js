@@ -18,7 +18,8 @@ function setAccompany() {
  $(document).ready(function() {
  	$("#safeReturnAddressForm").on("submit", function() {
  		event.preventDefault();
- 		var srpay = $("#srpay").val();
+ 		var formData = $(this).serialize();
+ 		console.log(formData);
  		if($("#safeReturnPay").text() == "") {
 			alert("이용 경로를 선택해 주세요.");
 			return false;
@@ -27,7 +28,7 @@ function setAccompany() {
  		$.ajax({
  			type:"post",
  			url:"/safe/safereturnsignup",
- 			data:{"srpay":srpay},
+ 			data:formData,
  			dateType:"text",
  			success:function(result) {
  				if(result == "success") { 

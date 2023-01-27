@@ -87,16 +87,16 @@
 						var resultData = response.features;
 
 						//결과 출력
-						var tDistance = '<img src="/image/main_images/walk.png" class="sfimg">' + "이동 거리 : "
-								+ ((resultData[0].properties.totalDistance) / 1000)
-										.toFixed(1) + "km&emsp;&emsp;";
-						var tTime = '<img src="/image/main_images/clock.png" class="sfimg">' + " 예상 시간 : "
-								+ ((resultData[0].properties.totalTime) / 60)
-										.toFixed(0) + "분";
-						
+						var tDistance = "<input type='hidden' id='working' name='working' value='" + ((resultData[0].properties.totalDistance) / 1000).toFixed(1) + "'>"
+								+ '<img src="/image/main_images/walk.png" class="sfimg">' + "이동 거리 : "
+								+ ((resultData[0].properties.totalDistance) / 1000).toFixed(1) + "km&emsp;&emsp;";
+						var tTime = "<input type='hidden' id='estimatedTime' name='estimatedTime' value='" + ((resultData[0].properties.totalTime) / 60).toFixed(0) + "'>"
+								+ '<img src="/image/main_images/clock.png" class="sfimg">' + " 예상 시간 : "
+								+ ((resultData[0].properties.totalTime) / 60).toFixed(0) + "분";
+						console.log(((resultData[0].properties.totalDistance) / 1000).toFixed(1));
 						$("#result").html(tDistance + tTime);
 						$("#safeReturnPay").html('<img src="/image/main_images/cash.png" class="sfimg">' +"&nbsp;&nbsp;결제 금액 : " + ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "원"
-								+ "<input type='hidden' id='srpay' value='" + ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "'>");
+								+ "<input type='hidden' id='srpay' name='srpay' value='" + ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "'>");
 						
 						//기존 그려진 라인 & 마커가 있다면 초기화
 						if (resultdrawArr.length > 0) {
@@ -214,9 +214,14 @@
 	          	 var chkDate = $("#date-picker").val();
 		 		 var chkBunji1 = $("#bunji1").val();
 		 		 var chkBunji2 = $("#bunji2").val();
+		 		 var chkTime = $("#timepicker").val();
 		 		
 		 		 if(chkDate == "") {
 		 		 	alert("서비스 사용 날짜를 선택해 주세요.");
+		 		 	return false;
+		 		 }
+		 		 if(chkTime == "") {
+		 		 	alert("서비스 사용 시간을 선택해 주세요.");
 		 		 	return false;
 		 		 }
 		 		 if(chkBunji1 == "") {
