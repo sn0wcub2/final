@@ -9,8 +9,10 @@
 		<title>커뮤니티 글 상세 조회</title>
 		
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comDetailView.css' />">
+	<c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 -->
 	</head>
-	<body>
+	<body style="background-color:#eedfcb">
+	<c:import url="/WEB-INF/views/layout/top.jsp"/> <!-- 탑 메뉴 -->
 		<div id="wrap">
 		<header><h3>커뮤니티 게시판</h3></header>
 				<p>이웃들과 다양한 이야기를 나눠보세요</p>
@@ -28,9 +30,9 @@
 				<div class="bt_wrap">
 				<a href="<c:url value='/ilcocommunity/boardlist'/>" class="on">목록</a>
 				
-				<a href="<c:url value='/ilcocommunity/boardViewForm/${com.comNo }'/>">수정</a>
+				<a class="a" href="<c:url value='/ilcocommunity/boardViewForm/${com.comNo }'/>">수정</a>
 				
-				<a href="javascript:deleteCheck();">삭제</a>
+				<a class="a" href="javascript:deleteCheck();">삭제</a>
 				</div>
 				<!--  삭제 확인 메시지 출력 -->
 				<script>
@@ -43,6 +45,7 @@
 				</script>
 		</div>
 	</div>
+	<c:import url="/WEB-INF/views/layout/footer.jsp"/> <!-- 바텀 메뉴 -->
 	</body>
 </html>
 

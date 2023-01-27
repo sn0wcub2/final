@@ -5,8 +5,61 @@
   
   
   <mapper namespace="com.spring_boot_final.project.dao.IDAO_cjh">
+  
+  	<resultMap id="menuResult" type="com.spring_boot_final.project.model.MenuVO_cjh">
+  		<result property="menu_id" column="menu_id"/>
+  		<result property="menu_date" column="menu_date"/>
+  		<result property="menu_type" column="menu_type"/>
+  		<result property="menu_pic" column="menu_pic"/>
+  		<result property="mainMenu" column="mainMenu"/>
+  		<result property="subMenu" column="subMenu"/>
+  		<result property="other" column="other"/>
+  		<result property="cal" column="cal"/>
+  		<result property="prot" column="prot"/>
+  		<result property="carb" column="carb"/>
+  		<result property="fat" column="fat"/>
+  		<result property="allergy_info" column="allergy_info"/>
+  	</resultMap>
+  
+  
+  <!-- menu 테이블에 모든 데이터 넣기 -->
 	  <insert id="insertmenu" parameterType="com.spring_boot_final.project.model.MenuVO_cjh">
-	  		INSERT INTO menu(menu_id, menu_pic, menu_type, menu_comp, nutrition_info, allergy_info, menu_date) 
-	  		VALUES(#{menu_id}, #{menu_pic}, #{menu_type}, #{menu_comp}, #{nutrition_info}, #{allergy_info}, #{menu_date})
+	  		INSERT INTO menu (menu_id, menu_date, menu_type, menu_pic, mainMenu, subMenu, other, cal, prot, fat, carb, allergy_info)
+	  		VALUES(#{menu_id}, #{menu_date}, #{menu_type}, #{menu_pic}, #{mainMenu}, #{subMenu}, #{other}, #{cal}, #{prot}, #{fat}, #{carb}, #{allergy_info})
 	  </insert>
+	  
+	  <!-- 오늘 날짜에 해당하는 메뉴만 가져오기 -->
+	  <select id="todaymenu" parameterType="string" resultMap="menuResult">
+	  	SELECT * FROM menu 
+	  	WHERE menu_date=#{menu_date} 
+	  	ORDER BY menu_id ASC
+	  </select>
+	  
+	  
+	  <!-- 오늘 날짜 이후 해당하는 메뉴 전부 가져오기 --><!-- 부등호 사용으로 인한 cdata 이용 즉, 오류 방지용 -->
+  	  <select id="menuAll" parameterType="string" resultMap="menuResult">
+	  	<![CDATA[
+	  		SELECT * FROM menu 
+	  		WHERE menu_date >= #{menu_date}
+	  		ORDER BY menu_id ASC
+	  	]]>
+	  </select>
+	  
+<!-- 	  메뉴 아이디에 해당하는 정보 가져오기 -->
+  	  <select id="menuDetail" parameterType="string" resultType="com.spring_boot_final.project.model.MenuVO_cjh">
+	  	SELECT * FROM menu 
+	  	WHERE menu_id=#{menu_id}
+	  </select>
+	  
+	  <update id="menuUpdate" parameterType="string">
+	  	UPDATE menu 
+	  	SET mainMenu=#{mainMenu}, subMenu=#{subMenu}, other=#{other}, cal=#{cal}, prot=#{prot}, fat=#{fat}, carb=#{carb}, allergy_info=#{allergy_info}
+	  	WHERE menu_id = #{menu_id}
+	  </update>
+	  
+	  
+	  <delete id="menuDelete" parameterType="string">
+	  	DELETE FROM menu
+	  	WHERE menu_id = #{menu_id}
+	  </delete>
   </mapper>

@@ -12,7 +12,9 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -159,5 +161,15 @@ public class MemberController_csh {
 		service.changePwd(vo);
 
 		return "member_csh/login"; // 로그인 폼으로 이동
+	}
+
+	/* 비밀번호 찾기 */
+	@RequestMapping(value = "/findpw", method = RequestMethod.GET)
+	public void findPwGET() throws Exception{
+	}
+	
+	@RequestMapping(value = "/findpw", method = RequestMethod.POST)
+	public void findPwPOST(@ModelAttribute VO_csh member, HttpServletResponse response) throws Exception{
+		service.findPw(response, member);
 	}
 }

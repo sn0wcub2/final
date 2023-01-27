@@ -5,133 +5,182 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
-<script src="<c:url value='/js/js_cjh/makeMID.js'/>"></script>
-<script src="<c:url value='/js/js_cjh/jquery-ui.js'/>"></script>
-<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
-<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/datepicker.css"/>'>
-<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/jquery-ui.css"/>'>
-<title>Insert title here</title>
+<c:import url="/WEB-INF/views/layout/header_main.jsp"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/jquery-ui.css' />">
+<link rel="stylesheet" type="text/css"	href='<c:url value="/css/css_cjh/eat_manage.css"/>'>
+<script src="<c:url value='/js/js_jjh/jquery-ui.js'/>"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_jjh/datepicker.css' />">
+
+
+<title>메뉴 등록</title>
+</head>
 </head>
 <body>
-
-		
-			메뉴 등록
+	<script>
+		$.datepicker.setDefaults({
+			  dateFormat: 'yy-mm-dd',
+			  prevText: '이전 달',
+			  nextText: '다음 달',
+			  monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			  monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			  dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+			  dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+			  dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+			  showMonthAfterYear: true,
+			  yearSuffix: '년'
+			});
+		  $(function(){
+			  $('.datepicker').datepicker({
+				    minDate: 0,
+				    autoclose: true,
+				    todayHighlight: true
+				});
+		  })
+	</script>
+	
+	<c:import url="/WEB-INF/views/layout/top.jsp"/>
+	<div class="inputmenuwraper">
+		<div class="inputform">
+			<div class="title">메뉴 등록</div>
 			<form method="post" action="/ilcofoodmange/insertmenu">
-				식단 일자 : <input type="date" name="date" id="date">
-				<br> 메뉴 종류 : <select id="type" name="menu_type">
-					<option value="" selected disabled>메뉴 타입</option>
-					<option value="LA">L-A</option>
-					<option value="LB">L-B</option>
-					<option value="DA">D-A</option>
-					<option value="DB">D-B</option>
-				</select><br> 식단 구성 : <input type="text" name="menu_comp"><br>
-				영양정보 : <input type="text" name="nutrition_info"><br> 알레르기
-				정보 : <input type="text"><br>
-				사진 첨부>>
-				<br> <input type="submit" value="등록">
+				<div class="submitrow">
+					<div class="what">식단 일자 :</div>
+					<div class="inputarea">
+						<input type='text' id="date-picker" name="menu_date" class='datepicker' placeholder="식단일자" autocomplete="off">
+					</div>
+				</div>
+				<div class="submitrow">
+	
+					<div class="inputarea">
+					
+							식단 유형 선택
+							<div class="searchBox">
+								<div class="radio-title-group">
+								
+									<div class="RadBtn">
+											<input type="radio" value="Day-A" name="menu_type" id="type" class="radioBtn">
+											<div class="radio_title">
+												<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
+												<label for="Day-A" class="radLab">A-type</label>
+										</div>									
+									</div>
+									<div class="RadBtn">
+											<input type="radio" value="Day-B"  name="menu_type" id="type" class="radioBtn">
+											<div class="radio_title">
+												<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
+												<label for="Day-B" class="radLab">B-type</label>
+											</div>
+									</div>
+									<div class="RadBtn">
+											<input type="radio" value="Night-A" name="menu_type" id="type"  class="radioBtn">
+											<div class="radio_title">
+												<img src="<c:url value='/image/cjh_moon.png'/>" class="type_icon">
+												<label for="Night-A" class="radLab">A-type</label>
+											</div>
+									</div>
+									<div class="RadBtn">
+											<input type="radio" value="Night-B" name="menu_type" id="type"  class="radioBtn">
+											<div class="radio_title">
+												<img src="<c:url value='/image/cjh_moon.png'/>" class="type_icon">	
+												<label for="Night-B" class="radLab">B-type</label>
+											</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+	
+				<div class="submitrow">
+					<div class="inputarea">
+						메뉴 구성 입력
+						<div class="compon">
+							<input type="text" placeholder="메인  메뉴" name="mainMenu"> 
+							<input type="text" placeholder="서브 메뉴" name="subMenu">
+							 <input	type="text" placeholder="이외" name="other">
+						</div>
+					</div>
+				</div>
+				<div class="submitrow">
+					<div class="inputarea">
+					영양정보 입력
+						<div class="nutrition">
+							<input type="text" name="cal" placeholder="총 열량 (kcal)"> 
+							<input type="text" name="prot" placeholder="단백질(g)">
+							 <input	type="text" name="carb" placeholder="탄수화물(g)"> 
+							<input type="text" name="fat" placeholder="지방(g)">
+						</div>
+					</div>
+				</div>
+				<div class="submitrow">
+					<div class="inputarea">
+					알레르기정보
+						<div class="searchBox">
+							<div class="check-title-group">
+								<div class="checkBtn">
+									<input type="checkbox" class="allergy" name="allergy" value="" checked>
+									<div class="check_title">
+										<label for="allergy"> 해당 없음</label>
+									</div>
+								</div>
+								<div class="checkBtn">
+									<input type="checkbox" class="allergy" name="allergy" value="갑각류">
+									<div class="check_title">
+									<img src="<c:url value='/image/cjh_lobster.png'/>" class="type_icon">
+										<label for="allergy"> 갑각류</label>
+									</div>
+								</div>
+								<div class="checkBtn">
+									<input type="checkbox" class="allergy" name="allergy" value="달걀">
+									<div class="check_title">
+									<img src="<c:url value='/image/cjh_egg.png'/>" class="type_icon">
+										<label for="allergy"> 달걀</label>
+									</div>
+								</div>
+								<div class="checkBtn">
+									<input type="checkbox" class="allergy" name="allergy" value="대두">
+									<div class="check_title">
+									<img src="<c:url value='/image/cjh_nuts.png'/>" class="type_icon">
+										<label for="allergy"> 대두</label>
+									</div>
+								</div>
+								<div class="checkBtn">
+									<input type="checkbox" class="allergy" name="allergy" value="우유">
+									<div class="check_title">
+									<img src="<c:url value='/image/cjh_milk.png'/>" class="type_icon">
+										<label for="allergy"> 우유</label>
+									</div>
+								</div>
+								<div class="checkBtn">
+									<input type="checkbox" class="allergy" name="allergy" value="땅콩">
+									<div class="check_title">
+									<img src="<c:url value='/image/cjh_peanut.png'/>" class="type_icon">
+										<label for="allergy"> 땅콩</label>
+									</div>
+								</div>
+								<div class="checkBtn">
+									<input type="checkbox" class="allergy" name="allergy" value="복숭아">
+									<div class="check_title">
+									<img src="<c:url value='/image/cjh_peach.png'/>" class="type_icon">
+										<label for="allergy"> 복숭아</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menuUpload">
+					<input type="submit" value="등록">
+				</div>
 			</form>
-		등록 일자 확인
-		<div class="calendar">
-			<div class="cal_head" >
-				<div class="row">
-					<div><</div>
-					<div>2023년</div>
-					<div> 01월</div>
-					<div>></div>
-				</div>
-				<div class="row">
-					<div>일</div>
-					<div>월</div>
-					<div>화</div>
-					<div>수</div>
-					<div>목</div>
-					<div>금</div>
-					<div>토</div>
-				</div>
 		</div>
-		<div class="cal_body" >
-				<div class="week" id="week1">
-					<div>1</div>
-					<div>2</div>
-					<div>3</div>
-					<div>4</div>
-					<div>5</div>
-					<div>6</div>
-					<div>7</div>
-				</div>
-				<div class="week" id="week2">
-					<div>8</div>
-					<div>9</div>
-					<div>10</div>
-					<div>11</div>
-					<div>12</div>
-					<div>13</div>
-					<div>14</div>
-				</div>
-				<div class="week" id="week3">
-					<div>15</div>
-					<div>16</div>
-					<div>17</div>
-					<div>18</div>
-					<div>19</div>
-					<div>20</div>
-					<div>21</div>
-				</div>
-				<div class="week" id="week4">
-					<div>22</div>
-					<div>23</div>
-					<div>24</div>
-					<div>25</div>
-					<div>26</div>
-					<div>27</div>
-					<div>28</div>
-				</div>
-				<div class="week" id="week5">
-					<div>30</div>
-					<div>31</div>
-					<div>1</div>
-					<div>2</div>
-					<div>3</div>
-					<div>4</div>
-					<div>5</div>
-				</div>
-			</div>
-			
-			
-			
-			
-			
-		<input type='text' id="date-picker" name="date-picker" class='datepicker'>
-            <script>
-                $.datepicker.setDefaults({
-                      dateFormat: 'yy-mm-dd',
-                      prevText: '이전 달',
-                      nextText: '다음 달',
-                      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-                      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-                      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-                      showMonthAfterYear: true,
-                      yearSuffix: '년'
-                    });
-                  $(function(){
-                      $('.datepicker').datepicker({
-                            minDate: 0,
-                            autoclose: true,
-                            todayHighlight: true
-                        });
-                  })
-            </script>
-            
-            
-            
-            
-		</div>
-		<div class="cal_footer" >
-		</div>
-		
+	</div>
+<a href="/ilcoeat/main"> 일코 푸드 메인</a>///
+<a href="/ilcoeat/ilcoeat/menu_all"> 일코 푸드 메뉴 전체 조회</a>
+
+
+
+
+		<c:import url="/WEB-INF/views/layout/footer.jsp"/>
 </body>
 
 </html>

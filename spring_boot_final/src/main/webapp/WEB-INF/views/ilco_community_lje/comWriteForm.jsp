@@ -8,8 +8,10 @@
 <meta charset="UTF-8">
 <title>커뮤니티 글쓰기</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comWriteForm.css' />">
+<c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 -->
 </head>
-<body>
+<body style="background-color:#eedfcb">
+<c:import url="/WEB-INF/views/layout/top.jsp"/> <!-- 탑 메뉴 -->
 	<div id="wrap">
 		<form id="writeForm" name="writeForm" method="post"  action="<c:url value='/ilcocommunity/insertCommunity' />">
 			<div>
@@ -29,14 +31,15 @@
 						</tr>						
 					</table>
 					<div class="bt_wrap">
-						<input type="submit" value="등록">
+						<input type="submit" value="등록" class="on">
 						<a href="<c:url value='/ilcocommunity/boardlist'/>" class="on">취소</a> 
-						<input type="reset" value="취소">
+						<input type="reset" value="취소" class="on">
 					</div>
 				</div>
 			</div>
 		</form>
 	
 	</div>
+	<c:import url="/WEB-INF/views/layout/footer.jsp"/> <!-- 바텀 메뉴 -->
 </body>
 </html>

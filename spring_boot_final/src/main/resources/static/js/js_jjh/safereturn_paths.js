@@ -24,7 +24,7 @@
 		// 1. 지도 띄우기
 		map = new Tmapv2.Map("map_div", {
 			center : new Tmapv2.LatLng(37.500692, 127.036978),
-			width : "80%",
+			width : "65%",
 			height : "400px",
 			zoom : 17,
 			zoomControl : true,
@@ -93,11 +93,10 @@
 						var tTime = " 예상 시간 : "
 								+ ((resultData[0].properties.totalTime) / 60)
 										.toFixed(0) + "분";
-						var pay = "결제 금액 : "
-								+ ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "원";
-
+						
 						$("#result").text(tDistance + tTime);
-						$("#safeReturnPay").text(pay);
+						$("#safeReturnPay").html("결제 금액 : "
+								+ "<input type='text' id='srpay' value='" + ((resultData[0].properties.totalTime) / 60).toFixed(0) * 100 + "'readonly>" + "원");
 						
 						//기존 그려진 라인 & 마커가 있다면 초기화
 						if (resultdrawArr.length > 0) {
@@ -212,6 +211,26 @@
   	$("#findPaths")
 	    .on('click', function() {
 	          	 event.preventDefault();
+	          	 var chkDate = $("#date-picker").val();
+		 		 var chkBunji1 = $("#bunji1").val();
+		 		 var chkBunji2 = $("#bunji2").val();
+		 		
+		 		 if(chkDate == "") {
+		 		 	alert("서비스 사용 날짜를 선택해 주세요.");
+		 		 	return false;
+		 		 }
+		 		 if(chkBunji1 == "") {
+		 			alert("시작 위치를 선택해 주세요.");
+		 			document.getElementById("bunji1").focus();
+		 			return false;
+		 		 }
+		 		 if(chkBunji2 == "") {
+		 			alert("도착 위치를 선택해 주세요.");
+		 			document.getElementById("bunji2").focus();
+		 			return false;
+		 		 } 
+	          	 
+	          	 
 	             // 2. API 사용요청
 	             for(var i=1; i<=2; i++) {
 	             var city_do = "서울시";

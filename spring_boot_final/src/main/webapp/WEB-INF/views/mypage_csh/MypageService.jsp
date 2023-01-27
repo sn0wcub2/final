@@ -6,6 +6,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>예약된 서비스 확인</title>
+		<!--  head -->         
+        	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
 	<style>
         table {
             width: 100%;
@@ -27,6 +29,8 @@
 </head>
 <body>
 <div id="wrap">
+<!--  top -->         
+        	<c:import url="/WEB-INF/views/layout/top.jsp" />
 <div style="text-align: center;">
     <h1>예약된 서비스 확인</h1>
     <table style="width: 700px; margin: auto">
@@ -48,5 +52,9 @@
     <input type="button" value="뒤로가기" onclick="history.back(-1)">
 </div>
 </div>
+<footer>
+        <!--  bottom -->         
+        	<c:import url="/WEB-INF/views/layout/footer.jsp" />
+    </footer>
 </body>
 </html>

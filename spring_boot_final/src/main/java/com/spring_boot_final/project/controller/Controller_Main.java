@@ -8,7 +8,11 @@ public class Controller_Main {
 
 	// 메인 페이지로 이동하는 컨트롤러 주요 기능 이외 추가 금지
 	@RequestMapping("/")
-	public String main() {
+	public String index() {
+		return"index";
+	}
+	@RequestMapping("/index2")
+	public String index2() {
 		return"main";
 	}
 }
