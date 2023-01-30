@@ -24,13 +24,11 @@ public class MypageService_csh implements IMypageService_csh {
 	@Override
 	public void updateMyPage(VO_csh mem) {
 		dao.updateMyPage(mem);
-		
 	}
 
 	@Override
 	public void deleteMyPage(VO_csh mem) {
 		// TODO Auto-generated method stub
-		
 	}
 
 }

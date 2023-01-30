@@ -48,7 +48,7 @@ public class MypageController_csh {
 			model.addAttribute("mem", mem);
 			// 수정된 데이터 저장 후 회원 조회 화면으로 포워딩
 
-			return "redirect:/myPage_csh/MypageUpdate";
+			return "/mypage_csh/MypageMain";
 		}
 	
 	// 내 게시판 확인
