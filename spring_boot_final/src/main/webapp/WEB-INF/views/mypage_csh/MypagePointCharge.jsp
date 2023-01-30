@@ -37,12 +37,11 @@
 
 
   
-                <div>${pointTotal}</div>
+             현재 포인트   <div>${pointTotal}</div>
     
-    <form method="post" action="#">
-    	<input type="text" name="pointAdd">
+    <form method="post" action="/mypage_csh/MypagePointChargeAdd">
+    	충전하실 금액 : <input type="text" name="pointAdd">
     	<input type="submit" value="충전하기">
-    	<input type="hidden" name="pointDescription" value="충전">
     </form>
     
     

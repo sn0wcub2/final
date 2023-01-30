@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring_boot_final.project.model.PointVO;
 import com.spring_boot_final.project.model.VO_csh;
@@ -85,8 +86,19 @@ public class MypageController_csh {
 		int pointChangeNo = ser.findLastestData(memId);
 		int pointTotal = ser.pointTotalCheck(memId, pointChangeNo);
 		model.addAttribute("pointTotal", pointTotal);
-		
 		return "mypage_csh/MypagePointCharge";
+	}
+	
+	// 충전 진행
+	@RequestMapping("/mypage_csh/MypagePointChargeAdd")
+	public String MypagePointChargeAdd(HttpSession session,
+																@RequestParam int pointAdd ) {
+		String memId=(String) session.getAttribute("sid");
+		int pointChangeNo = ser.findLastestData(memId);
+		int pointTotal = ser.pointTotalCheck(memId, pointChangeNo);
+		
+		ser.changePoint2(memId, pointAdd, pointTotal, " 사용자 충전");
+	return "redirect:/mypage_csh/MypagePoint";
 	}
 	
 	// 결제 내역
