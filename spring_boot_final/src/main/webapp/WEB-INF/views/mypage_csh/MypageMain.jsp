@@ -15,6 +15,9 @@ display:inline-block;
 margin-top:100px;
 padding-left:180px;
 }
+.mypagehistory{
+    text-align-last: center;
+}
 </style>
 <meta charset="UTF-8">
 <title>마이페이지 메인</title>

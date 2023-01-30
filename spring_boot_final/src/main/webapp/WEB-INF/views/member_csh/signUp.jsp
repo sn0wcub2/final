@@ -6,10 +6,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>회원가입 화면</title>
+		<!--  head -->         
+        	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_csh/signup.css'/>">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 		<script src="<c:url value='/js/js_csh/signup.js'/>"></script>
 		<script src="<c:url value='/js/js_csh/idCheck.js'/>"></script>
 		<style type="text/css">
@@ -49,8 +50,9 @@ h1 {
 		</style>
 	</head>
 	<body>
-	<c:import url="/WEB-INF/views/layout/top.jsp"/>
 		<div id="wrap">
+		<!--  top -->         
+        	<c:import url="/WEB-INF/views/layout/top.jsp" />
 			<div class="w3-content w3-container w3-margin-top signUpbox">
 				<div class="w3-container w3-card-4 w3-auto signUp" style="width: 600px;height: 1350px;">
 				<div class="w3-center w3-large w3-margin-top">
@@ -174,5 +176,7 @@ h1 {
 	<script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script>
 	</body>
 	<footer>
+        <!--  bottom -->         
+        	<c:import url="/WEB-INF/views/layout/footer.jsp" />
     </footer>
 </html>
