@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_final.project.dao.IDAO_jjh">
+  
+  <insert id="insertSafeReturn"
+		parameterType="com.spring_boot_final.project.model.VO_jjh">
+		insert into ansimservice(memId, desAddress1, desAddress2, depAddress1, depAddress2, desDate, desTime, charge, working, estimatedTime)
+		values(#{memId}, #{dong1}, #{bunji1}, #{dong2}, #{bunji2}, #{date-picker}, #{timepicker}, #{srpay}, #{working}, #{estimatedTime})
+  </insert>
+  
+  </mapper>

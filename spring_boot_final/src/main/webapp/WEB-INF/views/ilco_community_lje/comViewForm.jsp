@@ -8,8 +8,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comViewForm.css' />">
+<c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 -->
 </head>
 <body>
+<c:import url="/WEB-INF/views/layout/top.jsp"/> <!-- 탑 메뉴 -->
 	<div>
 		<form id="viewForm" name="viewForm" method="post" >
 			<div>
@@ -67,5 +69,6 @@ function fn_relay(){
 }
 </script>
 	</div>
+	<c:import url="/WEB-INF/views/layout/footer.jsp"/> <!-- 바텀 메뉴 -->
 </body>
 </html>

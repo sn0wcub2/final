@@ -1,11 +1,12 @@
 package com.spring_boot_final.project.service;
 
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.spring_boot_final.project.dao.IDAO_jjh;
-import com.spring_boot_final.project.model.VO_jjh;
 
 @Service
 public class Service_jjh implements IService_jjh {
@@ -14,8 +15,8 @@ public class Service_jjh implements IService_jjh {
 	private IDAO_jjh dao;
 
 	@Override
-	public void insertSafeReturn(VO_jjh vo) {
-		dao.insertSafeReturn(vo);
+	public void insertSafeReturn(HashMap<String, Object> map) {
+		dao.insertSafeReturn(map);
 	}
 
 }
