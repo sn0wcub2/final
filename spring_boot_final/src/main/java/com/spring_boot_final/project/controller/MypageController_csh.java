@@ -40,6 +40,17 @@ public class MypageController_csh {
 		return "mypage_csh/MypageUpdate";
 	}
 	
+	// 회원 정보 수정 : 수정된 데이터 DB에 저장
+		@RequestMapping("/myPage_csh/updateMyPage")
+		public String updateMyPage(VO_csh mem, Model model) {
+			service.updateMyPage(mem);
+
+			model.addAttribute("mem", mem);
+			// 수정된 데이터 저장 후 회원 조회 화면으로 포워딩
+
+			return "redirect:/myPage_csh/MypageUpdate";
+		}
+	
 	// 내 게시판 확인
 	@RequestMapping("/mypage_csh/MypageBoard")
 	public String MypageBoard() {

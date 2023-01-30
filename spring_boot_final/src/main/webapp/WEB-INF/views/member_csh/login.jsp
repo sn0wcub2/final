@@ -11,7 +11,6 @@
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/login.css'/>">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 		<script src="<c:url value='/js/js_csh/login.js'/>"></script>
 		<script src="<c:url value='/js/js_csh/findIdForm.js'/>"></script>
 		<style type="text/css">
