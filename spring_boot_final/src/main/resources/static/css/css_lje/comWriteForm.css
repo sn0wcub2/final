@@ -58,6 +58,7 @@ h4 {
     margin-bottom: 50px;
     text-align: center;
     font-size: 0;
+    
 }
 
 .bt_wrap input {
@@ -72,6 +73,11 @@ h4 {
 
 .bt_wrap input:first-child {
     margin-left: 0;
+}
+
+.bt_wrap input.on {
+    background: #000;
+    color: #fff;
 }
 
 .board_write{

@@ -10,10 +10,10 @@ public class MenuVO_cjh {
 		private String mainMenu;
 		private String subMenu;
 		private String other;
-		private int cal;
-		private int prot;
-		private int carb;
-		private int fat;
+		private String cal;
+		private String prot;
+		private String carb;
+		private String fat;
 		private String allergy_info;
 		public String getMenu_id() {
 			return menu_id;
@@ -57,28 +57,28 @@ public class MenuVO_cjh {
 		public void setOther(String other) {
 			this.other = other;
 		}
-		public int getCal() {
+		public String getCal() {
 			return cal;
 		}
-		public void setCal(int cal) {
+		public void setCal(String cal) {
 			this.cal = cal;
 		}
-		public int getProt() {
+		public String getProt() {
 			return prot;
 		}
-		public void setProt(int prot) {
+		public void setProt(String prot) {
 			this.prot = prot;
 		}
-		public int getCarb() {
+		public String getCarb() {
 			return carb;
 		}
-		public void setCarb(int carb) {
+		public void setCarb(String carb) {
 			this.carb = carb;
 		}
-		public int getFat() {
+		public String getFat() {
 			return fat;
 		}
-		public void setFat(int fat) {
+		public void setFat(String fat) {
 			this.fat = fat;
 		}
 		public String getAllergy_info() {
@@ -87,6 +87,8 @@ public class MenuVO_cjh {
 		public void setAllergy_info(String allergy_info) {
 			this.allergy_info = allergy_info;
 		}
+		
+		
 		
 		
 }

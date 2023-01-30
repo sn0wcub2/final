@@ -37,10 +37,6 @@
 	<!-- countTo -->
 	<script src="<c:url value='/js/js_main/jquery.countTo.js' />"></script>
 
-	<!-- Magnific Popup -->
-	<%-- <script src="<c:url value='/js/js_main/jquery.magnific-popup.min.js' />"></script>
-	<script src="<c:url value='/js/js_main/magnific-popup-options.js' />"></script> --%>
-	
 	<!-- Main -->
 	<script src="<c:url value='/js/js_main/main.js' />"></script>
 

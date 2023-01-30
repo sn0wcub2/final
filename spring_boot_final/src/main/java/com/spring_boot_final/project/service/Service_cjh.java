@@ -47,8 +47,8 @@ public class Service_cjh implements IService_cjh {
 
 
 	@Override
-	public void menuUpdate(String menu_id) {
-		dao.menuUpdate(menu_id);		
+	public void menuUpdate(MenuVO_cjh menuVO_cjh) {
+		dao.menuUpdate(menuVO_cjh);		
 	}
 
 

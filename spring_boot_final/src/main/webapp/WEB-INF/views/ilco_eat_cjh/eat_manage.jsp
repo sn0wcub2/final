@@ -44,8 +44,6 @@
 									});
 							  })
 						</script>
-						<input type='date' id="date-picker" name="date-picker" class='datepicker' placeholder="식단일자">
->>>>>>> refs/remotes/origin/jjh
 					</div>
 				</div>
 				<div class="submitrow">

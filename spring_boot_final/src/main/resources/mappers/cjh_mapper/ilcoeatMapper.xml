@@ -51,7 +51,7 @@
 	  	WHERE menu_id=#{menu_id}
 	  </select>
 	  
-	  <update id="menuUpdate" parameterType="string">
+	  <update id="menuUpdate" parameterType="com.spring_boot_final.project.model.MenuVO_cjh">
 	  	UPDATE menu 
 	  	SET mainMenu=#{mainMenu}, subMenu=#{subMenu}, other=#{other}, cal=#{cal}, prot=#{prot}, fat=#{fat}, carb=#{carb}, allergy_info=#{allergy_info}
 	  	WHERE menu_id = #{menu_id}

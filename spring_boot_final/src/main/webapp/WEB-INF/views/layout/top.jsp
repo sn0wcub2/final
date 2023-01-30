@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<div id="topBox" style="display:block; height:170px; background:skyblue;">
+<div id="topBox" style="display:block; height:180px; background:skyblue;">
 	<nav class="gtco-nav" role="navigation">
 		<div class="gtco-container">
 			

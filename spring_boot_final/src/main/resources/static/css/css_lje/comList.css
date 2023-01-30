@@ -38,17 +38,25 @@ html {
     font-size: 15px;
     background-color:#dfefff; 
 }
-
-a {
+.a{
     text-decoration: none;
-    color: inherit;
+    color: #000;
 }
 
+#title{
+    text-decoration: none;
+    color: #ddd;
+}
+
+#menu {
+	margin-left: -100%;
+}
 #wrap {
     width: 1000px;
     margin: 100px auto;
 	text-align:center;
 	position:relative;
+	
 }
 
 header {

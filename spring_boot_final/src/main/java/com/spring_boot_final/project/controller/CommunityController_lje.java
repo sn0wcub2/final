@@ -41,11 +41,11 @@ public class CommunityController_lje {
 			System.out.println(com.getComContent());
 			// memId 값 필요
 			// 로그인 했으면 지금 코드 사용
-			//String memId = (String)session.getAttribute("sid");
+			String memId = (String)session.getAttribute("sid");
 			
 			// 지금 혼자 테스트 할 경우에는 로그인 구현 없으므로 
 			// 로그인 했다고 가정
-			String memId = "hong";
+			//String memId = "hong";
 			// CommunityVO_lje의 memId에 로그인한 사람의 id 값 저장
 			com.setMemId(memId);
 			
@@ -70,5 +70,13 @@ public class CommunityController_lje {
 	@RequestMapping("/ilcocommunity/boardViewForm")
 	public String ilcocomView(){
 		return "ilco_community_lje/comViewForm";
+		}
+	
+	//나눔글목록 페이지
+		@RequestMapping("/ilcocommunity/shareBoardList")
+		public String ilcocomShareList(Model model){
+			ArrayList<CommunityVO_lje> comList = service.listAllCommunity();
+			model.addAttribute("comList", comList);
+			return "ilco_market_lje/marketSharecomList";
 		}
 }
