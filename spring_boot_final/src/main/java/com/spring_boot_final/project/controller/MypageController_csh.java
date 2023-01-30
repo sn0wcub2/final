@@ -78,6 +78,17 @@ public class MypageController_csh {
 		return "mypage_csh/MypagePoint";
 	}
 	
+	// 충전
+	@RequestMapping("/mypage_csh/MypagePointCharge")
+	public String MypagePointCharge(HttpSession session, Model model) {
+		String memId=(String) session.getAttribute("sid");
+		int pointChangeNo = ser.findLastestData(memId);
+		int pointTotal = ser.pointTotalCheck(memId, pointChangeNo);
+		model.addAttribute("pointTotal", pointTotal);
+		
+		return "mypage_csh/MypagePointCharge";
+	}
+	
 	// 결제 내역
 	@RequestMapping("/mypage_csh/MypageCredit")
 	public String MypageCredit() {

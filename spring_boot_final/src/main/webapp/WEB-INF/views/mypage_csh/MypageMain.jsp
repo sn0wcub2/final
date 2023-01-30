@@ -78,7 +78,7 @@ margin-top: 80px;
 			</div>
 			<br>
 			<div>
-			<a href="#"><img src="<c:url value='/image/csh_포인트.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypagePoint/'/>'"></a>
+			<a href="#"><img src="<c:url value='/image/csh_포인트.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypagePointCharge/'/>'"></a>
 			<p></p>
 			<p>포인트 충전</p>
 			</div>
