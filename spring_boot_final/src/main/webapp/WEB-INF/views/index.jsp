@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>일코노미 &mdash; 여기에 부제목 쓰고싶은데 생각나는게 없어요</title>
+	<title>일코노미 &mdash; 1인 가구를 위한 웹 플랫폼</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	
