@@ -6,26 +6,80 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>포인트 내역</title>
+		<title>포인트 충전</title>
 		<!--  head -->         
         	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
 	<style>
-        table {
-            width: 100%;
-            border: 1px solid #444444;
-            border-collapse: collapse;
-        }
-        table th {
-            border: 1px solid #444444;
-            text-align: center;
-            height: 40px;
-            background-color: lightskyblue;
-            color: cornsilk;
-        }
-        table td {
-            border: 1px solid #444444;
-            text-align: center;
-        }
+.pntNow{
+    color: black;
+    margin: auto;
+    width: 700px;
+    font-size: 30px;
+    display: flex;
+}
+.PntTitle{
+    margin: auto;
+    width: 600px;
+    font-size: 60px;
+    color: skyblue;
+    padding-top: 67px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid skyblue;
+    margin-bottom: 50px;
+    text-align: center;
+}
+	
+ .pntFrm{
+	color: black;
+    margin: auto;
+    width: 700px;
+    font-size: 30px;
+    display: flex;
+ }
+  .pntFrm input[type=text]{
+ 	width:300px;
+	  height: 40px;
+	  border: 4px solid skyblue;
+	  border-radius: 12px;
+	  font-size: 20px;
+  }
+  
+  .pntFrm input[type=submit]{
+	color:skyblue;
+  font-size: 15px;
+	background-color:white;
+	margin-left:50px;
+	width:120px;
+	height: 50px;
+	border: 4px solid skyblue;
+	border-radius: 12px;
+  }
+  
+  .pntFrm input[type=submit]:hover{
+  	color:white;
+	background-color:skyblue;
+	border: 4px solid orange;	
+  }
+ .pntElmtDis{
+     text-align: right;
+     width:200px;
+ }
+ .pntNowElmt{
+    width: 25%;
+    text-align: left;
+    margin-left: 50px;
+ }
+  .pntElmt{
+    width: 250px;
+    text-align: left;
+    margin-left: 50px;
+ }
+ .pntFrmRow{
+	margin-top: 50px;
+    margin-bottom: 50px;
+ display:flex;
+ }
+
     </style>
 </head>
 <body>
@@ -33,16 +87,21 @@
 <!--  top -->         
         	<c:import url="/WEB-INF/views/layout/top.jsp" />
 <div style="text-align: center;">
-    <h1>포인트 내역</h1>
+	<div class="PntTitle">
+	    포인트 충전
+	</div>
 
 
-  
-             현재 포인트   <div>${pointTotal}</div>
-    
-    <form method="post" action="/mypage_csh/MypagePointChargeAdd">
-    	충전하실 금액 : <input type="text" name="pointAdd">
-    	<input type="submit" value="충전하기">
+  <div class="pntNow">
+          <div class="pntElmtDis">현재 포인트 : </div><div class="pntNowElmt">${pointTotal}</div>
+  </div>
+  <div class="pntFrm">
+    <form method="post" action="/mypage_csh/MypagePointChargeAdd" id="PntChrgFrm">
+    	<div class="pntFrmRow">
+    	  <div class="pntElmtDis">충전하실 금액 : </div>  <div class="pntElmt"><input type="text" name="pointAdd" placeholder="인생은 실전입니다"></div><div class="pntElmt"><input type="submit" value="충전하기"> </div>
+    	</div>
     </form>
+  </div>
     
     
     
