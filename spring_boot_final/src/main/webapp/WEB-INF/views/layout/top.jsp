@@ -19,7 +19,7 @@
                             <ul class="dropdown">
                                 <li><a href="/ilcoeat/main">일코 푸트</a></li>
                                 <li><a href="/safe/main">안심 귀가</a></li>
-                                <li><a href="#">안심 동행</a></li>
+                                <li><a href="/safe/accmain">안심 동행</a></li>
                                 <li><a href="/laundry_kbh/laundryMain">세탁 서비스</a></li>
                                 <li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
                             </ul>
@@ -36,7 +36,7 @@
                             <ul class="dropdown">
                                 <li><a href="/ilcoeat/main">일코 푸트</a></li>
                                 <li><a href="/safe/main">안심 귀가</a></li>
-                                <li><a href="#">안심 동행</a></li>
+                                <li><a href="/safe/accmain">안심 동행</a></li>
                                 <li><a href="/laundry_kbh/laundryMain">세탁 서비스</a></li>
                                 <li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
                             </ul>

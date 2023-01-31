@@ -11,6 +11,17 @@
     width: 70px;
 }
 
+.text_custom2 {
+	border-top: none;
+    border-left:none;
+    border-right: none;
+    border-bottom: 2px skyblue solid;
+    background-color:transparent; 
+    text-align: center;
+    outline: none;
+    width: 160px;
+}
+
 input::placeholder {
 	color:#c5cecf000;
 	font-size: 15px;
@@ -91,7 +102,7 @@ hr {
 .dtse {
 	width: 250px;
 	height: 90px;
-	display:inline-block;
+	display:inline-table;
 }
 
 .circling {
