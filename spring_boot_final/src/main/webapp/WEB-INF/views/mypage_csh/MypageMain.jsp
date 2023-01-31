@@ -95,7 +95,7 @@ margin-top: 80px;
 			
 			<c:if test="${sessionScope.sid == 'admin'}">
 				<div>
-				<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageDelete/'/>'"></a>
+				<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/admin_csh/AdminMain/'/>'"></a>
 				<p></p>
 				<p>관리자 페이지</p>
 				</div>

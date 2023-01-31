@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AdminController_csh {
 	
-	// 마이페이지 메인
+	// 관리자 메인
 	@RequestMapping("/admin_csh/AdminMain")
 	public String AdminMain() {
 		return "admin_csh/AdminMain";
