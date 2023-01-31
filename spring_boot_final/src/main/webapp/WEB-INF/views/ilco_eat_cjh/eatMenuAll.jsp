@@ -9,6 +9,7 @@
 		<title>메뉴 확인</title>
 	<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatMenuAll.css"/>'>
+	<script src="<c:url value='/js/js_cjh/eatMenuAll.js'/>"></script>
 		<c:import url="/WEB-INF/views/layout/header_main.jsp"/>
 	</head>
 	<body>
@@ -18,23 +19,21 @@
 			일코푸드 전체 메뉴
 		</div>
 			
-			
-			
 			<div class="searchBox">
 				<div class="RadBtn">
-						<input type="radio" value="*" name="type" id="" class="radioBtn" onchange="search(this.value)"checked> 
+						<input type="radio" value="*" name="type" id="type" class="radioBtn" onchange="search(this.value)"checked> 
 						<label for="" class="radLab" >전체 보기</label>
 				</div>
 				<div class="RadBtn">
-						<input type="radio" value="Day-A" name="type" id="Day-A" onchange="search(this.value)" class="radioBtn"> 
+						<input type="radio" value="Day-A" name="type" id="type" onchange="search(this.value)" class="radioBtn"> 
 						<label for="Day-A" class="radLab">점심 A-type</label>
 				</div>
 				<div class="RadBtn">
-						<input type="radio" value="Day-B"  name="type" id="Day-B" onchange="search(this.value)" class="radioBtn">
+						<input type="radio" value="Day-B"  name="type" id="type" onchange="search(this.value)" class="radioBtn">
 						<label for="Day-B" class="radLab">점심 B-type</label>
 				</div>
 				<div class="RadBtn">
-						<input type="radio" value="Night-A" name="type" id="Night-A" onchange="search(this.value)" class="radioBtn">
+						<input type="radio" value="Night-A" name="type" id="type" onchange="search(this.value)" class="radioBtn">
 						<label for="Night-A" class="radLab">저녁 A-type</label>
 				</div>
 				<div class="RadBtn">

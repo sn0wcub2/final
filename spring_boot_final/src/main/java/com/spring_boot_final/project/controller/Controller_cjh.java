@@ -123,6 +123,8 @@ public class Controller_cjh {
 		service.insertmenu(menu);
 		return "redirect:/ilcoeat/menu_all";
 	}
+	
+	
 	//	관리자 메뉴 수정
 	@RequestMapping("/ilcofoodmange/update")
 	public String menuListadmin(@RequestParam List<String> allergy, 

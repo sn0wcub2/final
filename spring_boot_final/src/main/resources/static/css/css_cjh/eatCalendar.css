@@ -54,13 +54,12 @@
 	color:#f3f3f3;
 }
 
-
+s
 /* 달력 */
 .calendar-wrap{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
 }
 .calendar{
 	width: 1000px;
@@ -158,4 +157,15 @@
 .menuUpload input:hover{
 	background-color: #BDC667;
 	color:#f3f3f3;
+}
+.calendarwrap{
+	width: 800px;
+    height: 400px;
+    margin: auto;
+}
+
+.calendarwrap td{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
 }
