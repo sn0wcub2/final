@@ -37,16 +37,17 @@
     display: flex;
  }
   .pntFrm input[type=text]{
- 	width:300px;
-	  height: 40px;
-	  border: 4px solid skyblue;
-	  border-radius: 12px;
-	  font-size: 20px;
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    border: 4px solid skyblue;
+    border-radius: 12px;
+    font-size: 20px;
   }
   
   .pntFrm input[type=submit]{
 	color:skyblue;
-  font-size: 15px;
+    font-size: 15px;
 	background-color:white;
 	margin-left:50px;
 	width:120px;
