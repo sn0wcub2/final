@@ -107,7 +107,7 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="fh5co-card-item">
+					<a href="/safe/accmain" class="fh5co-card-item">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src='<c:url value="/image/main_images/아이콘_안심동행.png"/>' alt="Image" class="img-responsive">
@@ -290,7 +290,7 @@
 						<ul class="gtco-footer-links">
 							<li><a href="/ilcoeat/main">일코푸드</a></li>
 							<li><a href="/safe/main">안심서비스</a></li>
-							<li><a href="#">안심 동행</a></li>
+							<li><a href="/safe/accmain">안심 동행</a></li>
 							<li><a href="/laundry_kbh/laundryMain">세탁서비스</a></li>
 							<li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
 						</ul>
