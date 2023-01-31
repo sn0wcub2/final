@@ -70,7 +70,9 @@
 			
 					<div class="menu_row" id="${ menu.menu_type}">
 					<a href="<c:url value='/ilcoeat/detail/${menu.menu_id}'/>">
-							<div class="elmt" ><div class="elmt1">${menu.menu_date}</div><div class="elmt2">${type }</div><div class="elmt3"> ${menu.mainMenu} / ${menu.subMenu} / ${menu.other}</div></div>
+							<div class="elmt" >
+								<div class="elmt1">${menu.menu_date}</div><div class="elmt2">${type }</div><div class="elmt3"> ${menu.mainMenu} / ${menu.subMenu} / ${menu.other}</div>
+							</div>
 					</a>
 					</div>
 				</section>

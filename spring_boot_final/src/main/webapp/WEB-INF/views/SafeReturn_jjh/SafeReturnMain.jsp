@@ -28,8 +28,8 @@
 		
 		<div style="text-align:center;">
 			<form id="safeReturnAddressForm">
-				<div class="dtse" style="margin-left:50px;">
-					<p>날짜 입력</p>
+				<div class="dtse circling" style="margin-left:50px; height:118px;">
+					<p style="font-size:1.4em;">날&ensp;짜&emsp;&nbsp;입&ensp;력</p>
 					<input type='text' id="date-picker" name="date-picker" class='datepicker' placeholder="날짜를 입력해주세요" autocomplete="off" style="text-align:center;" readonly>
 					<script>
 						$.datepicker.setDefaults({
@@ -56,10 +56,12 @@
 					<script type='text/javascript'>
 						$('#timepicker').timepicki({
 							show_meridian:false,
-							min_hour_value:0,
+							min_hour_value:17,
 							max_hour_value:23,
+							step_size_minutes:15,
 							overflow_minutes:true,
-							increase_direction:'up'});
+							increase_direction:'up',
+							start_time: ["17", "00"]});
 					</script>
 				</div>
 				<div class="dtse circling">

@@ -53,4 +53,9 @@ public class Controller_jjh {
 		
 		return result;
 	}
+	
+	@RequestMapping("/safe/accmain")
+	public String SAMain() {
+		return "Accompany_jjh/AccompanyMain";
+	}
 }

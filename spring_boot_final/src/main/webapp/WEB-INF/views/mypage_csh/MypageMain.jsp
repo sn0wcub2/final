@@ -40,6 +40,9 @@ border: 0;
 height: 3px;
 margin-top: 80px;
 }
+.mypagehistory{
+    text-align-last: center;
+}
 </style>
 <meta charset="UTF-8">
 <title>마이페이지 메인</title>

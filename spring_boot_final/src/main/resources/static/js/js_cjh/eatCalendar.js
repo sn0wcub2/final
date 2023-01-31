@@ -38,7 +38,13 @@ const renderCalendar = () =>{
     const lastDateIndex = dates.lastIndexOf(TLDate);
     dates.forEach((date, i) =>{
         const condition = i >= firstDateIndex && i < lastDateIndex +1 ? 'this' : 'other';
-        dates[i] = `<div class="date"><span class=${condition}>${date}</span></div>`;
+
+            if(i<9){
+                dates[i] = `<div class="dateSlt" id="${viewYear}-0${viewMonth +1}-0${date}"onclick="clk()"><span class=${condition}>${date}</span></div>`;
+            }else{
+                dates[i] = `<div class="dateSlt" id="${viewYear}-0${viewMonth +1}-${date}"onclick="clk()"><span class=${condition}>${date}</span></div>`;
+            }
+
     });
 
     document.querySelector('.dates').innerHTML = dates.join(``);
@@ -69,3 +75,15 @@ const goToday = () => {
     date = new Date();
     renderCalendar();
 };
+
+
+
+
+
+// 버튼으로 좌측 데이터 출력
+
+
+function clk(){
+    var sltDate = document.querySelector('#dateSlt').style.backgroundColor = "black"
+    alert(sltDate.getAttribute("value"));
+}
