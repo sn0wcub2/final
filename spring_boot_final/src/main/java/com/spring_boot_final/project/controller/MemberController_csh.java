@@ -19,12 +19,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_final.project.model.VO_csh;
+import com.spring_boot_final.project.service.MypageService_csh;
 import com.spring_boot_final.project.service.Service_csh;
 
 @Controller
 public class MemberController_csh {
 	@Autowired
 	Service_csh service;
+	@Autowired
+	MypageService_csh mser;
 
 	// 로그인 폼 열기
 	@RequestMapping("/member_csh/login")
@@ -44,13 +47,17 @@ public class MemberController_csh {
 	@ResponseBody
 	@RequestMapping("/member_csh/eqlogin")
 	public String loginCheck(@RequestParam HashMap<String, Object> param, HttpSession session) {
+		String state = mser.findState((String) param.get("id"));
+		String result = "fail";
+		if(state.equals("1")){
 		// 로그인 체크 결과
-		String result = service.loginCheck(param);
+		result = service.loginCheck(param);
 
 		// 아이디와 비밀번호 일치하면 (로그인 성공하면) 서비스에서 success 반환
 		if (result.equals("success")) {
 			// 로그인 성공하면 세션 변수 지정
 			session.setAttribute("sid", param.get("id"));
+		}
 		}
 		return result;
 	}

@@ -18,6 +18,14 @@ public class VO_csh {
 	private String memAddress1;
 	private String memAddress2;
 	private int memPoint;
+	private String memState;
+	
+	public String getMemState() {
+		return memState;
+	}
+	public void setMemState(String memState) {
+		this.memState = memState;
+	}
 	public int getMemPoint() {
 		return memPoint;
 	}

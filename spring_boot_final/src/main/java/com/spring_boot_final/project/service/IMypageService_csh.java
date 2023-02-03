@@ -8,5 +8,9 @@ public interface IMypageService_csh {
 	public void updateMyPage(VO_csh mem); // 회원정보수정
 
 	public void deleteMyPage(VO_csh mem); // 회원탈퇴
+	
+	public void changeState(String memId); // 휴먼계정전환
+	
+	public String findState(String memId); // state 가져오기
 
 }

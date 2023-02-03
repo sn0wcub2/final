@@ -1,6 +1,7 @@
 package com.spring_boot_final.project.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,14 +10,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_final.project.model.PointVO;
 import com.spring_boot_final.project.model.VO_csh;
 import com.spring_boot_final.project.service.MypageService_csh;
 import com.spring_boot_final.project.service.PointService;
+import com.spring_boot_final.project.service.Service_csh;
 
 @Controller
 public class MypageController_csh {
+	@Autowired
+	private Service_csh user;
 	@Autowired
 	private MypageService_csh service;
 	
@@ -107,9 +112,35 @@ public class MypageController_csh {
 		return "mypage_csh/MypageCredit";
 	}
 	
-	// 회원 탈퇴
-	@RequestMapping("/mypage_csh/MypageDelete")
-	public String MypageDelete() {
+	// 회원 탈퇴 메인
+	@RequestMapping("/mypage_csh/MypageDeleteMain")
+	public String MypageDeleteMain(HttpSession session,Model model) {
+		String memId=(String) session.getAttribute("sid");
+		VO_csh mem = service.detailViewMyPage(memId);
+		model.addAttribute("mem", mem);
+		
 		return "mypage_csh/MypageDelete";
+	}
+	
+	// 회원 탈퇴
+	@ResponseBody
+	@RequestMapping("/myPage_csh/deleteMyPage")
+	public String MypageDelete(@RequestParam HashMap<String, Object> param,Model model,HttpSession session) {
+		System.out.println("123");
+		String result = user.loginCheck(param);
+		System.out.println(result);
+		String mem=(String) session.getAttribute("sid");
+		service.changeState(mem);
+		session.invalidate();
+		// 수정된 데이터 저장 후 회원 조회 화면으로 포워딩
+		return result;
+	}
+	// 탈퇴 성공
+	@RequestMapping("/mypage_csh/deleteMyPagesuccess")
+	public String deleteMyPagesuccess(HttpSession session) {
+		String mem=(String) session.getAttribute("sid");
+		service.changeState(mem);
+		session.invalidate();
+		return "redirect:/";
 	}
 }
