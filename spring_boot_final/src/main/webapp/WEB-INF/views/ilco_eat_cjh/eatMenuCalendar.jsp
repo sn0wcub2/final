@@ -11,17 +11,17 @@
 	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatcalendar.css"/>'>
 	</head>
 	<body>
-		<form method="post" action="#">
+		<form method="post" action="/ilcoeat/eatSubscribeSubmit">
 		
 			<c:import url="/WEB-INF/views/layout/top.jsp"/>
 	<!-- 	주소 입력 -->
 			<div class="lct">
-				<select name="location1">
-					<option value="신림동">신림동</option>
-					<option value="역삼동">역삼동</option>
-					<option value="화양동">화양동</option>
+				<select name="address1">
+					<option value="신림동" >신림동</option>
+					<option value="역삼동" >역삼동</option>
+					<option value="화양동" >화양동</option>
 				</select>
-				<input type="text" name="lct2" placeholder="상세정보입력">
+				<input type="text" name="address2" placeholder="상세정보입력">
 			</div>
 	<!-- 	타입 선택 -->
 			<div class="searchBox">
@@ -62,6 +62,7 @@
 				</div>
 			</div>
 	<!-- 							날짜 선택 -->
+	<input type="text" placeholder="날짜 임시 입력란" name="order_date">
 			<div class="calendar-wrap">
 				<div class="calendar">
 					<div class="header">
@@ -91,6 +92,9 @@
 			</div>			
 			<div class="menuUpload">
 				<input type="submit" value="등록">
+				<script>
+					if
+				</script> 
 			</div>
 		</form>
 		<script src="<c:url value='/js/js_cjh/eatcalendar.js'/>"></script>
