@@ -28,7 +28,18 @@ public class MypageService_csh implements IMypageService_csh {
 
 	@Override
 	public void deleteMyPage(VO_csh mem) {
-		// TODO Auto-generated method stub
+		dao.deleteMyPage(mem);
+	}
+
+	@Override
+	public void changeState(String memId) {
+		dao.changeState(memId);
+		
+	}
+
+	@Override
+	public String findState(String memId) {
+		return dao.findState(memId);
 	}
 
 }

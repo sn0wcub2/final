@@ -88,7 +88,7 @@ margin-top: 80px;
 			<p>포인트 내역 확인</p>
 			</div>
 			<div>
-			<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageDelete/'/>'"></a>
+			<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageDeleteMain/'/>'"></a>
 			<p></p>
 			<p>회원 탈퇴</p>
 			</div>
