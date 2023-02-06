@@ -63,11 +63,8 @@ public class MypageController_csh {
 		return "mypage_csh/MypageBoard";
 	}
 	
-	// 구독 정보 확인
-	@RequestMapping("/mypage_csh/MyPageSubscribe")
-	public String MyPageSubscribe() {
-		return "mypage_csh/MyPageSubscribe";
-	}
+	// 구독 정보 확인 >> controller cjh로 이동
+
 	
 	// 예약된 서비스 확인
 	@RequestMapping("/mypage_csh/MypageService")

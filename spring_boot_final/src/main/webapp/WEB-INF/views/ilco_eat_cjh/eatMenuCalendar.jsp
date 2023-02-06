@@ -11,17 +11,21 @@
 	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatcalendar.css"/>'>
 	</head>
 	<body>
-		<form method="post" action="#">
+		<form method="post" action="/ilcoeat/eatSubscribeSubmit">
 		
 			<c:import url="/WEB-INF/views/layout/top.jsp"/>
 	<!-- 	주소 입력 -->
 			<div class="lct">
-				<select name="location1">
-					<option value="신림동">신림동</option>
-					<option value="역삼동">역삼동</option>
-					<option value="화양동">화양동</option>
+			<img src="<c:url value='/image/cjh_map.png'/>" class="lct_ctg_icon">	
+			<div class="lctDis">
+				1 . 배달 받을 주소 입력
+			</div>
+				<select name="address1" >
+					<option value="신림동" >신림동</option>
+					<option value="역삼동" >역삼동</option>
+					<option value="화양동" >화양동</option>
 				</select>
-				<input type="text" name="lct2" placeholder="상세정보입력">
+				<input type="text" name="address2" placeholder="상세정보입력">
 			</div>
 	<!-- 	타입 선택 -->
 			<div class="searchBox">
@@ -32,7 +36,8 @@
 							<div class="radio_title">
 								<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
 								<label for="Day-A" class="radLab">A-type</label>
-								<div class="instructions">이메뉴는 말이죠~~</div>
+								<div class="instructions">한식 위주의 일코푸드 스테디 셀러</div>
+								<div class="instructions-price">6000원</div>
 						</div>									
 					</div>
 					<div class="RadBtn">
@@ -40,7 +45,8 @@
 							<div class="radio_title">
 								<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
 								<label for="Day-B" class="radLab">B-type</label>
-								<div class="instructions">이메뉴는 말이죠~~</div>
+								<div class="instructions">다양하고 새로운 글로벌 메뉴 </div>
+								<div class="instructions-price">8000원</div>
 							</div>
 					</div>
 					<div class="RadBtn">
@@ -48,7 +54,8 @@
 							<div class="radio_title">
 								<img src="<c:url value='/image/cjh_moon.png'/>" class="type_icon">
 								<label for="Night-A" class="radLab">A-type</label>
-								<div class="instructions">이메뉴는 말이죠~~</div>
+								<div class="instructions">저녁에 부담이 안되는 한식 위주의 메뉴</div>
+								<div class="instructions-price">6000원</div>
 							</div>
 					</div>
 					<div class="RadBtn">
@@ -56,12 +63,14 @@
 							<div class="radio_title">
 								<img src="<c:url value='/image/cjh_moon.png'/>" class="type_icon">	
 								<label for="Night-B" class="radLab">B-type</label>
-								<div class="instructions">이메뉴는 말이죠~~</div>
+								<div class="instructions">피로감을 날려줄 자극적인 메뉴</div>
+								<div class="instructions-price">8000원</div>
 							</div>
 					</div>
 				</div>
 			</div>
 	<!-- 							날짜 선택 -->
+	<input type="text" placeholder="날짜 임시 입력란" name="order_date">
 			<div class="calendar-wrap">
 				<div class="calendar">
 					<div class="header">
@@ -91,6 +100,9 @@
 			</div>			
 			<div class="menuUpload">
 				<input type="submit" value="등록">
+				<script>
+					if
+				</script> 
 			</div>
 		</form>
 		<script src="<c:url value='/js/js_cjh/eatcalendar.js'/>"></script>
