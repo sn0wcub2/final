@@ -42,4 +42,5 @@ public class MypageService_csh implements IMypageService_csh {
 		return dao.findState(memId);
 	}
 
+
 }

@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_final.project.model.VO_csh;
 import com.spring_boot_final.project.service.MypageService_csh;
+import com.spring_boot_final.project.service.PointService;
 import com.spring_boot_final.project.service.Service_csh;
 
 @Controller
@@ -29,6 +30,8 @@ public class MemberController_csh {
 	@Autowired
 	MypageService_csh mser;
 
+	@Autowired
+	PointService pser;
 	// 로그인 폼 열기
 	@RequestMapping("/member_csh/login")
 	public String login() {
@@ -79,7 +82,7 @@ public class MemberController_csh {
 
 	// 회원가입
 	@RequestMapping("/member_csh/insert")
-	public String insert(VO_csh vo, HttpServletRequest hsr, HttpServletResponse res) {
+	public String insert(VO_csh vo, HttpServletRequest hsr, HttpServletResponse res,@RequestParam String memId) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
 		Date date = null;
 		String email = hsr.getParameter("memEmail")+"@"+hsr.getParameter("email-list");
@@ -92,6 +95,8 @@ public class MemberController_csh {
 		vo.setMemBirth(date);
 		vo.setMemEmail(email);
 		service.insertMember(vo);
+		pser.insertMemIdPoint(memId);
+		
 
 		return "member_csh/login"; // 회원가입 후 로그인 폼으로 이동
 	}

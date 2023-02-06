@@ -4,7 +4,61 @@
 	font-family: sans-serif;
 	box-sizing: border-box;
 }
+
+/* 지역선택 */
+.lct{
+    position: relative;
+    text-align: center;
+    padding-top: 120px;
+    background: #29335c;
+    padding-bottom: 80px;
+}
+.lct_ctg_icon{
+    height: 100px;
+    margin-bottom: 40px;
+}
+.lctDis{
+	color:white;	
+	font-size:40px;
+    margin-bottom: 100px;
+}
+.lct select{
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 15px;
+    color: white;
+    background-color: transparent;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    margin: 0;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+.lct select:focus{
+	  border:none;
+}
+.lct input{
+	font-size:30px;
+	color:white;
+	border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px white solid;
+    background-color: transparent;
+    text-align: center;
+    outline: none;
+    width: 700px;
+    transition:ease;
+}
+.lct input:focus{
+ 	    border-bottom: 2px #BDC667 solid;
+}
+
 /* 타입 선택*/
+.instructions-price{
+	padding-top: 20px;
+    font-size: 13px;
+    opacity: 0.8;
+}
 .submitrow .searchBox{
 	display:flex;
 	align-items:center;
@@ -46,8 +100,8 @@
 	width:140px;
 }
 .RadBtn label{
-	font-size: 16px;
-    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 10px;
 }
 .RadBtn input:checked + .radio_title{
 	background-color: #BDC667;
