@@ -9,6 +9,9 @@
 		<title>메뉴 확인</title>
 		<c:import url="/WEB-INF/views/layout/header_main.jsp"/>
 	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatcalendar.css"/>'>
+	
+	
+	
 	</head>
 	<body>
 		<form method="post" action="/ilcoeat/eatSubscribeSubmit">
@@ -28,84 +31,310 @@
 				<input type="text" name="address2" placeholder="상세정보입력">
 			</div>
 	<!-- 	타입 선택 -->
-			<div class="searchBox">
-				<div class="radio-title-group">
-				
-					<div class="RadBtn">
-							<input type="radio" value="Day-A" name="menu_type" id="type" class="radioBtn">
-							<div class="radio_title">
-								<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
-								<label for="Day-A" class="radLab">A-type</label>
-								<div class="instructions">한식 위주의 일코푸드 스테디 셀러</div>
-								<div class="instructions-price">6000원</div>
-						</div>									
-					</div>
-					<div class="RadBtn">
-							<input type="radio" value="Day-B"  name="menu_type" id="type" class="radioBtn">
-							<div class="radio_title">
-								<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
-								<label for="Day-B" class="radLab">B-type</label>
-								<div class="instructions">다양하고 새로운 글로벌 메뉴 </div>
-								<div class="instructions-price">8000원</div>
-							</div>
-					</div>
-					<div class="RadBtn">
-							<input type="radio" value="Night-A" name="menu_type" id="type"  class="radioBtn">
-							<div class="radio_title">
-								<img src="<c:url value='/image/cjh_moon.png'/>" class="type_icon">
-								<label for="Night-A" class="radLab">A-type</label>
-								<div class="instructions">저녁에 부담이 안되는 한식 위주의 메뉴</div>
-								<div class="instructions-price">6000원</div>
-							</div>
-					</div>
-					<div class="RadBtn">
-							<input type="radio" value="Night-B" name="menu_type" id="type"  class="radioBtn">
-							<div class="radio_title">
-								<img src="<c:url value='/image/cjh_moon.png'/>" class="type_icon">	
-								<label for="Night-B" class="radLab">B-type</label>
-								<div class="instructions">피로감을 날려줄 자극적인 메뉴</div>
-								<div class="instructions-price">8000원</div>
-							</div>
+			<div class="subsec2">
+				<img src="<c:url value='/image/cjh_menu.png'/>" class="lct_ctg_icon">	
+				<div class="lctDis">
+					2 . 메뉴 선택
+				</div>
+				<div class="searchBox">			
+					<div class="radio-title-group">
+					
+						<div class="RadBtn">
+								<input type="radio" value="Day-A" name="menu_type" id="type" class="radioBtn">
+								<div class="radio_title">
+									<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
+									<label for="Day-A" class="radLab">A-type</label>
+									<div class="instructions">한식 위주의 일코푸드 스테디 셀러</div>
+									<div class="instructions-price">6000원</div>
+							</div>									
+						</div>
+						<div class="RadBtn">
+								<input type="radio" value="Day-B"  name="menu_type" id="type" class="radioBtn">
+								<div class="radio_title">
+									<img src="<c:url value='/image/cjh_sun.png'/>" class="type_icon">
+									<label for="Day-B" class="radLab">B-type</label>
+									<div class="instructions">다양하고 새로운 글로벌 메뉴 </div>
+									<div class="instructions-price">8000원</div>
+								</div>
+						</div>
+						<div class="RadBtn">
+								<input type="radio" value="Night-A" name="menu_type" id="type"  class="radioBtn">
+								<div class="radio_title">
+									<img src="<c:url value='/image/cjh_moon.png'/>" class="type_icon">
+									<label for="Night-A" class="radLab">A-type</label>
+									<div class="instructions">저녁에 부담이 안되는 한식 위주의 메뉴</div>
+									<div class="instructions-price">6000원</div>
+								</div>
+						</div>
+						<div class="RadBtn">
+								<input type="radio" value="Night-B" name="menu_type" id="type"  class="radioBtn">
+								<div class="radio_title">
+									<img src="<c:url value='/image/cjh_moon.png'/>" class="type_icon">	
+									<label for="Night-B" class="radLab">B-type</label>
+									<div class="instructions">피로감을 날려줄 자극적인 메뉴</div>
+									<div class="instructions-price">8000원</div>
+								</div>
+						</div>
 					</div>
 				</div>
 			</div>
 	<!-- 							날짜 선택 -->
-	<input type="text" placeholder="날짜 임시 입력란" name="order_date">
-			<div class="calendar-wrap">
-				<div class="calendar">
-					<div class="header">
-						<div class="year-month"></div>
-						<div class="nav">
-							<button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
-							<button class="nav-btn go-today"onclick="goToday()">today</button>
-							<button class="nav-btn go-next"onclick="nextMonth()">&gt;</button>
-						</div>
+	
+			<div class="dateCheck">
+				<img src="<c:url value='/image/cjh_menu.png'/>" class="lct_ctg_icon">	
+					<div class="lctDis">
+						3 . 날짜 선택
 					</div>
-					<div class="main">
-						<div class="days">
-							<div class="day">일</div>
-							<div class="day">월</div>
-							<div class="day">화</div>
-							<div class="day">수</div>
-							<div class="day">목</div>
-							<div class="day">금</div>
-							<div class="day">토</div>
-						</div>
-						<div class="dates"></div>
+					<div class="monthInfo">
+						2023년 2월
+					</div>
+					<div class="dayrow">
+						<div class="day">일</div>
+						<div class="day">월</div>
+						<div class="day">화</div>
+						<div class="day">수</div>
+						<div class="day">목</div>
+						<div class="day">금</div>
+						<div class="day">토</div>
+					</div>
+					
+						<div class="inputarea">
+								<div class="check-title-group">
+								
+									<div class="week" id="week1">
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-01-29" >
+											<div class="check_title">
+												<label for="order_date"> 29</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-01-30" >
+											<div class="check_title">
+												<label for="order_date">30</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-01-31" >
+											<div class="check_title">
+												<label for="order_date"> 31</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-01" >
+											<div class="check_title">
+												<label for="order_date"> 1</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-02" >
+											<div class="check_title">
+												<label for="order_date"> 2</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-03">
+											<div class="check_title">
+												<label for="order_date"> 3</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-04" >
+											<div class="check_title">
+												<label for="order_date"> 4</label>
+											</div>
+										</div>
+								</div>
+								<div class="week" id="week2">
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-05" >
+										<div class="check_title">
+											<label for="order_date"> 5</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-06" >
+										<div class="check_title">
+											<label for="order_date">6</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-07" >
+										<div class="check_title">
+											<label for="order_date"> 7</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-08" >
+										<div class="check_title">
+											<label for="order_date">8</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-09" >
+										<div class="check_title">
+											<label for="order_date"> 9</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-10">
+										<div class="check_title">
+											<label for="order_date"> 10</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-11" >
+										<div class="check_title">
+											<label for="order_date">11</label>
+										</div>
+									</div>
+								</div>
+								<div class="week" id="week3">
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-01-12" >
+										<div class="check_title">
+											<label for="order_date"> 12</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-01-13" >
+										<div class="check_title">
+											<label for="order_date">13</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-01-14" >
+										<div class="check_title">
+											<label for="order_date"> 14</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-15" >
+										<div class="check_title">
+											<label for="order_date">15</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-16" >
+										<div class="check_title">
+											<label for="order_date"> 16</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-17">
+										<div class="check_title">
+											<label for="order_date">17</label>
+										</div>
+									</div>
+									<div class="checkBtn">
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-18" >
+										<div class="check_title">
+											<label for="order_date">18</label>
+										</div>
+									</div>
+								</div>
+									<div class="week"id="week4">
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-01-19" >
+											<div class="check_title">
+												<label for="order_date"> 19</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-01-20" >
+											<div class="check_title">
+												<label for="order_date">20</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-01-21" >
+											<div class="check_title">
+												<label for="order_date"> 21</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-22" >
+											<div class="check_title">
+												<label for="order_date">22</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-23" >
+											<div class="check_title">
+												<label for="order_date">23</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-24">
+											<div class="check_title">
+												<label for="order_date">24</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-25" >
+											<div class="check_title">
+												<label for="order_date">25</label>
+											</div>
+										</div>
+								</div>
+									<div class="week" id="week5">
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-26" >
+											<div class="check_title">
+												<label for="order_date">26</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-27" >
+											<div class="check_title">
+												<label for="order_date">27</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-28" >
+											<div class="check_title">
+												<label for="order_date"> 28</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-03-01" >
+											<div class="check_title">
+												<label for="order_date"> 1</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-03-02" >
+											<div class="check_title">
+												<label for="order_date"> 2</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-03-03">
+											<div class="check_title">
+												<label for="order_date"> 3</label>
+											</div>
+										</div>
+										<div class="checkBtn">
+											<input type="checkbox" class="order_date" name="order_date" value="2023-03-04" >
+											<div class="check_title">
+												<label for="order_date"> 4</label>
+											</div>
+										</div>
+								</div>
+							</div>
 					</div>
 				</div>
-			<div class="calenderRslt">
-				<div class="dateRslt"></div>
-			</div>
-			</div>			
+				<hr>
+				<hr>
+				<hr>
+				<hr>
+				<hr>
+				<input type="text" placeholder="날짜 임시 입력란" name="order_date">
+
 			<div class="menuUpload">
 				<input type="submit" value="등록">
-				<script>
-					if
-				</script> 
 			</div>
 		</form>
-		<script src="<c:url value='/js/js_cjh/eatcalendar.js'/>"></script>
 		<c:import url="/WEB-INF/views/layout/footer.jsp"/>
 	</body>
 </html>

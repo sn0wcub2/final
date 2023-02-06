@@ -54,17 +54,25 @@
 }
 
 /* 타입 선택*/
+.subsec2{
+    position: relative;
+    text-align: center;
+    padding-top: 120px;
+    background: #8F8389;
+    padding-bottom: 80px;
+}
 .instructions-price{
 	padding-top: 20px;
     font-size: 13px;
     opacity: 0.8;
 }
-.submitrow .searchBox{
+.searchBox{
 	display:flex;
 	align-items:center;
 	justify-content:center
 }
 .radio-title-group{
+	color:white;
 	display:flex;
 	flex-wrap: wrap;
 	justify-content:center;
@@ -91,7 +99,7 @@
 	align-items: center;
 	justify-content:center;
 	height:100%;
-	border: 3px solid orange;
+	border: 3px solid white;
 	border-radius:8px;
 	transition: all .3s ease;
 }
@@ -107,119 +115,67 @@
 	background-color: #BDC667;
 	color:#f3f3f3;
 }
+/* 날짜 선택 */
 
-s
-/* 달력 */
-.calendar-wrap{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.calendar{
-	width: 1000px;
-	margin: 50px;
-}
-.header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.year-month{
-	font-size: 35px;
-}
-.nav{
-	display: flex;
-	border: 1px solid #333333;
-	border-radius: 5px;
-}
-.nav-btn{
-	width:28px;
-	height:30px;
-	border:none;
-	font-size: 16px;
-	line-height: 34px;
-	background-color: transparent;
-	cursor: pointer;
-}
-.go-today{
-	width:75px;
-	border-left: 1px solid #333333;
-	border-right: 1px solid #333333;
-}
-.days{
-	display: flex;
-	margin:25px 0 10px;
+.dateCheck{
+    position: relative;
+    text-align: center;
+    padding-top: 120px;
+    background: #29335c;
+    padding-bottom: 80px;
+    color: white;
 }
 .day{
-	width: calc(100% / 7);
-	text-align: center;
+	width:140px;
 }
-.dates{
-	display: flex;
-	flex-flow: row wrap;
-	height: 500px;
-	border-top: 1px solid #333333;
-	border-left:1px solid #333333;
-}
-.dateSlt{
-	width: calc(100% / 7);
-	padding: 15px;
-	text-align: right;
-	border-bottom: 1px solid #333333;
-	border-right: 1px solid #333333;
-}
-.day:nth-child(7n + 1),
-.date:nth-child(7n + 1){
-	color: #D13E3E;
-}
-.day:nth-child(7n),
-.date:nth-child(7n){
-	color: #396EE2;
-}
-.other{
-	opacity: 0.3;
-}
-.today{
-	position: relative;
-	color:#ffffff;
-}
-.today::before{
-	position:absolute;
-	top:50%;
-	left:50%;
-	transform: translate(-50%, -50%);
-	z-index: -1;
-	width: 30px;
-	height: 30px;
-	display: block;
-	background-color: #D13E3E;
-	border-radius: 50%;
-	content: '';
-}
-
-.menuUpload input{
-	margin-top:100px;
-	border: 3px solid orange;
-	background-color:white;
-	width:400px;
-	height:40px;
-	border-radius:8px;
-	margin-bottom:100px;
-	font-size:20px;
-	transition: all .3s ease;
-}
-.menuUpload input:hover{
-	background-color: #BDC667;
-	color:#f3f3f3;
-}
-.calendarwrap{
-	width: 800px;
-    height: 400px;
+.dayrow{
+    display: flex;
+    position: relative;
+    width: 980px;
+    justify-content: center;
     margin: auto;
 }
+.week{
+display:flex;	
+	
+}
 
-.calendarwrap td{
-    height: 50px;
-    width: 50px;
-    font-size: 30px;
+.check-title-group{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+}
+.checkBtn{
+	position:relative;
+	height:60px;
+	width:100px;
+	margin:20px;
+}
+.checkBtn input{
+	right: 0px;
+	position:absolute;
+	height:100%;
+	width:100%;
+	cursor:pointer;
+	margin:0 auto;
+	opacity:0;
+	z-index:2;
+}
+.checkBtn .check_title{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+	height:100%;
+	border: 3px solid orange;
+	border-radius:8px;
+	transition: all .3s ease;
+}
+.checkBtn label{
+	font-size: 16px;
+    font-weight: bold;
+}
+.checkBtn input:checked + .check_title{
+	background-color: #BDC667;
+	color:#f3f3f3;
 }

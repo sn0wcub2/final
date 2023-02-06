@@ -1,89 +1,69 @@
-/**
- * 달력
- */
-$(document).ready(function(){ 
-	let date = new Date();
-	
-	const renderCalendar = () =>{
-	    const viewYear = date.getFullYear();
-	    const viewMonth = date.getMonth();
-	
-	    document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth +1}월`;
-	
-	    const prevLast = new Date(viewYear, viewMonth, 0);
-	    const thisLast = new Date(viewYear, viewMonth + 1, 0);
-	
-	    const PLDate = prevLast.getDate();
-	    const PLDay = prevLast.getDay();
-	
-	    const TLDate = thisLast.getDate();
-	    const TLDay = thisLast.getDay();
-	
-	    const prevDates = [];
-	    const thisDates = [...Array(TLDate + 1).keys()].slice(1);
-	    const nextDates =[];
-	
-	    if(PLDay !==6){
-	        for(let i = 0; i < PLDay +1; i++){
-	            prevDates.unshift(PLDate -i);
-	        }
-	    }
-	
-	    for(let i = 1; i < 7 - TLDay; i++){
-	        nextDates.push(i);
-	    }
-	
-	    const dates = prevDates.concat(thisDates, nextDates);
-	    const firstDateIndex = dates.indexOf(1);
-	    const lastDateIndex = dates.lastIndexOf(TLDate);
-	    dates.forEach((date, i) =>{
-	        const condition = i >= firstDateIndex && i < lastDateIndex +1 ? 'this' : 'other';
-	
-	            if(i<9){
-	                dates[i] = `<div class="dateSlt" id="${viewYear}-0${viewMonth +1}-0${date}"onclick="clk()"><span class=${condition}>${date}</span></div>`;
-	            }else{
-	                dates[i] = `<div class="dateSlt" id="${viewYear}-0${viewMonth +1}-${date}"onclick="clk()"><span class=${condition}>${date}</span></div>`;
-	            }
-	
-	    });
-	
-	    document.querySelector('.dates').innerHTML = dates.join(``);
-	    const today = new Date();
-	    if(viewMonth == today.getMonth() && viewYear == today.getFullYear()){
-	        for(let date of document.querySelectorAll('.this')){
-	            if (+date.innerText == today.getDate()){
-	                date.classList.add('today');
-	                break;
-	            }
-	        }
-	    }
-	};
-	
-	renderCalendar();
-	
-	const prevMonth = () =>{
-	    date.setMonth(date.getMonth() - 1);
-	    renderCalendar();
-	};
-	
-	const nextMonth = () =>{
-	    date.setMonth(date.getMonth() + 1);
-	    renderCalendar();
-	};
-	
-	const goToday = () => {
-	    date = new Date();
-	    renderCalendar();
-	};
+var today = new Date();
+function buildCalendar(){
+  var row = null
+  var cnt = 0;
+  var calendarTable = document.getElementById("calendar");
+  var calendarTableTitle = document.getElementById("calendarTitle");
+  calendarTableTitle.innerHTML = today.getFullYear()+"년"+(today.getMonth()+1)+"월";
+  
+  var firstDate = new Date(today.getFullYear(), today.getMonth(), 1);
+  var lastDate = new Date(today.getFullYear(), today.getMonth()+1, 0);
+  while(calendarTable.rows.length > 2){
+  	calendarTable.deleteRow(calendarTable.rows.length -1);
+  }
 
-});
+  row = calendarTable.insertRow();
+  for(i = 0; i < firstDate.getDay(); i++){
+  	cell = row.insertCell();
+  	cnt += 1;
+  }
 
+  row = calendarTable.insertRow();
 
+  for(i = 1; i <= lastDate.getDate(); i++){
+  	cell = row.insertCell();
+  	cnt += 1;
 
-// 버튼으로 좌측 데이터 출력
+    cell.setAttribute('id', i);
+  	cell.innerHTML = i;
+  	cell.align = "center";
 
+    cell.onclick = function(){
+    	clickedYear = today.getFullYear();
+    	clickedMonth = ( 1 + today.getMonth() );
+    	clickedDate = this.getAttribute('id');
 
-function clk(){
-    var sltDate = document.querySelector('#dateSlt').style.backgroundColor = "black"
-    alert(sltDate.getAttribute("value"));
+    	clickedDate = clickedDate >= 10 ? clickedDate : '0' + clickedDate;
+    	clickedMonth = clickedMonth >= 10 ? clickedMonth : '0' + clickedMonth;
+    	clickedYMD = clickedYear + "-" + clickedMonth + "-" + clickedDate;
+
+    	opener.document.getElementById("date").value = clickedYMD;
+    	self.close();
+    }
+
+    if (cnt % 7 == 1) {
+    	cell.innerHTML = "<font color=#F79DC2>" + i + "</font>";
+    }
+
+    if (cnt % 7 == 0){
+    	cell.innerHTML = "<font color=skyblue>" + i + "</font>";
+    	row = calendar.insertRow();
+    }
+  }
+
+  if(cnt % 7 != 0){
+  	for(i = 0; i < 7 - (cnt % 7); i++){
+  		cell = row.insertCell();
+  	}
+  }
+}
+
+function prevCalendar(){
+	today = new Date(today.getFullYear(), today.getMonth()-1, today.getDate());
+	buildCalendar();
+}
+
+function nextCalendar(){
+	today = new Date(today.getFullYear(), today.getMonth()+1, today.getDate());
+	buildCalendar();
 }
