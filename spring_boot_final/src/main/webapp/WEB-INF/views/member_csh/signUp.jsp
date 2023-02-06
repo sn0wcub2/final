@@ -13,48 +13,14 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="<c:url value='/js/js_csh/signup.js'/>"></script>
 		<script src="<c:url value='/js/js_csh/idCheck.js'/>"></script>
-		<style type="text/css">
-		.w3-card-4, .w3-hover-shadow:hover {
-    box-shadow: 0 4px 10px 0 rgb(135 206 235), 0 4px 20px 0 rgb(135 206 235);
-}
-.w3-input:focus {
-    border-bottom: 2px solid orange;
-	outline: none;
-}
-h1 {
-    color: #87ceeb;
-    font-family: "Lato", Arial, sans-serif;
-    font-weight: 400;
-    margin: 0 0 20px 0;
-}
-		.mybtn{
-		  width:150px;
-		  height:40px;
-		  padding:0;
-		  display:inline; 
-		  border-radius: 4px; 
-		  background: #87ceeb;
-		  color: #fff;
-		  margin-top: 20px;
-		  transition: all 0.5s ease-in-out 0s;
-		}
-		.mybtn:hover .mybtn:focus {
-		  border-color:  #87ceeb; 
-  		  border-radius: 4px; 
-   		  border: solid 2px #000;
-		  background: white;
-		  color: #212529;
-		  text-decoration: none;
-		}
-
-		</style>
+		<link rel="stylesheet" href="<c:url value='/css/css_csh/signup.css' />">
 	</head>
 	<body>
 		<div id="wrap">
 		<!--  top -->         
         	<c:import url="/WEB-INF/views/layout/top.jsp" />
 			<div class="w3-content w3-container w3-margin-top signUpbox">
-				<div class="w3-container w3-card-4 w3-auto signUp" style="width: 600px;height: 1350px;">
+				<div class="w3-container w3-card-4 w3-auto signUp" style="width: 600px;height: 1400px;">
 				<div class="w3-center w3-large w3-margin-top">
 				<h1>회원 가입</h1>
 				</div>
@@ -80,9 +46,9 @@ h1 {
 						<input class="w3-input" type="text" maxlength="5" name="memName" id="memName">
 						<br><br>
 						
-						<label>성별</label>
-						<label><input type="radio" name="memGender" value="man">남자</label>
-						<label><input type="radio" name="memGender" value="woman">여자</label>
+						<label>성별&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<label><input class="w3-radio" type="radio" name="memGender" value="man">남자</label>
+						<label><input class="w3-radio" type="radio" name="memGender" value="woman">여자</label>
 						<br><br>
 						<hr>
 						
@@ -124,12 +90,12 @@ h1 {
 						
 						<label>연락처</label>
 						<input class="w3-input" type="tel" maxlength="11" name="memHP" id="memHP"
-						placeholder="ex) 01011111111">
+						placeholder="ex) 01012345678">
 						<br><br>
 						
 						<label>긴급 연락처</label>
 						<input class="w3-input" type="tel" maxlength="11" name="memEmgHP" id="memEmgHP"
-						placeholder="ex) 01011111111">
+						placeholder="ex) 01023456789">
 						<br><br>
 											
 						<label>이메일</label>
@@ -149,7 +115,7 @@ h1 {
 						<span class="input_area"><input type="text" name="memZipcode" class="postcodify_postcode" id="memZipcode"
 						readonly></span>
 						<button type="button" id="postcodify_search_button">검색</button>
-						<br><br>
+						<br>
 						<hr>
 						
 						<label>도로명 주소</label>
