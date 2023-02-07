@@ -1,0 +1,19 @@
+.calendar-wrap{
+	height: 100px;
+}
+#calendar td{
+	align:center;
+}
+
+#CalendarTitle{
+	align:center;
+	background:#ff2;
+}
+/* 일요일 색상 변경 */
+#calendar tr:nth-child(n+2) td:first-child{
+	color:#F79DC2;
+}
+/* 토요일 색상 변경 */
+#calendar tr:nth-child(n+2) td:last-child{
+	color:skyblue;
+}

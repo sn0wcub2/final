@@ -17,6 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_final.project.model.EatSubVO_cjh;
 import com.spring_boot_final.project.model.MenuVO_cjh;
@@ -30,6 +31,14 @@ public class Controller_cjh {
 	
 	@Autowired
 	private PointService pservice;
+	
+	//달력 연습
+	@RequestMapping("/ilcoeat/Calendar")
+	public String test() {
+			return "ilco_eat_cjh/CalendarDrill";
+	}
+
+	
 	
 	
 	// 푸드 메인으로 이동
@@ -133,6 +142,28 @@ public class Controller_cjh {
 		ArrayList<MenuVO_cjh> menuAllList = service.menuAll(sdf.format(date));
 		model.addAttribute("menuAllList", menuAllList);
 		return "ilco_eat_cjh/eatMenuAll";
+	}
+	
+	// 타입별 모든 메뉴 보기 페이지로 이동
+	@RequestMapping("/ilcoeat/menu_all_type/{type}")
+	public String menuTypeList(Model model,
+												@PathVariable String type){
+		
+		HashMap<String,String> map = new HashMap<>();
+		// 현재 날짜 문자열로 변환
+		Date realdate = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		sdf.format(realdate);
+		String date = sdf.format(realdate).toString();
+		
+		// 해시맵에 데이터 추가
+		map.put("order_date", date);
+		map.put("menu_type", (String)type);
+		System.out.println(type);
+		ArrayList<MenuVO_cjh> menuAllList = service.menuAllType(map);
+		model.addAttribute("menuAllList", menuAllList);
+		return "ilco_eat_cjh/eatMenuAlltype";
 	}
 	
 	//상세 정보

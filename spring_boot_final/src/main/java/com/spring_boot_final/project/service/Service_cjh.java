@@ -53,6 +53,10 @@ public class Service_cjh implements IService_cjh {
 	public ArrayList<EatSubVO_cjh> mypageSubOver(HashMap<String, String>  map) {
 		return dao.mypageSubOver(map);
 	}
+	@Override
+	public ArrayList<MenuVO_cjh> menuAllType(HashMap<String, String> map) {
+		return dao.menuAllType(map);
+	}
 
 
 }
