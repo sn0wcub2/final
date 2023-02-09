@@ -22,6 +22,17 @@
     width: 160px;
 }
 
+.text_custom3 {
+	border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px skyblue solid;
+    background-color: transparent;
+    text-align: start;
+    outline: none;
+    font-size: inherit;
+    width: 385px;
+}
 input::placeholder {
 	color:#c5cecf000;
 	font-size: 15px;
@@ -106,9 +117,19 @@ hr {
 }
 
 .circling {
-	margin-right: 50px;
+	margin-right: 32px;
 	border: 1px solid skyblue;
-	border-radius: 30px;
+	border-radius: 25px;
+}
+
+#spdiv {
+	position: relative;
+    width: 538px;
+    border: 1px solid skyblue;
+    border-radius: 30px;
+    text-align: start;
+    display: table;
+    margin-top: 25px;
 }
 
 .sfimg {

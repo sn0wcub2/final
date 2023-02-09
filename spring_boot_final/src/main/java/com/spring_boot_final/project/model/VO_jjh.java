@@ -11,14 +11,23 @@ public class VO_jjh {
 	private String desAddress2;
 	private String depAddress1;
 	private String depAddress2;
-	private String partnerId;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date desDate;
 	private String desTime;
 	private int charge;
 	private double working;
 	private int estimatedTime;
+	private String prtId;
 	
+	public String getPrtId() {
+		return prtId;
+	}
+	public void setPrtId(String prtId) {
+		this.prtId = prtId;
+	}
+	public void setWorking(double working) {
+		this.working = working;
+	}
 	public String getAserviceId() {
 		return aserviceId;
 	}
@@ -54,12 +63,6 @@ public class VO_jjh {
 	}
 	public void setDepAddress2(String depAddress2) {
 		this.depAddress2 = depAddress2;
-	}
-	public String getPartnerId() {
-		return partnerId;
-	}
-	public void setPartnerId(String partnerId) {
-		this.partnerId = partnerId;
 	}
 	public Date getDesDate() {
 		return desDate;

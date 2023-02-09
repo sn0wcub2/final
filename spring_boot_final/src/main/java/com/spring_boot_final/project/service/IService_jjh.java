@@ -4,4 +4,5 @@ import java.util.HashMap;
 
 public interface IService_jjh {
 	public void insertSafeReturn(HashMap<String, Object> map);
+	public void insertAccompany(HashMap<String, Object> map);
 }

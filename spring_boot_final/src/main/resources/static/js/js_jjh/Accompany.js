@@ -1,5 +1,5 @@
 /**
- * Accompany.js
+ * Accompany.js // 안심귀가서비스임 이름 잘 못 붙혔음 죄송합니다.
  */
 
 function setAccompany() {
@@ -19,7 +19,6 @@ function setAccompany() {
  	$("#safeReturnAddressForm").on("submit", function() {
  		event.preventDefault();
  		var formData = $(this).serialize();
- 		console.log(formData);
  		if($("#safeReturnPay").text() == "") {
 			alert("이용 경로를 선택해 주세요.");
 			return false;
