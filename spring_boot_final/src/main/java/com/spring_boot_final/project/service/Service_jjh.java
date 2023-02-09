@@ -19,4 +19,9 @@ public class Service_jjh implements IService_jjh {
 		dao.insertSafeReturn(map);
 	}
 
+	@Override
+	public void insertAccompany(HashMap<String, Object> map) {
+		dao.insertAccompany(map);
+	}
+
 }
