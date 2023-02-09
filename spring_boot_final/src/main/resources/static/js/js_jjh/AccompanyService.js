@@ -13,7 +13,7 @@ function setCharge() {
 	} else if(tokens[0] == tokens2[0] && tokens[1] > tokens2[1]) {
 		$("#accompanyPay").html("시간을 잘 못 선택하셨습니다.");
 	} else { 
-		$("#accompanyPay").html(((tokens2[0]-tokens[0])*8000 + (tokens2[1]-tokens[1])/15*2000) + "원");
+		$("#accompanyPay").html(((tokens2[0]-tokens[0])*4000 + (tokens2[1]-tokens[1])/15*1000) + "원");
 	}
 }; 
 
