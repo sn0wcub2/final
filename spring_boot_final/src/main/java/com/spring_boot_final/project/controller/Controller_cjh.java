@@ -17,7 +17,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_final.project.model.EatSubVO_cjh;
 import com.spring_boot_final.project.model.MenuVO_cjh;
@@ -55,7 +54,7 @@ public class Controller_cjh {
 	// 구독페이지로 이동===================================================================
 	@RequestMapping("/ilcoeat/eatSubscribe")
 	public String ilcoeatSub(){
-		return "ilco_eat_cjh/eatMenuCalendar";
+		return "ilco_eat_cjh/eatMenuSubscribe";
 	}
 	
 	// 일코 푸드 구독
@@ -65,7 +64,7 @@ public class Controller_cjh {
 													@RequestParam("menu_type") String type,
 													EatSubVO_cjh eatsub){
 		String memId = (String) session.getAttribute("sid");
-		StringTokenizer st = new StringTokenizer(date,  "/");
+		StringTokenizer st = new StringTokenizer(date,  ",");
 		int cnt = 0;
 		int tot = 0;
 		int price = 0;

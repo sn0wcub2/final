@@ -191,19 +191,19 @@
 								</div>
 								<div class="week" id="week3">
 									<div class="checkBtn">
-										<input type="checkbox" class="order_date" name="order_date" value="2023-01-12" >
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-12" >
 										<div class="check_title">
 											<label for="order_date"> 12</label>
 										</div>
 									</div>
 									<div class="checkBtn">
-										<input type="checkbox" class="order_date" name="order_date" value="2023-01-13" >
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-13" >
 										<div class="check_title">
 											<label for="order_date">13</label>
 										</div>
 									</div>
 									<div class="checkBtn">
-										<input type="checkbox" class="order_date" name="order_date" value="2023-01-14" >
+										<input type="checkbox" class="order_date" name="order_date" value="2023-02-14" >
 										<div class="check_title">
 											<label for="order_date"> 14</label>
 										</div>
@@ -235,19 +235,19 @@
 								</div>
 									<div class="week"id="week4">
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="2023-01-19" >
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-19" >
 											<div class="check_title">
 												<label for="order_date"> 19</label>
 											</div>
 										</div>
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="2023-01-20" >
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-20" >
 											<div class="check_title">
 												<label for="order_date">20</label>
 											</div>
 										</div>
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="2023-01-21" >
+											<input type="checkbox" class="order_date" name="order_date" value="2023-02-21" >
 											<div class="check_title">
 												<label for="order_date"> 21</label>
 											</div>
@@ -324,12 +324,6 @@
 							</div>
 					</div>
 				</div>
-				<hr>
-				<hr>
-				<hr>
-				<hr>
-				<hr>
-				<input type="text" placeholder="날짜 임시 입력란" name="order_date">
 
 			<div class="menuUpload">
 				<input type="submit" value="등록">
