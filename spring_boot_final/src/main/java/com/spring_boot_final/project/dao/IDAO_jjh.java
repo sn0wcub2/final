@@ -1,7 +1,8 @@
 package com.spring_boot_final.project.dao;
 
-import com.spring_boot_final.project.model.VO_jjh;
+import java.util.HashMap;
 
 public interface IDAO_jjh {
-	public void insertSafeReturn(VO_jjh vo);
+	public void insertSafeReturn(HashMap<String, Object> map);
+	public void insertAccompany(HashMap<String, Object> map);
 }

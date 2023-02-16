@@ -80,5 +80,10 @@ p {
 }
 
 #gtco-features {
-	height: 700px;
+	height: 510px;
+}
+
+.durimg {
+	width: 200px;
+	height: 50px;
 }

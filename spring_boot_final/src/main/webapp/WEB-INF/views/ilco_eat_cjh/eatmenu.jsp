@@ -8,8 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>메뉴 확인</title>
-<link rel="stylesheet" type="text/css"
-	href='<c:url value="/css/css_cjh/eatMenu.css"/>'>
+<link rel="stylesheet" type="text/css"	href='<c:url value="/css/css_cjh/eatMenu.css"/>'>
 </head>
 <body>
 

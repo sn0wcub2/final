@@ -11,6 +11,28 @@
     width: 70px;
 }
 
+.text_custom2 {
+	border-top: none;
+    border-left:none;
+    border-right: none;
+    border-bottom: 2px skyblue solid;
+    background-color:transparent; 
+    text-align: center;
+    outline: none;
+    width: 160px;
+}
+
+.text_custom3 {
+	border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px skyblue solid;
+    background-color: transparent;
+    text-align: start;
+    outline: none;
+    font-size: inherit;
+    width: 385px;
+}
 input::placeholder {
 	color:#c5cecf000;
 	font-size: 15px;
@@ -59,6 +81,7 @@ hr {
 	background-color: skyblue;
 	height: 3px;
 	border: 0;
+	width: 900px;
 }
 
 .btn-two {
@@ -86,3 +109,36 @@ hr {
 }
 
 .btn-two.cyan {background-color: skyblue;}
+
+.dtse {
+	width: 250px;
+	height: 90px;
+	display:inline-table;
+}
+
+.circling {
+	margin-right: 32px;
+	border: 1px solid skyblue;
+	border-radius: 25px;
+}
+
+#spdiv {
+	position: relative;
+    width: 538px;
+    border: 1px solid skyblue;
+    border-radius: 30px;
+    text-align: start;
+    display: table;
+    margin-top: 25px;
+}
+
+.sfimg {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	top: 10px;
+}
+
+#srpay {
+	outline: none;
+}

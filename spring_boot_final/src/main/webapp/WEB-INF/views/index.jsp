@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>일코노미 &mdash; 여기에 부제목 쓰고싶은데 생각나는게 없어요</title>
+	<title>일코노미 &mdash; 1인 가구를 위한 웹 플랫폼</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	
@@ -107,14 +107,14 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="fh5co-card-item">
+					<a href="/safe/accmain" class="fh5co-card-item">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src='<c:url value="/image/main_images/아이콘_안심동행.png"/>' alt="Image" class="img-responsive">
 						</figure>
 						<div class="fh5co-text">
 							<h2>안심 동행 서비스</h2>
-							<p>설명 넣으세용<br>링크도 넣으세용</p>
+							<p>몸이 불편하신 분들을 위한<br>동행 서비스</p>
 							<p><span class="btn btn-primary">서비스 신청</span></p>
 						</div>
 					</a>
@@ -143,22 +143,22 @@
 						</figure>
 						<div class="fh5co-text">
 							<h2>커뮤니티</h2>
-							<p>설명 넣으세용<br>링크도 넣으세용</p>
+							<p>이웃들과 다양한<br>일상을 공유해 보세요</p>
 							<p><span class="btn btn-primary">바로가기</span></p>
 						</div>
 					</a>
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="/index2" class="fh5co-card-item">
+					<a href="#" class="fh5co-card-item">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="#" alt="Image" class="img-responsive">
 						</figure>
 						<div class="fh5co-text">
-							<h2>임시 연습페이지로 이동하는 곳</h2>
-							<p>개인적으로 잠시 쓸게요</p>
-							<p><span class="btn btn-primary">죄송 ㅎㅎ;;</span></p>
+							<h2>챗봇</h2>
+							<p>궁금한 내용이 있다면<br>언제나 문의주세요</p>
+							<p><span class="btn btn-primary">바로가기</span></p>
 						</div>
 					</a>
 				</div>
@@ -168,40 +168,32 @@
 	</div>
 	
 	
-	<div id="gtco-features">
+	<div id="gtco-features" >
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2>일코노미에 관한 좋은 문구</h2>
-					<p>늘어나는 1인 가구를 위한 서비스를 한번에 볼 수 있는 최고의 사이트</p>
+					<h2>일코노미 서비스 지역</h2>
+					<p>더 많은 지역에서 서비스 할 수 있도록 노력하겠습니다</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-sm-6">
 					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i>1</i>
-						</span>
-						<h3>장점 1번</h3>
-						<p>설명은 여기에</p>
+						
+						<img src='<c:url value="/image/main_images/역삼.png"/>' class="durimg" alt="Image">
+						
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
 					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i>2</i>
-						</span>
-						<h3>장점 2번</h3>
-						<p>설명은 여기에</p>
+						
+						<img src='<c:url value="/image/main_images/신림.png"/>' class="durimg" alt="Image">
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
 					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i>3</i>
-						</span>
-						<h3>장점 3번</h3>
-						<p>설명은 여기에</p>
+						
+						<img src='<c:url value="/image/main_images/화양.png"/>' class="durimg" alt="Image">
 					</div>
 				</div>
 				
@@ -224,27 +216,27 @@
 				
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="196" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">적당히 배치</span>
+						<span class="counter js-counter" data-from="0" data-to="5849000" data-speed="2000" data-refresh-interval="50">1</span>
+						<span class="counter-label">2018년</span>
 
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="97" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">해놨으니까</span>
+						<span class="counter js-counter" data-from="0" data-to="6148000" data-speed="2500" data-refresh-interval="50">1</span>
+						<span class="counter-label">2019년</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="12402" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">필요한 갯수만큼</span>
+						<span class="counter js-counter" data-from="0" data-to="6643000" data-speed="3000" data-refresh-interval="50">1</span>
+						<span class="counter-label">2020년</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="12202" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">쓰시면 됩니다</span>
+						<span class="counter js-counter" data-from="0" data-to="7166000" data-speed="3500" data-refresh-interval="50">1</span>
+						<span class="counter-label">2021년</span>
 
 					</div>
 				</div>
@@ -260,7 +252,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 					<h2>구독</h2>
-					<p>일단 이야기 나왔으니 만들어는 둘게요</p>
+					<p>편리한 1인 생활을 위해</p>
 				</div>
 			</div>
 			<div class="row animate-box">
@@ -269,7 +261,7 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="form-group">
 								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email 입력">
+								<input type="email" class="form-control" id="email" placeholder="미완성">
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
@@ -288,7 +280,7 @@
 				<div class="col-md-4">
 					<div class="gtco-widget" style="width:336.66px">
 						<h3>About Us</h3>
-						<p>여기에 주저리주저리 뭔가를 채워서 넣으면 보기 좋을거같은데 일단 당장 생각나는 내용이 없으니까 이렇게 채워넣지만 발표 전까지는 다른 내용으로 채워 넣는게 좋아보이겠죠?</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum justo eu blandit feugiat. Fusce feugiat odio eget massa lacinia, eget scelerisque tellus congue.</p>
 					</div>
 				</div>
 
@@ -296,25 +288,18 @@
 					<div class="gtco-widget">
 						<h3>바로가기</h3>
 						<ul class="gtco-footer-links">
-							<li><a href="#">일코푸드</a></li>
-							<li><a href="#">안심서비스</a></li>
-							<li><a href="#">세탁서비스</a></li>
-							<li><a href="#">커뮤니티</a></li>
-							<li><a href="#">일코장터</a></li>
+							<li><a href="/ilcoeat/main">일코푸드</a></li>
+							<li><a href="/safe/main">안심서비스</a></li>
+							<li><a href="/safe/accmain">안심 동행</a></li>
+							<li><a href="/laundry_kbh/laundryMain">세탁서비스</a></li>
+							<li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="col-md-2 col-md-push-1">
 					<div class="gtco-widget">
-						<h3>추가 할 거 있으면 여기에 넣으세요</h3>
-						<ul class="gtco-footer-links">
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-						</ul>
+						
 					</div>
 				</div>
 
@@ -335,7 +320,7 @@
 				<div class="col-md-12">
 					<p class="pull-left">
 						<small class="block">&copy; 2023 일코노미. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="/index" target="_blank">iconomi Team</a> Demo Images: <a href="/" target="_blank">이미지 출처 사이트 이름 넣기</a></small>
+						<small class="block">Designed by <a href="/" target="_blank">iconomi Team</a></small>
 					</p>
 					<p class="pull-right">
 						<ul class="gtco-social-icons pull-right">
