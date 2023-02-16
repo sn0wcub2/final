@@ -5,11 +5,11 @@
   
   <mapper namespace="com.spring_boot_final.project.dao.IPointDAO">
   
-<!-- 
       <insert id="insertMemIdPoint" parameterType="string">
           INSERT INTO point(memId, pointAdd, pointDescription)
-          VALUES (#{memId}, 3000, "회원가입 포인트")
+          VALUES (#{memId}, 1000, "회원가입 포인트")
       </insert>
+<!-- 
 
 
 

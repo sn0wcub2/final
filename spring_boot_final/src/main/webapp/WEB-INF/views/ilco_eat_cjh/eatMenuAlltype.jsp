@@ -21,8 +21,8 @@
 			
 			<div class="searchBox">
 				<div class="RadBtn">
-						<input type="radio" value="*" name="type" id="type" class="radioBtn" onchange="location.href='/ilcoeat/menu_all/'" class="radioBtn" checked>
-						<label for="" class="radLab" >전체 보기</label>
+						<input type="radio" value="Day-A"  name="type" id="type" onchange="location.href='/ilcoeat/menu_all'" class="radioBtn">
+						<label for="Day-A" class="radLab">전체보기</label>
 				</div>
 				<div class="RadBtn">
 						<input type="radio" value="Day-A"  name="type" id="type" onchange="location.href='/ilcoeat/menu_all_type/Day-A'" class="radioBtn">

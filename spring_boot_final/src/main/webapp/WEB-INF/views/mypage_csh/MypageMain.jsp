@@ -4,46 +4,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="<c:url value='/css/css_csh/MypageMain.css' />">
 <head>
-<style type="text/css">
-.mypagehistory img{
-width:100px;
-height:100px;
-margin-top:30px;
-}
-.mypagehistory div{
-font-family:BMDOHYEON_ttf;
-display:inline-block;
-margin-top:50px;
-margin-right:30px;
-margin-left:30px;
-padding: 20px;
-border:2.5px solid #09C6AB;
-border-radius: 15px;
-width: 180px;
-height: 190px;
-box-shadow: 5px 5px 20px -10px rgb(0 0 0 / 30%);
-}
-#mypageH3 {
-text-align:center;
-margin-top: 80px;
-color: skyblue;
-font-size: 50px;
-letter-spacing: 40px;
-line-height: 1.5;
-font-weight: 10px;
-}
-#mypageHR {
-width: 1085px;
-background-color: skyblue;
-border: 0;
-height: 3px;
-margin-top: 80px;
-}
-.mypagehistory{
-    text-align-last: center;
-}
-</style>
 <meta charset="UTF-8">
 <title>마이페이지 메인</title>
 			<!--  head -->         
@@ -78,7 +40,7 @@ margin-top: 80px;
 			</div>
 			<br>
 			<div>
-			<a href="#"><img src="<c:url value='/image/csh_포인트.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypagePoint/'/>'"></a>
+			<a href="#"><img src="<c:url value='/image/csh_포인트.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypagePointCharge/'/>'"></a>
 			<p></p>
 			<p>포인트 충전</p>
 			</div>
@@ -88,14 +50,14 @@ margin-top: 80px;
 			<p>포인트 내역 확인</p>
 			</div>
 			<div>
-			<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageDelete/'/>'"></a>
+			<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageDeleteMain/'/>'"></a>
 			<p></p>
 			<p>회원 탈퇴</p>
 			</div>
 			
 			<c:if test="${sessionScope.sid == 'admin'}">
 				<div>
-				<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/mypage_csh/MypageDelete/'/>'"></a>
+				<a href="#"><img src="<c:url value='/image/csh_탈퇴.png'/>"onclick="location.href='<c:url value='/admin_csh/AdminMain/'/>'"></a>
 				<p></p>
 				<p>관리자 페이지</p>
 				</div>

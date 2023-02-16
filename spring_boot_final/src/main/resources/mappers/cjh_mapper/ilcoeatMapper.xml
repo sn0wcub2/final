@@ -20,6 +20,14 @@
   		<result property="fat" column="fat"/>
   		<result property="allergy_info" column="allergy_info"/>
   	</resultMap>
+  	
+  	<resultMap id="SubResult" type="com.spring_boot_final.project.model.EatSubVO_cjh">
+  		<result property="user_id" column="user_id"/>
+  		<result property="address1" column="address1"/>
+  		<result property="address2" column="address2"/>
+  		<result property="menu_type" column="menu_type"/>
+  		<result property="order_date" column="order_date"/>
+  	</resultMap>
   
   
   <!-- menu 테이블에 모든 데이터 넣기 -->
@@ -44,6 +52,15 @@
 	  		ORDER BY menu_id ASC
 	  	]]>
 	  </select>
+<!-- 	  	menu_date >= #{menu_date}  누락-->
+  	  <select id="menuAllType" parameterType="hashmap" resultMap="menuResult">
+	  	<![CDATA[
+	  		SELECT * FROM menu 
+	  		WHERE  menu_type = #{menu_type}
+	  		ORDER BY menu_id ASC
+	  	]]>
+	  	
+	  </select>
 	  
 <!-- 	  메뉴 아이디에 해당하는 정보 가져오기 -->
   	  <select id="menuDetail" parameterType="string" resultType="com.spring_boot_final.project.model.MenuVO_cjh">
@@ -62,4 +79,20 @@
 	  	DELETE FROM menu
 	  	WHERE menu_id = #{menu_id}
 	  </delete>
+	  
+  	  <insert id="subscribe" parameterType="com.spring_boot_final.project.model.EatSubVO_cjh">
+	  		INSERT INTO eatsub (user_id, address1, address2, menu_type, order_date)
+	  		VALUES(#{user_id}, #{address1}, #{address2}, #{menu_type}, #{order_date})
+	  </insert>
+	  
+	  <select id ="mypageSub" parameterType="hashmap" resultMap="SubResult">
+  	  	<![CDATA[
+	  		SELECT * FROM eatsub WHERE user_id =#{user_id} AND order_date >= #{order_date} ORDER BY order_date ASC;
+	  	]]>
+	  </select>
+	  <select id ="mypageSubOver" parameterType="hashmap" resultMap="SubResult">
+  	  	<![CDATA[
+	  		SELECT * FROM eatsub WHERE user_id =#{user_id} AND order_date < #{order_date} ORDER BY order_date ASC;
+	  	]]>
+	  </select>
   </mapper>

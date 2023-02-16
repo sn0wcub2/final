@@ -20,7 +20,7 @@
 		<!-- 		top -->
 <c:import url="/WEB-INF/views/layout/top.jsp"/>
 
-		<a href="/ilcoeat/Calendar">달력</a><br>
+
 
 		<!-- 	메인 광고 -->
 		<div id="mainbox">
@@ -106,11 +106,10 @@
 		</div>
 
 
-
+		<a href="/ilcoeat/Calendar">달력</a><br>
 		<!-- 오늘의 메뉴 오늘의 메뉴 페이지 제작 후 진행 -->
 <c:import url="/WEB-INF/views/layout/footer.jsp"/>
-		<a href="/ilcoMypageasdfasdf">마이페이지 > 구독 관리</a><br> <a
-			href="/ilcofoodmange">관리자</a>
+		<a href="/ilcoMypageasdfasdf">마이페이지 > 구독 관리</a><br>
 	</div>
 	<!-- bottom -->
 </body>
