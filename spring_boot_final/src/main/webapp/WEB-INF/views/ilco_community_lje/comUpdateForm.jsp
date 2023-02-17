@@ -10,12 +10,12 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comWriteForm.css' />">
 <c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 -->
 </head>
-<body style="background-color:#eedfcb">
+<body>
 <c:import url="/WEB-INF/views/layout/top.jsp"/> <!-- 탑 메뉴 -->
 	<div id="wrap">
 		<form id="updateForm" name="updateForm" method="post"  action="<c:url value='/ilcocommunity/updateCommunity' />">
 			<div>
-			<header><h3>커뮤니티 게시판</h3></header>
+			<header><h3 id="title">커뮤니티 게시판</h3></header>
 				<h4>글수정</h4>
 				<div class="board_write_wrap">
 					<table class="board_write">

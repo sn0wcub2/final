@@ -11,10 +11,10 @@
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comDetailView.css' />">
 	<c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 -->
 	</head>
-	<body style="background-color:#eedfcb">
+	<body>
 	<c:import url="/WEB-INF/views/layout/top.jsp"/> <!-- 탑 메뉴 -->
 		<div id="wrap">
-		<header><h3>커뮤니티 게시판</h3></header>
+		<header><h3 id="title">커뮤니티 게시판</h3></header>
 				<p>이웃들과 다양한 이야기를 나눠보세요</p>
 			<div class="board_view_wrap">
 			<div class="board_view">
