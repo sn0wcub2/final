@@ -283,7 +283,7 @@
 						<ul class="gtco-quick-contact">
 							<li><a href="#"><i class="icon-phone"></i> 010 1234 5678</a></li>
 							<li><a href="#"><i class="icon-mail2"></i> iconomi@gmail.com</a></li>
-							<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+							<li><a href="/chatbotForm"><i class="icon-chat"></i> Live Chat</a></li>
 						</ul>
 					</div>
 				</div>

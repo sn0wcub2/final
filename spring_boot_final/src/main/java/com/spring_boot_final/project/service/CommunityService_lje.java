@@ -36,13 +36,13 @@ public class CommunityService_lje implements ICommunityService_lje {
 
 	@Override
 	public void updateCommunity(CommunityVO_lje com) {
-		// TODO Auto-generated method stub
+		dao.updateCommunity(com);
 		
 	}
 
 	@Override
 	public void deleteCommunity(String comNo) {
-		// TODO Auto-generated method stub
+		dao.deleteCommunity(comNo);
 		
 	}
 

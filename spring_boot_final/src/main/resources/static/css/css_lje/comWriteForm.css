@@ -27,6 +27,10 @@ header {
 	font-size: 3rem;	
 }
 
+#title{
+	color: #ff9d3c;
+}
+
 h4 {
     margin-top: 5px;
     margin-bottom: 10px;

@@ -13,25 +13,25 @@
 <body>
 <c:import url="/WEB-INF/views/layout/top.jsp"/> <!-- 탑 메뉴 -->
 	<div id="wrap">
-		<form id="writeForm" name="writeForm" method="post"  action="<c:url value='/ilcocommunity/insertCommunity' />">
+		<form id="updateForm" name="updateForm" method="post"  action="<c:url value='/ilcocommunity/updateCommunity' />">
 			<div>
 			<header><h3 id="title">커뮤니티 게시판</h3></header>
-				<h4>글작성</h4>
+				<h4>글수정</h4>
 				<div class="board_write_wrap">
 					<table class="board_write">
 						<tr class="title">
-							
-							<td><input type="text" id="comTitle"
-								name="comTitle" placeholder="제목을 입력하세요"/></td>
+							<td><input type="hidden" name="comNo" value="${com.comNo}"/>
+							<input type="text" id="comTitle"
+								name="comTitle" value="${com.comTitle}" placeholder="제목을 입력하세요"/></td>
 						</tr>
 						<tr class="cont">
 							
 							<td><textarea rows="10" cols="10"
-									id="comContent"  name="comContent" placeholder="내용을 입력하세요"></textarea></td>
+									id="comContent"  name="comContent"  placeholder="내용을 입력하세요">${com.comContent}</textarea></td>
 						</tr>						
 					</table>
 					<div class="bt_wrap">
-						<input type="submit" value="등록" class="on">
+						<input type="submit" value="수정" class="on">
 						<a href="<c:url value='/ilcocommunity/boardlist'/>" class="on">취소</a> 
 						<input type="reset" value="취소" class="on">
 					</div>
