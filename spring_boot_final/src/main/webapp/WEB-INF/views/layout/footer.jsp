@@ -67,6 +67,9 @@
 			</div>
 		</footer>
 		
+		<div class="chatIcon">
+			<a href="/chatbotForm" class="chatcon"><i class="ti-comments"></i></a>
+		</div>
 		
 		<div class="gototop js-top">
 			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
