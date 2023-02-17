@@ -8,7 +8,7 @@
 		<meta charset="UTF-8">
 		<title>메뉴 확인</title>
 		<c:import url="/WEB-INF/views/layout/header_main.jsp"/>
-	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatcalendar.css"/>'>
+	<link rel="stylesheet" type="text/css" href='<c:url value="/css/css_cjh/eatCalendar.css"/>'>
 	<script type="text/javascript" src='<c:url value="/js/js_cjh/CheckBlank.js"/>'>CheckBlank();</script>
 	
 	
