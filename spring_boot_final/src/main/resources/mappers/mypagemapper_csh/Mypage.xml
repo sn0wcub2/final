@@ -34,4 +34,9 @@
 		resultType="string">
 		SELECT memState FROM user WHERE memId = #{memId}
 	</select>
+	
+	<select id="detailViewCommunity" parameterType="string"
+		resultType="com.spring_boot_final.project.model.CommunityVO_lje">
+		SELECT * FROM community WHERE memId = #{memId}
+	</select>
 </mapper>
