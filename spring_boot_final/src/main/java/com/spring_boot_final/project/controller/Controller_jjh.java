@@ -82,7 +82,7 @@ public class Controller_jjh {
 			int ldate = pservice.findLastestData(memId);
 			int pointTotal = pservice.pointTotalCheck(memId, ldate);
 			
-			int charge = (endTime-startTime)*8000 + (endTimeBun-startTimeBun)/15*2000;
+			int charge = (endTime-startTime)*4000 + (endTimeBun-startTimeBun)/15*1000;
 			
 			if (pointTotal >= charge) {
 				String pointDesciption = "안심 동행 서비스 이용";

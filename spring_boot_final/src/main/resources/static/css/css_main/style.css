@@ -1132,6 +1132,32 @@ form label {
   text-transform: uppercase;
 }
 
+.chatIcon {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 999;
+}
+
+.chatIcon a {
+  width: 50px;
+  height: 50px;
+  display: table;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.chatIcon a i {
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .gototop {
   position: fixed;
   bottom: 20px;

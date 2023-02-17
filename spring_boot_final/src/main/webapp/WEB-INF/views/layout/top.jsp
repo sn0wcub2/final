@@ -22,6 +22,7 @@
                                 <li><a href="/safe/accmain">안심 동행</a></li>
                                 <li><a href="/laundry_kbh/laundryMain">세탁 서비스</a></li>
                                 <li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
+                                <li><a href="/chatbotForm">챗봇</a></li>
                             </ul>
                         </li>
 						</ul>
@@ -39,6 +40,7 @@
                                 <li><a href="/safe/accmain">안심 동행</a></li>
                                 <li><a href="/laundry_kbh/laundryMain">세탁 서비스</a></li>
                                 <li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
+                                <li><a href="/chatbotForm">챗봇</a></li>
                             </ul>
                         </li><br>
                         ${sessionScope.sid}님 환영합니다!
