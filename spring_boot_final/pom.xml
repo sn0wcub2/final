@@ -67,6 +67,13 @@
         	<groupId>org.springframework.boot</groupId>
         	<artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+         <!-- SpringBoot mailService -->
+	    <!-- 메일 api -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<dependency>
         	<groupId>org.json</groupId>
         	<artifactId>json</artifactId>
