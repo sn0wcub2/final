@@ -15,7 +15,7 @@
   
   <!-- 전체 글 조회 -->
   <select id="listAllCommunity" resultMap="comResult">
-  		SELECT * FROM community ORDER BY comNo
+  		SELECT * FROM community ORDER BY comNo DESC
   </select>
   
   <!-- 글쓰기 -->
@@ -29,5 +29,17 @@
   												   resultType="com.spring_boot_final.project.model.CommunityVO_lje">
   		SELECT * FROM community WHERE comNo = #{comNo}
   </select>
+  
+   <!-- 글 수정 : 기본키인 번호는 수정하지 않음 -->
+  <update id="updateCommunity"  parameterType="com.spring_boot_final.project.model.CommunityVO_lje">
+  		UPDATE community
+  		SET comTitle=#{comTitle}, comContent=#{comContent}
+  	    WHERE comNo=#{comNo}
+  </update>
+  
+  <!--  글 삭제 : 삭제할 번호 전달 받음-->
+  <delete id="deleteCommunity"  parameterType="string" >
+  		DELETE FROM community WHERE comNo=#{comNo}
+  </delete>
   
   </mapper>
