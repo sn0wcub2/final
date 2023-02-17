@@ -86,7 +86,7 @@
 						3 . 날짜 선택
 					</div>
 					<div class="monthInfo">
-						2023년 3월
+						2023년 30000월
 					</div>
 					<div class="dayrow">
 						<div class="day">일</div>
@@ -103,19 +103,19 @@
 								
 									<div class="week" id="week1">
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="" >
+											<input type="checkbox" class="order_date" name="order_date" value="" disabled>
 											<div class="check_title">
 												<label for="order_date"> 구독불가</label>
 											</div>
 										</div>
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="" >
+											<input type="checkbox" class="order_date" name="order_date" value="" disabled>
 											<div class="check_title">
 												<label for="order_date">구독불가</label>
 											</div>
 										</div>
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="" >
+											<input type="checkbox" class="order_date" name="order_date" value="" disabled>
 											<div class="check_title">
 												<label for="order_date"> 구독불가</label>
 											</div>
@@ -315,7 +315,7 @@
 											</div>
 										</div>
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="" >
+											<input type="checkbox" class="order_date" name="order_date" value="" disabled>
 											<div class="check_title">
 												<label for="order_date"> 4월</label>
 											</div>
