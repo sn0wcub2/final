@@ -10,7 +10,7 @@
 	var x2 = "";
 	var y1 = "";
 	var y2 = "";
-	var makerFlag = 0;
+	var makerFlag = 0; 
 	
 	function today() {
 		date = new Date();
