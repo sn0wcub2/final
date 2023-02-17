@@ -41,11 +41,11 @@ public class CommunityController_lje {
 			System.out.println(com.getComContent());
 			// memId 값 필요
 			// 로그인 했으면 지금 코드 사용
-			//String memId = (String)session.getAttribute("sid");
+			String memId = (String)session.getAttribute("sid");
 			
 			// 지금 혼자 테스트 할 경우에는 로그인 구현 없으므로 
 			// 로그인 했다고 가정
-			String memId = "hong";
+			//String memId = "hong";
 			// CommunityVO_lje의 memId에 로그인한 사람의 id 값 저장
 			com.setMemId(memId);
 			
@@ -66,17 +66,42 @@ public class CommunityController_lje {
 			return "ilco_community_lje/comDetailView";
 		}
 	
-	//글수정 페이지
-	@RequestMapping("/ilcocommunity/boardViewForm")
-	public String ilcocomView(){
-		return "ilco_community_lje/comViewForm";
+	
+		
+		// 글 수정 : 수정된 데이터 DB에 저장
+		@RequestMapping("/ilcocommunity/updateCommunityForm/{comNo}")
+		public String updateCommunityForm(@PathVariable String comNo, Model model) {
+			CommunityVO_lje com = service.detailViewCommunity(comNo);
+			model.addAttribute("com", com);
+			// 수정된 글 저장 후 글목록 화면으로 포워딩  
+			return "ilco_community_lje/comUpdateForm";
+		}
+		
+		//수정 폼 열기
+		@RequestMapping("/ilcocommunity/updateCommunity")
+		public String updateCommunity(CommunityVO_lje com) {
+			System.out.println(com.getComTitle());
+			service.updateCommunity(com);		
+			// 수정된 글 저장 후 글목록 화면으로 포워딩  
+			return "redirect:/ilcocommunity/boardlist";
+		}
+		
+		// 글 삭제
+		// 삭제할 글의 번호 전달 받음 : @PathVariable 사용
+		@RequestMapping("/ilcocommunity/deleteCommunity/{comNo}")
+		public String deleteCommunity(@PathVariable String comNo) {
+			service.deleteCommunity(comNo);
+			// 데이터 삭제 후 글목록 화면으로 포워딩  
+			return "redirect:/ilcocommunity/boardlist";
+			
 		}
 	
-	//나눔글목록 페이지
-		@RequestMapping("/ilcocommunity/shareBoardList")
-		public String ilcocomShareList(Model model){
-			ArrayList<CommunityVO_lje> comList = service.listAllCommunity();
-			model.addAttribute("comList", comList);
-			return "ilco_market_lje/marketSharecomList";
-		}
+		/*
+		 * //나눔글목록 페이지
+		 * 
+		 * @RequestMapping("/ilcocommunity/shareBoardList") public String
+		 * ilcocomShareList(Model model){ ArrayList<CommunityVO_lje> comList =
+		 * service.listAllCommunity(); model.addAttribute("comList", comList); return
+		 * "ilco_market_lje/marketSharecomList"; }
+		 */
 }

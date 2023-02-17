@@ -5,90 +5,177 @@
 	box-sizing: border-box;
 }
 
-body{
-	display: flex;
-	justify-content: center;
+/* 지역선택 */
+.lct{
+    position: relative;
+    text-align: center;
+    padding-top: 120px;
+    background: #29335c;
+    padding-bottom: 80px;
+}
+.lct_ctg_icon{
+    height: 100px;
+    margin-bottom: 40px;
+}
+.lctDis{
+	color:white;	
+	font-size:40px;
+    margin-bottom: 100px;
+}
+.lct select{
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 15px;
+    color: white;
+    background-color: transparent;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    margin: 0;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+.lct select:focus{
+	  border:none;
+}
+.lct input{
+	font-size:30px;
+	color:white;
+	border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px white solid;
+    background-color: transparent;
+    text-align: center;
+    outline: none;
+    width: 700px;
+    transition:ease;
+}
+.lct input:focus{
+ 	    border-bottom: 2px #BDC667 solid;
+}
+
+/* 타입 선택*/
+.subsec2{
+    position: relative;
+    text-align: center;
+    padding-top: 120px;
+    background: #8F8389;
+    padding-bottom: 80px;
+}
+.instructions-price{
+	padding-top: 20px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+.searchBox{
+	display:flex;
+	align-items:center;
+	justify-content:center
+}
+.radio-title-group{
+	color:white;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+}
+.RadBtn{
+	position:relative;
+	height:300px;
+	width:400px;
+	margin:20px;
+}
+.RadBtn input{
+	position:absolute;
+	height:100%;
+	width:100%;
+	cursor:pointer;
+	margin:0 auto;
+	opacity:0;
+	left:4px;
+	z-index:2;
+}
+.RadBtn .radio_title{
+	display:flex;
+	flex-direction: column;
 	align-items: center;
-	min-height: 100vh;
+	justify-content:center;
+	height:100%;
+	border: 3px solid white;
+	border-radius:8px;
+	transition: all .3s ease;
 }
-.calendar{
-	width: 600px;
-	margin: 50px;
+.type_icon{
+	height:140px;
+	width:140px;
 }
-.header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.RadBtn label{
+    font-size: 25px;
+    padding-bottom: 10px;
 }
-.year-month{
-	font-size: 35px;
+.RadBtn input:checked + .radio_title{
+	background-color: #BDC667;
+	color:#f3f3f3;
 }
-.nav{
-	display: flex;
-	border: 1px solid #333333;
-	border-radius: 5px;
-}
-.nav-btn{
-	width:28px;
-	height:30px;
-	border:none;
-	font-size: 16px;
-	line-height: 34px;
-	background-color: transparent;
-	cursor: pointer;
-}
-.go-today{
-	width:75px;
-	border-left: 1px solid #333333;
-	border-right: 1px solid #333333;
-}
-.days{
-	display: flex;
-	margin:25px 0 10px;
+/* 날짜 선택 */
+
+.dateCheck{
+    position: relative;
+    text-align: center;
+    padding-top: 120px;
+    background: #29335c;
+    padding-bottom: 80px;
+    color: white;
 }
 .day{
-	width: calc(100% / 7);
-	text-align: center;
+	width:140px;
 }
-.dates{
-	display: flex;
-	flex-flow: row wrap;
-	height: 500px;
-	border-top: 1px solid #333333;
-	border-left:1px solid #333333;
+.dayrow{
+    display: flex;
+    position: relative;
+    width: 980px;
+    justify-content: center;
+    margin: auto;
 }
-.date{
-	width: calc(100% / 7);
-	padding: 15px;
-	text-align: right;
-	border-bottom: 1px solid #333333;
-	border-right: 1px solid #333333;
+.week{
+display:flex;	
+	
 }
-.day:nth-child(7n + 1),
-.date:nth-child(7n + 1){
-	color: #D13E3E;
+
+.check-title-group{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
 }
-.day:nth-child(7n),
-.date:nth-child(7n){
-	color: #396EE2;
+.checkBtn{
+	position:relative;
+	height:60px;
+	width:100px;
+	margin:20px;
 }
-.other{
-	opacity: 0.3;
-}
-.today{
-	position: relative;
-	color:#ffffff;
-}
-.today::before{
+.checkBtn input{
+	right: 0px;
 	position:absolute;
-	top:50%;
-	left:50%;
-	transform: translate(-50%, -50%);
-	z-index: -1;
-	width: 30px;
-	height: 30px;
-	display: block;
-	background-color: #D13E3E;
-	border-radius: 50%;
-	content: '';
+	height:100%;
+	width:100%;
+	cursor:pointer;
+	margin:0 auto;
+	opacity:0;
+	z-index:2;
+}
+.checkBtn .check_title{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+	height:100%;
+	border: 3px solid orange;
+	border-radius:8px;
+	transition: all .3s ease;
+}
+.checkBtn label{
+	font-size: 16px;
+    font-weight: bold;
+}
+.checkBtn input:checked + .check_title{
+	background-color: #BDC667;
+	color:#f3f3f3;
 }

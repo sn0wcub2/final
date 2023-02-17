@@ -20,6 +20,18 @@
 		SET memName=#{memName}, memHP=#{memHP}, memEmail=#{memEmail},
 		memZipcode=#{memZipcode},
 		memAddress1=#{memAddress1},memAddress2=#{memAddress2}
-		WHERE memName=#{memName}
+		WHERE memId=#{memId}
 	</update>
+	<update id="changeState"
+		parameterType="string">
+		UPDATE user
+		SET memState='2'
+		WHERE memId=#{memId}
+	
+	</update>
+	
+	<select id="findState" parameterType="string"
+		resultType="string">
+		SELECT memState FROM user WHERE memId = #{memId}
+	</select>
 </mapper>

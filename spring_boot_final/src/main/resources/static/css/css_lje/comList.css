@@ -62,7 +62,11 @@ html {
 header {
 	margin-top: 50px;
 	margin-bottom: 30px;
-	font-size: 3rem;	
+	font-size: 3rem;
+}
+
+#title{
+	color: #ff9d3c;
 }
 
 p {

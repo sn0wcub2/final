@@ -22,7 +22,6 @@
 	<c:import url="/WEB-INF/views/layout/top.jsp"/>
 	<div class="inputmenuwraper">
 		<div class="inputform">
-		
 			<c:set var="typeWord" value="${menu.menu_type}"/>
 		    <c:set var ="length" value = "${fn:length(typeWord)}"/>
 			<c:set var="typeLast" value="${fn:substring(typeWord, length-1, length)} "/>
@@ -30,6 +29,9 @@
 		    <c:set var ="datelength" value = "${fn:length(dateWord)}"/>
 			<c:set var="dateLast" value="${fn:substring(dateWord, datelength-5, datelength)} "/>
 			<div class="title">${dateLast} ${typeLast } 타입</div>
+			<div class="sampleImg">
+				<img src="<c:url value='/image/cjh_smaple.jpg'/>" class="type_icon">
+			</div>
 			<form method="post" action="/ilcofoodmange/insertmenu" >
 				<div class="submitrow">
 					<div class="inputarea">

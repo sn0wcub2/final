@@ -18,7 +18,7 @@
             border: 1px solid #444444;
             text-align: center;
             height: 40px;
-            background-color: dodgerblue;
+            background-color: lightskyblue;
             color: cornsilk;
         }
         table td {

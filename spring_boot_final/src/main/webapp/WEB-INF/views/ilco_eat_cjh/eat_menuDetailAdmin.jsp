@@ -18,7 +18,7 @@
 </head>
 </head>
 <body>
-	<a href="/ilcoeat/main"> 일코 푸드 메인</a>
+
 	<c:import url="/WEB-INF/views/layout/top.jsp"/>
 	<div class="inputmenuwraper">
 		<div class="inputform">
@@ -29,9 +29,11 @@
 			<c:set var="dateWord" value="${menu.menu_date}"/>
 		    <c:set var ="datelength" value = "${fn:length(dateWord)}"/>
 			<c:set var="dateLast" value="${fn:substring(dateWord, datelength-5, datelength)} "/>
-			
 			<div class="title">${dateLast} ${typeLast } 타입</div>
-			<form method="post" action="/ilcofoodmange/insertmenu" >
+			<div class="sampleImg">
+				<img src="<c:url value='/image/cjh_smaple.jpg'/>" class="type_icon">
+			</div>
+			<form method="post" action="/ilcofoodmange/update" >
 				<div class="submitrow">
 					<div class="inputarea">
 						<input type='text' id="date-picker" name="menu_date" class='datepicker' value="${menu.menu_date}" pattern="YYYY-MM-dd" readonly>
@@ -175,9 +177,9 @@
 					<div class="inputarea">
 						메뉴 구성 입력
 						<div class="compon">
-							<input type="text" placeholder="${menu.mainMenu}" name="mainMenu" > 
-							<input type="text" placeholder="${menu.subMenu }" name="subMenu" >
-							 <input	type="text" placeholder="${menu.other }" name="other" >
+							<input type="text" value="${menu.mainMenu}" name="mainMenu" > 
+							<input type="text" value="${menu.subMenu }" name="subMenu" >
+							 <input	type="text" value="${menu.other }" name="other" >
 						</div>
 					</div>
 				</div>
@@ -324,26 +326,28 @@
 					영양정보 입력
 						<div class="nutrition">
 							<div class="nutrition_row">
-								열량 : <input type="text" name="cal" placeholder="${menu.cal } " ><div class="unit">(kcal)</div>
+								열량 : <input type="text" name="cal" value="${menu.cal } " ><div class="unit">(kcal)</div>
 							</div>
 							<div class="nutrition_row">
-								단백질 : <input type="text" name="prot" placeholder="${menu.prot }" ><div class="unit">(g)</div>
+								단백질 : <input type="text" name="prot" value="${menu.prot }" ><div class="unit">(g)</div>
 							</div>
 							<div class="nutrition_row">
-								탄수화물 : <input	type="text" name="carb" placeholder="${menu.carb }" ><div class="unit">(g)</div>
+								탄수화물 : <input type="text" name="carb" value="${menu.carb }" ><div class="unit">(g)</div>
 							</div>
 							<div class="nutrition_row">
-								지방 : <input type="text" name="fat" placeholder="${menu.prot }" ><div class="unit">(g)</div>
+								지방 : <input type="text" name="fat" value="${menu.prot }" ><div class="unit">(g)</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<input type="submit" value="수정">
-				<button type="button" onclick = "location.href = '<c:url value="/ilcoeat/deletemenu/${menu.menu_id}"/>' ">삭제</button>
+				<input type="hidden" value="${menu.menu_id }" name="menu_id">
+				<input type="submit" value="수정" class="forTest">
+				<button type="button" class="forTest"onclick = "location.href = '<c:url value="/ilcoeat/deletemenu/${menu.menu_id}"/>' ">삭제</button>
 				<div class="menuUpload">
 							<a href="/ilcoeat/menu_all"> &lt;&lt;일코 푸드 메뉴 전체 조회&gt;&gt;</a>
 				</div>
 			</form>
+				<a href="/ilcoeat/main"> 일코 푸드 메인</a>
 		</div>
 	</div>
 

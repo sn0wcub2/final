@@ -10,7 +10,7 @@
 <title>일코 잇 메인 페이지</title>
 <link rel="stylesheet" type="text/css"
 	href='<c:url value="/css/css_cjh/eatMain.css"/>'>
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+	<c:import url="/WEB-INF/views/layout/header_main.jsp"/>
 <script src='<c:url value="/js/js_cjh/panel.js"/>'>
 	
 </script>
@@ -18,17 +18,9 @@
 <body>
 	<div id="wrap">
 		<!-- 		top -->
-		<div class="nav">
-			<img src="<c:url value='/image/cjh_beta_eat_logo.png'/>" class="logo">
-			<ul>
-				<li><a href="<c:url value='/ilcoeat/eatSubscribe'/>">구독하기</a></li>
-				<li><a href="<c:url value='/ilcoeat/eatMenu'/>">오늘 메뉴</a></li>
-				<li><a href="#">후기</a></li>
-				<li><a href="#">문의하기</a></li>
-			</ul>
-		</div>
+<c:import url="/WEB-INF/views/layout/top.jsp"/>
 
-		<a href="/ilcoeat/Calendar">달력</a><br>
+
 
 		<!-- 	메인 광고 -->
 		<div id="mainbox">
@@ -109,16 +101,15 @@
 				</div>
 			</div>
 	<div class="subAn">
-		<a href="<c:url value='/ilcoeat/eatSubscribe'/>">구독하러가기"&gt;&gt;</a>
+		<a href="<c:url value='/ilcoeat/eatSubscribe'/>">구독하러가기&gt;&gt;</a>
 	</div>
 		</div>
 
 
-
+		<a href="/ilcoeat/Calendar">달력</a><br>
 		<!-- 오늘의 메뉴 오늘의 메뉴 페이지 제작 후 진행 -->
-
-		<a href="/ilcoMypageasdfasdf">마이페이지 > 구독 관리</a><br> <a
-			href="/ilcofoodmange">관리자</a>
+<c:import url="/WEB-INF/views/layout/footer.jsp"/>
+		<a href="/ilcoMypageasdfasdf">마이페이지 > 구독 관리</a><br>
 	</div>
 	<!-- bottom -->
 </body>

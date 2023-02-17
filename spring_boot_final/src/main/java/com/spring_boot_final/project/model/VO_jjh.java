@@ -6,27 +6,39 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class VO_jjh {
 	private String aserviceId;
-	private String userId;
+	private String memId;
 	private String desAddress1;
 	private String desAddress2;
 	private String depAddress1;
 	private String depAddress2;
-	private String partnerId;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date desTime;
-	private int bill;
+	private Date desDate;
+	private String desTime;
+	private int charge;
+	private double working;
+	private int estimatedTime;
+	private String prtId;
 	
+	public String getPrtId() {
+		return prtId;
+	}
+	public void setPrtId(String prtId) {
+		this.prtId = prtId;
+	}
+	public void setWorking(double working) {
+		this.working = working;
+	}
 	public String getAserviceId() {
 		return aserviceId;
 	}
 	public void setAserviceId(String aserviceId) {
 		this.aserviceId = aserviceId;
 	}
-	public String getUserId() {
-		return userId;
+	public String getMemId() {
+		return memId;
 	}
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setMemId(String memId) {
+		this.memId = memId;
 	}
 	public String getDesAddress1() {
 		return desAddress1;
@@ -52,22 +64,36 @@ public class VO_jjh {
 	public void setDepAddress2(String depAddress2) {
 		this.depAddress2 = depAddress2;
 	}
-	public String getPartnerId() {
-		return partnerId;
+	public Date getDesDate() {
+		return desDate;
 	}
-	public void setPartnerId(String partnerId) {
-		this.partnerId = partnerId;
+	public void setDesDate(Date desDate) {
+		this.desDate = desDate;
 	}
-	public Date getDesTime() {
+	public String getDesTime() {
 		return desTime;
 	}
-	public void setDesTime(Date desTime) {
+	public void setDesTime(String desTime) {
 		this.desTime = desTime;
 	}
-	public int getBill() {
-		return bill;
+	public int getCharge() {
+		return charge;
 	}
-	public void setBill(int bill) {
-		this.bill = bill;
+	public void setCharge(int charge) {
+		this.charge = charge;
 	}
+	public double getWorking() {
+		return working;
+	}
+	public void setWorking(float working) {
+		this.working = working;
+	}
+	public int getEstimatedTime() {
+		return estimatedTime;
+	}
+	public void setEstimatedTime(int estimatedTime) {
+		this.estimatedTime = estimatedTime;
+	}
+	
+	
 }
