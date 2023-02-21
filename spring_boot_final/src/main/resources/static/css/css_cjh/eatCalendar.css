@@ -116,7 +116,10 @@
 	color:#f3f3f3;
 }
 /* 날짜 선택 */
-
+.monthInfo{
+	margin-bottom:50px;
+	font-size: 30px;
+}
 .dateCheck{
     position: relative;
     text-align: center;

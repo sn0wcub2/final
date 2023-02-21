@@ -86,7 +86,7 @@
 						3 . 날짜 선택
 					</div>
 					<div class="monthInfo">
-						2023년 30000월
+						2023년 3월
 					</div>
 					<div class="dayrow">
 						<div class="day">일</div>
