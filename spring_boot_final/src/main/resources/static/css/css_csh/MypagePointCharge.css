@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+.pntNow {
+	color: black;
+	margin: auto;
+	width: 700px;
+	font-size: 30px;
+	display: flex;
+}
+
+.PntTitle {
+	margin: auto;
+	width: 600px;
+	font-size: 60px;
+	color: skyblue;
+	padding-top: 67px;
+	padding-bottom: 20px;
+	border-bottom: 3px solid skyblue;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.pntFrm {
+	color: black;
+	margin: auto;
+	width: 700px;
+	font-size: 30px;
+	display: flex;
+}
+
+.pntFrm input[type=text] {
+	text-align: center;
+	width: 300px;
+	height: 40px;
+	border: 4px solid skyblue;
+	border-radius: 12px;
+	font-size: 20px;
+}
+
+.pntFrm input[type=submit] {
+	color: skyblue;
+	font-size: 15px;
+	background-color: white;
+	margin-left: 50px;
+	width: 120px;
+	height: 50px;
+	border: 4px solid skyblue;
+	border-radius: 12px;
+}
+
+.pntFrm input[type=submit]:hover {
+	color: white;
+	background-color: skyblue;
+	border: 4px solid orange;
+}
+
+.pntElmtDis {
+	text-align: right;
+	width: 200px;
+}
+
+.pntNowElmt {
+	width: 25%;
+	text-align: left;
+	margin-left: 50px;
+}
+
+.pntElmt {
+	width: 250px;
+	text-align: left;
+	margin-left: 50px;
+}
+
+.pntFrmRow {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: flex;
+}
+#button {
+	width: 100px;
+	height: 40px;
+	padding: 0;
+	display: inline;
+	border: 1.5px solid white;
+	border-radius: 4px;
+	background: #87ceeb;
+	color: #fff;
+	margin-top: 20px;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+#button:hover {
+	border-color: #87ceeb;
+	border-radius: 4px;
+	border: solid 2px skyblue;
+	background: white;
+	color: #212529;
+	text-decoration: none;
+	box-shadow: 0 4px 10px 0 rgb(135, 206, 235), 0 4px 20px 0
+		rgb(135, 206, 235);
+}
