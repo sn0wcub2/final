@@ -27,7 +27,7 @@
   <div class="pntFrm">
     <form method="post" action="/mypage_csh/MypagePointChargeAdd" id="PntChrgFrm">
     	<div class="pntFrmRow">
-    	  <div class="pntElmtDis">충전하실 금액 : </div>  <div class="pntElmt"><input type="text" name="pointAdd" placeholder="인생은 실전입니다"></div><div class="pntElmt"><input type="submit" value="충전하기"> </div>
+    	  <div class="pntElmtDis">충전하실 금액 : </div>  <div class="pntElmt"><input type="text" name="pointAdd" placeholder="금액을 입력해주세요"></div><div class="pntElmt"><input type="submit" value="충전하기"> </div>
     	</div>
     </form>
   </div>
