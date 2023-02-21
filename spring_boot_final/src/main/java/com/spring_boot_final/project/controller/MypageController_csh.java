@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.spring_boot_final.project.model.CommunityVO_lje;
 import com.spring_boot_final.project.model.PointVO;
 import com.spring_boot_final.project.model.VO_csh;
+import com.spring_boot_final.project.service.CommunityService_lje;
 import com.spring_boot_final.project.service.MarketService_lje;
 import com.spring_boot_final.project.service.MypageService_csh;
 import com.spring_boot_final.project.service.PointService;
@@ -32,6 +33,9 @@ public class MypageController_csh {
 	
 	@Autowired
 	private MarketService_lje bser;
+	
+	@Autowired
+	private CommunityService_lje cser;
 	
 	
 	// 마이페이지 메인
@@ -64,9 +68,9 @@ public class MypageController_csh {
 	
 	// 내 게시판 확인
 	@RequestMapping("/mypage_csh/MypageBoard")
-	public String MypageBoard(HttpSession session,Model model, String comNo) {
+	public String MypageBoard(HttpSession session,Model model) {
 		String memId = (String) session.getAttribute("sid");
-		CommunityVO_lje comList = bser.detailViewCommunity(memId);
+		CommunityVO_lje comList = cser.detailViewCommunity(memId);
 		model.addAttribute("comList","comList");
 		return "mypage_csh/MypageBoard";
 	}
@@ -76,7 +80,10 @@ public class MypageController_csh {
 	
 	// 예약된 서비스 확인
 	@RequestMapping("/mypage_csh/MypageService")
-	public String MypageService() {
+	public String MypageService(HttpSession session, Model model) {
+		String memId=(String) session.getAttribute("sid");
+		ArrayList<PointVO> rsList = ser.pointView(memId);
+		model.addAttribute("rsList",rsList);
 		return "mypage_csh/MypageService";
 	}
 	
