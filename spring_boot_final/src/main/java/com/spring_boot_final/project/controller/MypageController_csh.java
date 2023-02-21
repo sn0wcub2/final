@@ -16,7 +16,6 @@ import com.spring_boot_final.project.model.CommunityVO_lje;
 import com.spring_boot_final.project.model.PointVO;
 import com.spring_boot_final.project.model.VO_csh;
 import com.spring_boot_final.project.service.CommunityService_lje;
-import com.spring_boot_final.project.service.MarketService_lje;
 import com.spring_boot_final.project.service.MypageService_csh;
 import com.spring_boot_final.project.service.PointService;
 import com.spring_boot_final.project.service.Service_csh;
@@ -31,8 +30,9 @@ public class MypageController_csh {
 	@Autowired
 	private PointService ser;
 	
-	@Autowired
-	private MarketService_lje bser;
+//	@Autowired
+//	private MarketService_lje bser;
+	// > 65line 확인 >> 나의 게시글
 	
 	@Autowired
 	private CommunityService_lje cser;
@@ -75,8 +75,6 @@ public class MypageController_csh {
 		return "mypage_csh/MypageBoard";
 	}
 	
-	// 구독 정보 확인 >> controller cjh로 이동
-
 	
 	// 예약된 서비스 확인
 	@RequestMapping("/mypage_csh/MypageService")

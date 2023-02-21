@@ -129,7 +129,7 @@
 						</figure>
 						<div class="fh5co-text">
 							<h2>세탁 서비스</h2>
-							<p>설명 넣으세용<br>링크도 넣으세용</p>
+							<p>세탁 서비스<br>였던것</p>
 							<p><span class="btn btn-primary">바로가기</span></p>
 						</div>
 					</a>
@@ -150,10 +150,10 @@
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="fh5co-card-item">
+					<a href="/chatbotForm" class="fh5co-card-item">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="#" alt="Image" class="img-responsive">
+							<img src='<c:url value="/image/main_images/아이콘_챗봇.png"/>' alt="Image" class="img-responsive">
 						</figure>
 						<div class="fh5co-text">
 							<h2>챗봇</h2>
@@ -247,32 +247,6 @@
 
 	
 
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>구독</h2>
-					<p>편리한 1인 생활을 위해</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="미완성">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">Subscribe</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<footer id="gtco-footer" role="contentinfo">
 		<div class="gtco-container">
 			<div class="row row-p	b-md">
@@ -309,7 +283,7 @@
 						<ul class="gtco-quick-contact">
 							<li><a href="#"><i class="icon-phone"></i> 010 1234 5678</a></li>
 							<li><a href="#"><i class="icon-mail2"></i> iconomi@gmail.com</a></li>
-							<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+							<li><a href="/chatbotForm"><i class="icon-chat"></i> Live Chat</a></li>
 						</ul>
 					</div>
 				</div>
@@ -337,6 +311,10 @@
 	</footer>
 	<!-- </div> -->
 
+	</div>
+	
+	<div class="chatIcon">
+		<a href="/chatbotForm" class="chatcon"><i class="ti-comments"></i></a>
 	</div>
 
 	<div class="gototop js-top">

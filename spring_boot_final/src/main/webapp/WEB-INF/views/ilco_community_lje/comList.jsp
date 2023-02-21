@@ -10,15 +10,10 @@
 <c:import url="/WEB-INF/views/layout/header_main.jsp"/> <!-- 헤더 -->
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/css_lje/comList.css' />">
 </head>
-<body style="background-color:#eedfcb">
+<body>
 <c:import url="/WEB-INF/views/layout/top.jsp"/> <!-- 탑 메뉴 -->
 	<div id="wrap">
-	<div id="menu">
-	<a class="a" href="<c:url value='/ilcocommunity/boardlist'/>">커뮤니티 게시판</a><span> | </span>
-	<a class="a" href="<c:url value='/ilcocommunity/shareBoardList'/>">나눔 게시판</a><span> | </span>
-	<a class="a" href="<c:url value='#'/>">중고거래 게시판</a>
-	</div>
-		<header><h3>커뮤니티 게시판</h3></header>
+		<header><h3 id=title>커뮤니티 게시판</h3></header>
 		<p>이웃들과 다양한 이야기를 나눠보세요</p>
 		<section>
 			<table class="board_list" id="comList">

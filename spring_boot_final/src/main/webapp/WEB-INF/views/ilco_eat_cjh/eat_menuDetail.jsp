@@ -30,7 +30,7 @@
 			<c:set var="dateLast" value="${fn:substring(dateWord, datelength-5, datelength)} "/>
 			<div class="title">${dateLast} ${typeLast } 타입</div>
 			<div class="sampleImg">
-				<img src="<c:url value='/image/cjh_smaple.jpg'/>" class="type_icon">
+				<img src="<c:url value='/image/${menu.menu_pic}'/>" class="type_icon">
 			</div>
 			<form method="post" action="/ilcofoodmange/insertmenu" >
 				<div class="submitrow">

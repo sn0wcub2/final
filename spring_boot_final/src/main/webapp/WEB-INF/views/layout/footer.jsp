@@ -21,7 +21,7 @@
 							<ul class="gtco-footer-links">
 								<li><a href="/ilcoeat/main">일코푸드</a></li>
 								<li><a href="/safe/main">안심서비스</a></li>
-								<li><a href="#">안심 동행</a></li>
+								<li><a href="/safe/accmain">안심 동행</a></li>
 								<li><a href="/laundry_kbh/laundryMain">세탁서비스</a></li>
 								<li><a href="/ilcocommunity/boardlist">커뮤니티</a></li>
 							</ul>
@@ -40,7 +40,7 @@
 							<ul class="gtco-quick-contact">
 								<li><a href="#"><i class="icon-phone"></i> 010 1234 5678</a></li>
 								<li><a href="#"><i class="icon-mail2"></i> iconomi@gmail.com</a></li>
-								<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+								<li><a href="/chatbotForm"><i class="icon-chat"></i> Live Chat</a></li>
 							</ul>
 						</div>
 					</div>
@@ -67,6 +67,9 @@
 			</div>
 		</footer>
 		
+		<div class="chatIcon">
+			<a href="/chatbotForm" class="chatcon"><i class="ti-comments"></i></a>
+		</div>
 		
 		<div class="gototop js-top">
 			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>

@@ -1,0 +1,3 @@
+function CheckBlank(){
+	alert('working');
+}

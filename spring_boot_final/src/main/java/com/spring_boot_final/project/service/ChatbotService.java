@@ -17,72 +17,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ChatbotService {
-	public String main(String voiceMessage) {
-		
-		String  apiURL = "https://vn8wr77gpv.apigw.ntruss.com/custom/v1/9301/2cf9cceb6f9018b1fc9e65b490e0886dee6a19bea551696d14ac42cf79bdb541";
-		String secretKey = "T1NMckJQaVRjaVhYbU9pbUVacVJ1Q0pTdVhPa2pESU8=";
-		
-        String chatbotMessage = ""; // 응답 메시지
-
-        try {
-            //String apiURL = "https://ex9av8bv0e.apigw.ntruss.com/custom_chatbot/prod/";
-
-            URL url = new URL(apiURL);
-
-            String message = getReqMessage(voiceMessage);
-            System.out.println("##" + message);
-
-            String encodeBase64String = makeSignature(message, secretKey);
-
-            HttpURLConnection con = (HttpURLConnection)url.openConnection();
-            con.setRequestMethod("POST");
-            con.setRequestProperty("Content-Type", "application/json;UTF-8");
-            con.setRequestProperty("X-NCP-CHATBOT_SIGNATURE", encodeBase64String);
-
-            // post request
-            con.setDoOutput(true);
-            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-            wr.write(message.getBytes("UTF-8"));
-            wr.flush();
-            wr.close();
-            int responseCode = con.getResponseCode();
-
-            BufferedReader br;
-
-            if(responseCode==200) { // Normal call
-                System.out.println(con.getResponseMessage());
-
-                BufferedReader in = new BufferedReader(
-                        new InputStreamReader(
-                                con.getInputStream()));
-                String decodedString;
-                while ((decodedString = in.readLine()) != null) {
-                    chatbotMessage = decodedString; // 서버로부터 결과 받은 메시지 : chatbotMessage(응답 메시지)
-                }
-                //chatbotMessage = decodedString;
-                in.close();
-                
-                // 응답 메시지 출력
-                System.out.println("응답 메시지 : " + chatbotMessage);
-                // chatbotMessage : 서버에서 응답 받은 메시지(JSON 형식의 문자열)
-                
-                // 응답 메시지 JSON 파싱 메소드 호출
-                chatbotMessage = jsonToString(chatbotMessage);
-                // JSON 파싱 결과 추출된 답변 메시지
-
-            } else {  // Error occurred
-                chatbotMessage = con.getResponseMessage();
-            }
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-        return chatbotMessage;
-    }
-	
 	// chatbot3 : 이미지/멀티링크 답변 처리하기 위해서
 	// JSON 형식의 문자열을 파싱하지 않고 그대로 반환
-public String chatbot3Main(String voiceMessage) {
+	public String chatbot3Main(String voiceMessage) {
 		
 		String  apiURL = "https://vn8wr77gpv.apigw.ntruss.com/custom/v1/9301/2cf9cceb6f9018b1fc9e65b490e0886dee6a19bea551696d14ac42cf79bdb541";
 		String secretKey = "T1NMckJQaVRjaVhYbU9pbUVacVJ1Q0pTdVhPa2pESU8=";
@@ -230,14 +167,6 @@ public String chatbot3Main(String voiceMessage) {
     public String jsonToString(String jsonResultStr) {
     	JSONArray bubbleArray = new JSONObject(jsonResultStr).getJSONArray("bubbles");
     	String result = bubbleArray.getJSONObject(0).getJSONObject("data").getString("description");
-    	
-    	// 한 번에 추출하기 어려우면 하나씩 추출하면 됨
-    	// JSONObject jsonObj = new JSONObject(jsonResultStr);
-    	// JSONArray bubbleArray = jsonObj.getJSONArray("bubbles");
-    	// JSONObject obj0 = bubbleArray.getJSONObject(0);
-    	// JSONObject dataObj = obj0.getJSONObject("data");
-    	// String result = dataObj.getString("description");
-    	
     	
     	return result;
     }
