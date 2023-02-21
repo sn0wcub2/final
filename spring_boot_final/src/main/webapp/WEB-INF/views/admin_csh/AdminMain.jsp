@@ -24,16 +24,6 @@
 					<p>공지</p>
 				</div>
 				<div class="adminhistoryElmt">
-					<a href="#"><img src="<c:url value='/image/csh_게시글.png'/>"onclick="location.href='<c:url value='/admin_csh/AdminMangement/'/>'"></a>
-					<p></p>
-					<p>회원,게시글 검색/조회</p>
-				</div>
-				<div class="adminhistoryElmt">
-					<a href="#"><img src="<c:url value='/image/동행인관리.png'/>"onclick="location.href='<c:url value='/admin_csh/AdminAccompany/'/>'"></a>
-					<p></p>
-					<p>동행인 관리</p>
-				</div>
-				<div class="adminhistoryElmt">
 					<a href="#"><img src="<c:url value='/image/푸드메뉴등록.png'/>"onclick="location.href='<c:url value='/ilcofoodmange'/>'"></a>
 					<p></p>
 					<p>일코 푸드 메뉴 등록</p>
