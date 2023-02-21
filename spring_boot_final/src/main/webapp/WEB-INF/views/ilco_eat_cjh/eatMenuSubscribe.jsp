@@ -103,19 +103,19 @@
 								
 									<div class="week" id="week1">
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="" >
+											<input type="checkbox" class="order_date" name="order_date" value="" disabled>
 											<div class="check_title">
 												<label for="order_date"> 구독불가</label>
 											</div>
 										</div>
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="" >
+											<input type="checkbox" class="order_date" name="order_date" value="" disabled>
 											<div class="check_title">
 												<label for="order_date">구독불가</label>
 											</div>
 										</div>
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="" >
+											<input type="checkbox" class="order_date" name="order_date" value="" disabled>
 											<div class="check_title">
 												<label for="order_date"> 구독불가</label>
 											</div>
@@ -315,7 +315,7 @@
 											</div>
 										</div>
 										<div class="checkBtn">
-											<input type="checkbox" class="order_date" name="order_date" value="" >
+											<input type="checkbox" class="order_date" name="order_date" value="" disabled>
 											<div class="check_title">
 												<label for="order_date"> 4월</label>
 											</div>

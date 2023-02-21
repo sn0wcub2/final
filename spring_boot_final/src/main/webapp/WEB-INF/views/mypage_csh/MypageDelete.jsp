@@ -35,7 +35,7 @@
 							<tr><td colspan="2">
 								<input id="button" onclick="return confirm('※보유한 포인트가 모두 소멸됩니다.\n탈퇴하시겠습니까?')" type="submit" value="탈퇴 확인">
 
-							    <input id="userreset" type="reset" value="취소"></td></tr>
+							    <input id="userreset" type="reset" value="취소"onClick="history.back()"></td></tr>
 						</table>
 					</form>
 				</div>

@@ -9,24 +9,7 @@
 		<title>포인트 내역</title>
 		<!--  head -->         
         	<c:import url="/WEB-INF/views/layout/header_main.jsp" />
-	<style>
-        table {
-            width: 100%;
-            border: 1px solid #444444;
-            border-collapse: collapse;
-        }
-        table th {
-            border: 1px solid #444444;
-            text-align: center;
-            height: 40px;
-            background-color: lightskyblue;
-            color: cornsilk;
-        }
-        table td {
-            border: 1px solid #444444;
-            text-align: center;
-        }
-    </style>
+        	<link rel="stylesheet" href="<c:url value='/css/css_csh/MypagePoint.css' />">
 </head>
 <body>
 <div id="wrap">
@@ -34,6 +17,7 @@
         	<c:import url="/WEB-INF/views/layout/top.jsp" />
 <div style="text-align: center;">
     <h1>포인트 내역</h1>
+    <hr>
     <table border="1" style="width: 1000px; margin: auto">
         <tr>
             <th style="width: 10%">포인트 변경 내역 번호</th>
@@ -57,7 +41,7 @@
            </tr>
         </c:forEach>
     </table>
-    <input type="button" value="뒤로가기" onclick="history.back(-1)">
+    <input id="button"type="button" value="뒤로가기" onclick="history.back(-1)">
 </div>
 </div>
 <footer>

@@ -116,7 +116,10 @@
 	color:#f3f3f3;
 }
 /* 날짜 선택 */
-
+.monthInfo{
+	margin-bottom:50px;
+	font-size: 30px;
+}
 .dateCheck{
     position: relative;
     text-align: center;
@@ -178,4 +181,27 @@ display:flex;
 .checkBtn input:checked + .check_title{
 	background-color: #BDC667;
 	color:#f3f3f3;
+}
+
+.menuUpload{
+	background: #29335c;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.menuUpload input{
+    width: 1020px;
+    height: 70px;
+    border: 5px solid orange;
+    border-radius: 30px;
+    color: white;
+    font-size: 26px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menuUpload input:hover{
+    border: 5px solid orange;
+    background:  #BDC667;
+
 }

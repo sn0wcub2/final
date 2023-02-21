@@ -77,6 +77,8 @@ public class Controller_jjh {
 			result = "timeerror";
 		} else if (startTime == endTime && startTimeBun > endTimeBun) {
 			result = "timeerror";
+		} else if (startTime == endTime && startTimeBun == endTimeBun) {
+			result = "timeerror";
 		} else {
 			String memId = (String) session.getAttribute("sid");
 			int ldate = pservice.findLastestData(memId);
